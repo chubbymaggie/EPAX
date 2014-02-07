@@ -1,0 +1,89 @@
+.TH "EPAX::Section" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Section \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Section\&.hpp>\fP
+.PP
+Inherits \fBEPAX::FileBase\fP, \fBEPAX::MemoryBase\fP, \fBEPAX::IndexBase\fP, \fBEPAX::NameBase\fP, and \fBEPAXExport\fP\&.
+.PP
+Inherited by \fBEPAX::StringTable\fP, and \fBEPAX::SymbolTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSection\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t fs, uint64_t ma, uint64_t ms, uint32_t i, std::string n)"
+.br
+.ti -1c
+.RI "virtual \fB~Section\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "virtual bool \fBisText\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisData\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisBSS\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisDebug\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisString\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisSymbol\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 35 of file Section\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Section::Section\fP (\fBBaseBinary\fP *b, uint64_to, uint64_tfs, uint64_tma, uint64_tms, uint32_ti, std::stringn)"
+.PP
+Definition at line 31 of file Section\&.cpp\&.
+.SS "virtual \fBEPAX::Section::~Section\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 38 of file Section\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool \fBEPAX::Section::isBSS\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 44 of file Section\&.hpp\&.
+.SS "virtual bool \fBEPAX::Section::isData\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 43 of file Section\&.hpp\&.
+.SS "virtual bool \fBEPAX::Section::isDebug\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 45 of file Section\&.hpp\&.
+.SS "virtual bool \fBEPAX::Section::isString\fP ()\fC [inline, virtual]\fP"
+.PP
+Reimplemented in \fBEPAX::StringTable\fP\&.
+.PP
+Definition at line 46 of file Section\&.hpp\&.
+.SS "virtual bool \fBEPAX::Section::isSymbol\fP ()\fC [inline, virtual]\fP"
+.PP
+Reimplemented in \fBEPAX::SymbolTable\fP\&.
+.PP
+Definition at line 47 of file Section\&.hpp\&.
+.SS "virtual bool \fBEPAX::Section::isText\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 42 of file Section\&.hpp\&.
+.SS "void \fBEPAX::Section::print\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Reimplemented in \fBEPAX::Elf::ElfSymbolTable\fP, \fBEPAX::Elf::ElfStringTable\fP, and \fBEPAX::SymbolTable\fP\&.
+.PP
+Definition at line 40 of file Section\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

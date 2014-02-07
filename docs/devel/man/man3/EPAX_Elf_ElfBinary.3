@@ -1,0 +1,235 @@
+.TH "EPAX::Elf::ElfBinary" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Elf::ElfBinary \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ElfBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::BaseBinary\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::ElfBinary32\fP, and \fBEPAX::Elf::ElfBinary64\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElfBinary\fP (std::string n)"
+.br
+.ti -1c
+.RI "virtual \fB~ElfBinary\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBBinaryFormat\fP \fBgetFormat\fP ()=0"
+.br
+.ti -1c
+.RI "uint64_t \fBgetStartAddr\fP ()"
+.br
+.ti -1c
+.RI "void \fBemit\fP (std::string n)"
+.br
+.ti -1c
+.RI "bool \fBverify\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisARM\fP ()"
+.br
+.ti -1c
+.RI "void \fBdescribe\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindFunctions\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindSymbols\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindSections\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindSegments\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis32Bit\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis64Bit\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisExecutable\fP ()"
+.br
+.ti -1c
+.RI "\fBElfStringTable\fP * \fBfindStringtable\fP (uint32_t i)"
+.br
+.ti -1c
+.RI "bool \fBinsideTextRange\fP (uint64_t a)"
+.br
+.ti -1c
+.RI "void \fBprintSections\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "void \fBprintFunctions\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "uint64_t \fBvaddrToFile\fP (uint64_t v)"
+.br
+.ti -1c
+.RI "uint64_t \fBfunctionEndAddress\fP (\fBFunction\fP *f, \fBFunction\fP *nextf)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBFileHeader\fP * \fBfileheader\fP"
+.br
+.ti -1c
+.RI "bool \fBfoundsections\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBSectionHeader\fP * > * \fBsections\fP"
+.br
+.ti -1c
+.RI "bool \fBfoundsegments\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBProgramHeader\fP * > * \fBsegments\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 42 of file ElfBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Elf::ElfBinary::ElfBinary\fP (std::stringn)"
+.PP
+Definition at line 47 of file ElfBinary\&.cpp\&.
+.SS "\fBEPAX::Elf::ElfBinary::~ElfBinary\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 55 of file ElfBinary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::Elf::ElfBinary::describe\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 120 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::emit\fP (std::stringn)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 144 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::findFunctions\fP ()\fC [virtual]\fP"Finds and internally stores all functions in the image
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 158 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::findSections\fP ()"
+.PP
+Definition at line 278 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::findSegments\fP ()"
+.PP
+Definition at line 299 of file ElfBinary\&.cpp\&.
+.SS "\fBElfStringTable\fP * \fBEPAX::Elf::ElfBinary::findStringtable\fP (uint32_ti)"
+.PP
+Definition at line 220 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::findSymbols\fP ()\fC [virtual]\fP"Finds and internally stores all symbols in the image
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 230 of file ElfBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::Elf::ElfBinary::functionEndAddress\fP (\fBFunction\fP *f, \fBFunction\fP *nextf)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 88 of file ElfBinary\&.cpp\&.
+.SS "virtual \fBBinaryFormat\fP \fBEPAX::Elf::ElfBinary::getFormat\fP ()\fC [pure virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary64\fP, and \fBEPAX::Elf::ElfBinary32\fP\&.
+.SS "uint64_t \fBEPAX::Elf::ElfBinary::getStartAddr\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 108 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::insideTextRange\fP (uint64_ta)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 78 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::is32Bit\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 136 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::is64Bit\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 140 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::isARM\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 116 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::isExecutable\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 458 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::printFunctions\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 210 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfBinary::printSections\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 704 of file ElfBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::Elf::ElfBinary::vaddrToFile\fP (uint64_tv)"
+.PP
+Definition at line 148 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::verify\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 112 of file ElfBinary\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBFileHeader\fP* \fBEPAX::Elf::ElfBinary::fileheader\fP\fC [protected]\fP"
+.PP
+Definition at line 44 of file ElfBinary\&.hpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::foundsections\fP\fC [protected]\fP"
+.PP
+Definition at line 46 of file ElfBinary\&.hpp\&.
+.SS "bool \fBEPAX::Elf::ElfBinary::foundsegments\fP\fC [protected]\fP"
+.PP
+Definition at line 48 of file ElfBinary\&.hpp\&.
+.SS "std::vector<\fBSectionHeader\fP*>* \fBEPAX::Elf::ElfBinary::sections\fP\fC [protected]\fP"
+.PP
+Definition at line 47 of file ElfBinary\&.hpp\&.
+.SS "std::vector<\fBProgramHeader\fP*>* \fBEPAX::Elf::ElfBinary::segments\fP\fC [protected]\fP"
+.PP
+Definition at line 49 of file ElfBinary\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

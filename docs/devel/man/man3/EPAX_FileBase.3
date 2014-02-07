@@ -1,0 +1,77 @@
+.TH "EPAX::FileBase" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::FileBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BaseClass\&.hpp>\fP
+.PP
+Inherited by \fBEPAX::DetachedText\fP, \fBEPAX::Elf::FileHeader\fP, \fBEPAX::Elf::ProgramHeader\fP, \fBEPAX::Elf::SectionHeader\fP, \fBEPAX::MachO::MachHeader\fP, \fBEPAX::Section\fP, and \fBEPAX::Symbol\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileBase\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s)"
+.br
+.ti -1c
+.RI "virtual \fB~FileBase\fP ()"
+.br
+.ti -1c
+.RI "\fBBaseBinary\fP * \fBgetBinary\fP ()"
+.br
+.ti -1c
+.RI "\fBInputFile\fP * \fBgetInputFile\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis32Bit\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetFileOffset\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetFileSize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetFileSize\fP (uint64_t s)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 42 of file BaseClass\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::FileBase::FileBase\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts)\fC [inline]\fP"
+.PP
+Definition at line 49 of file BaseClass\&.hpp\&.
+.SS "virtual \fBEPAX::FileBase::~FileBase\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 51 of file BaseClass\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBBaseBinary\fP* \fBEPAX::FileBase::getBinary\fP ()\fC [inline]\fP"
+.PP
+Definition at line 53 of file BaseClass\&.hpp\&.
+.SS "uint64_t \fBEPAX::FileBase::getFileOffset\fP ()\fC [inline]\fP"
+.PP
+Reimplemented in \fBEPAX::Elf::SectionHeader64\fP, \fBEPAX::Elf::SectionHeader32\fP, and \fBEPAX::Elf::SectionHeader\fP\&.
+.PP
+Definition at line 56 of file BaseClass\&.hpp\&.
+.SS "uint64_t \fBEPAX::FileBase::getFileSize\fP ()\fC [inline]\fP"
+.PP
+Definition at line 57 of file BaseClass\&.hpp\&.
+.SS "\fBInputFile\fP * \fBEPAX::FileBase::getInputFile\fP ()"
+.PP
+Definition at line 46 of file BaseClass\&.cpp\&.
+.SS "bool \fBEPAX::FileBase::is32Bit\fP ()"
+.PP
+Definition at line 50 of file BaseClass\&.cpp\&.
+.SS "void \fBEPAX::FileBase::setFileSize\fP (uint64_ts)\fC [inline]\fP"
+.PP
+Definition at line 58 of file BaseClass\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

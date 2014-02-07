@@ -1,0 +1,79 @@
+.TH "EPAX::MachO::MachHeader32" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::MachO::MachHeader32 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MachOBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::MachO::MachHeader\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMachHeader32\fP (\fBBaseBinary\fP *b, uint64_t o)"
+.br
+.ti -1c
+.RI "virtual \fB~MachHeader32\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetStartAddr\fP ()"
+.br
+.ti -1c
+.RI "bool \fBverify\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisARM\fP ()"
+.br
+.ti -1c
+.RI "void \fBdescribe\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetFileType\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 102 of file MachOBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::MachO::MachHeader32::MachHeader32\fP (\fBBaseBinary\fP *b, uint64_to)"
+.PP
+Definition at line 131 of file MachOBinary\&.cpp\&.
+.SS "virtual \fBEPAX::MachO::MachHeader32::~MachHeader32\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 106 of file MachOBinary\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::MachO::MachHeader32::describe\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::MachO::MachHeader\fP\&.
+.PP
+Definition at line 228 of file MachOBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::MachO::MachHeader32::getFileType\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::MachO::MachHeader\fP\&.
+.PP
+Definition at line 178 of file MachOBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::MachO::MachHeader32::getStartAddr\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::MachO::MachHeader\fP\&.
+.PP
+Definition at line 145 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachHeader32::isARM\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::MachO::MachHeader\fP\&.
+.PP
+Definition at line 167 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachHeader32::verify\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::MachO::MachHeader\fP\&.
+.PP
+Definition at line 153 of file MachOBinary\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

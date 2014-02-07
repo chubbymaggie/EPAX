@@ -1,0 +1,71 @@
+\hypertarget{_binary_8cpp}{\section{\-Binary.\-cpp \-File \-Reference}
+\label{_binary_8cpp}\index{\-Binary.\-cpp@{\-Binary.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}\-E\-P\-A\-X\-Common\-Internal.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Binary.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Elf\-Binary.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Function.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Instruction.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Mach\-O\-Binary.\-hpp\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_binary_8cpp_a4628c3f9c1faba04508ed7d8b763ff59}{\-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K}(\-\_\-\-\_\-opt, \-\_\-\-\_\-pid, \-\_\-\-\_\-addr, \-\_\-\-\_\-data)
+\item 
+\#define \hyperlink{_binary_8cpp_afea99a952279469fc6e1db9a5dd0bff7}{\-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T}(\-\_\-\-\_\-fmt\-\_\-\-\_\-)~\hyperlink{_e_p_a_x_common_internal_8hpp_a7b41ef1769db498d904361f6eb56a0eb}{\-E\-P\-A\-X\-Assert}(f == \-Binary\-Format\-\_\-undefined, \char`\"{}\-This binary appears to be valid for two formats\-: \char`\"{} $<$$<$ \-Base\-Binary\-::get\-Format\-Name(\-\_\-\-\_\-fmt\-\_\-\-\_\-) $<$$<$ \char`\"{} and \char`\"{} $<$$<$ \-Base\-Binary\-::get\-Format\-Name(f));
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_binary_8cpp_source}{\-Binary.\-cpp}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_binary_8cpp_a4628c3f9c1faba04508ed7d8b763ff59}{\index{\-Binary.\-cpp@{\-Binary.\-cpp}!\-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K@{\-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K}}
+\index{\-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K@{\-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K}!Binary.cpp@{\-Binary.\-cpp}}
+\subsubsection[{\-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-T\-R\-A\-C\-E\-\_\-\-A\-N\-D\-\_\-\-C\-H\-E\-C\-K}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-opt, }
+\item[{}]{\-\_\-\-\_\-pid, }
+\item[{}]{\-\_\-\-\_\-addr, }
+\item[{}]{\-\_\-\-\_\-data}
+\end{DoxyParamCaption}
+)}}\label{_binary_8cpp_a4628c3f9c1faba04508ed7d8b763ff59}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+res = ptrace(__opt, __pid,__addr,__data);                           \
+    if (res == -1){                                                     \
+        EPAXErr << "ptrace failed with " << DEC(errno) << ENDL;       \
+    }                                                                   \
+    EPAXAssert(res == 0, "call to ptrace(" << #__opt << ", pid=" << DEC(__pid) 
+      << ", addr=" << HEX(__addr) << ", data=" << HEX(__data) << ") failed with error 
+      " << DEC(res));
+\end{DoxyCode}
+
+
+\-Definition at line 61 of file \-Binary.\-cpp.
+
+\hypertarget{_binary_8cpp_afea99a952279469fc6e1db9a5dd0bff7}{\index{\-Binary.\-cpp@{\-Binary.\-cpp}!\-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T@{\-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T}}
+\index{\-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T@{\-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T}!Binary.cpp@{\-Binary.\-cpp}}
+\subsubsection[{\-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-V\-E\-R\-I\-F\-Y\-\_\-\-S\-I\-N\-G\-L\-E\-\_\-\-F\-O\-R\-M\-A\-T}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-fmt\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~{\bf \-E\-P\-A\-X\-Assert}(f == \-Binary\-Format\-\_\-undefined, \char`\"{}\-This binary appears to be valid for two formats\-: \char`\"{} $<$$<$ \-Base\-Binary\-::get\-Format\-Name(\-\_\-\-\_\-fmt\-\_\-\-\_\-) $<$$<$ \char`\"{} and \char`\"{} $<$$<$ \-Base\-Binary\-::get\-Format\-Name(f));}}\label{_binary_8cpp_afea99a952279469fc6e1db9a5dd0bff7}

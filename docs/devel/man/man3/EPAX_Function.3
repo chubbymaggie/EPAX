@@ -1,0 +1,105 @@
+.TH "EPAX::Function" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Function \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Function\&.hpp>\fP
+.PP
+Inherits \fBEPAX::DetachedText\fP, \fBEPAX::SymbolBase\fP, and \fBEPAXExport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFunction\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s, uint64_t a, uint32_t i, \fBSymbol\fP *y)"
+.br
+.ti -1c
+.RI "virtual \fB~Function\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "\fBControlFlow\fP * \fBgetControlFlow\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountBasicBlocks\fP ()"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBfindBasicBlock\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetBasicBlock\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "uint32_t \fBcountInstructions\fP ()"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBfindInstruction\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBgetInstruction\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "void \fBdisassemble\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBprintHeader\fP (std::ostream &stream=std::cout)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 55 of file Function\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Function::Function\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts, uint64_ta, uint32_ti, \fBSymbol\fP *y)"
+.PP
+Definition at line 154 of file Function\&.cpp\&.
+.SS "\fBEPAX::Function::~Function\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 166 of file Function\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t \fBEPAX::Function::countBasicBlocks\fP ()"
+.PP
+Definition at line 198 of file Function\&.cpp\&.
+.SS "uint32_t \fBEPAX::Function::countInstructions\fP ()"
+.PP
+Definition at line 220 of file Function\&.cpp\&.
+.SS "void \fBEPAX::Function::disassemble\fP ()"
+.PP
+Definition at line 172 of file Function\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::Function::findBasicBlock\fP (uint64_taddr)"
+.PP
+Definition at line 205 of file Function\&.cpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::Function::findInstruction\fP (uint64_taddr)"
+.PP
+Definition at line 227 of file Function\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::Function::getBasicBlock\fP (uint32_tidx)"
+.PP
+Definition at line 213 of file Function\&.cpp\&.
+.SS "\fBControlFlow\fP* \fBEPAX::Function::getControlFlow\fP ()\fC [inline]\fP"
+.PP
+Definition at line 68 of file Function\&.hpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::Function::getInstruction\fP (uint32_tidx)"
+.PP
+Definition at line 234 of file Function\&.cpp\&.
+.SS "void \fBEPAX::Function::print\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBEPAX::DetachedText\fP\&.
+.PP
+Definition at line 186 of file Function\&.cpp\&.
+.SS "void \fBEPAX::Function::printHeader\fP (std::ostream &stream = \fCstd::cout\fP)\fC [static]\fP"
+.PP
+Definition at line 178 of file Function\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

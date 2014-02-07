@@ -1,0 +1,211 @@
+.TH "EPAX::Binary" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Binary \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Binary\&.hpp>\fP
+.PP
+Inherits \fBEPAXExport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBinary\fP (std::string n)"
+.br
+.ti -1c
+.RI "\fBBinary\fP (std::string n, \fBBinaryFormat\fP f)"
+.br
+.ti -1c
+.RI "virtual \fB~Binary\fP ()"
+.br
+.ti -1c
+.RI "void \fBrunBasic\fP (int argc, char *argv[])"
+.br
+.ti -1c
+.RI "uint64_t \fBgetStartAddr\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBgetName\fP ()"
+.br
+.ti -1c
+.RI "\fBBinaryFormat\fP \fBgetFormat\fP ()"
+.br
+.ti -1c
+.RI "const char * \fBgetFormatName\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountFunctions\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFirstFunction\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetNextFunction\fP (\fBFunction\fP *f)"
+.br
+.ti -1c
+.RI "bool \fBisLastFunction\fP (\fBFunction\fP *f)"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBfindFunction\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "bool \fBisExecutable\fP ()"
+.br
+.ti -1c
+.RI "void \fBprintStaticFile\fP (std::string &fname)"
+.br
+.ti -1c
+.RI "void \fBprintStaticFile\fP (const char *fname)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetFileSize\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBBinaryFormat\fP \fBdetectFormat\fP (std::string n)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+A thin wrapper around the classes which will hold all of the useful information about program binaryies\&. The idea is that this class will provide a single interface on top of any number of different formats\&. 
+.PP
+Definition at line 51 of file Binary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Binary::Binary\fP (std::stringn)"Constructs an \fBBinary\fP object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP The name of a file\&. Format will be set based on the file's contents\&. 
+.RE
+.PP
+
+.PP
+Definition at line 35 of file Binary\&.cpp\&.
+.SS "\fBEPAX::Binary::Binary\fP (std::stringn, \fBBinaryFormat\fPf)"Constructs an \fBBinary\fP object\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIn\fP The name of a file\&. 
+.br
+\fIf\fP The format of the file\&. 
+.RE
+.PP
+
+.PP
+Definition at line 41 of file Binary\&.cpp\&.
+.SS "\fBEPAX::Binary::~Binary\fP ()\fC [virtual]\fP"Destroys an \fBBinary\fP instance\&. Should not be called directly\&. 
+.PP
+Definition at line 47 of file Binary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t \fBEPAX::Binary::countFunctions\fP ()"Counts the functions in the binary
+.PP
+\fBReturns:\fP
+.RS 4
+the number of functions in the binary 
+.RE
+.PP
+
+.PP
+Definition at line 225 of file Binary\&.cpp\&.
+.SS "\fBBinaryFormat\fP \fBEPAX::Binary::detectFormat\fP (std::stringn)\fC [static]\fP"Attempts to guess the format of an binary file
+.PP
+\fBReturns:\fP
+.RS 4
+the format of the binary file, or BinaryFormat_undefined(0) if the format cannot be found 
+.RE
+.PP
+
+.PP
+Definition at line 160 of file Binary\&.cpp\&.
+.SS "\fBFunction\fP * \fBEPAX::Binary::findFunction\fP (uint64_taddr)"
+.PP
+Definition at line 221 of file Binary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Binary::getFileSize\fP ()"
+.PP
+Definition at line 233 of file Binary\&.cpp\&.
+.SS "\fBFunction\fP * \fBEPAX::Binary::getFirstFunction\fP ()"Gets the first function in the binary
+.PP
+\fBReturns:\fP
+.RS 4
+the first function in the binary 
+.RE
+.PP
+
+.PP
+Definition at line 209 of file Binary\&.cpp\&.
+.SS "\fBBinaryFormat\fP \fBEPAX::Binary::getFormat\fP ()\fC [inline]\fP"Gets the format of the binary\&.
+.PP
+\fBReturns:\fP
+.RS 4
+the format of this binary 
+.RE
+.PP
+
+.PP
+Definition at line 106 of file Binary\&.hpp\&.
+.SS "const char * \fBEPAX::Binary::getFormatName\fP ()"Gets a string representation of the format of this binary\&.
+.PP
+@ return a string representation of the format of this binary 
+.PP
+Definition at line 123 of file Binary\&.cpp\&.
+.SS "std::string \fBEPAX::Binary::getName\fP ()"
+.PP
+Definition at line 205 of file Binary\&.cpp\&.
+.SS "\fBFunction\fP * \fBEPAX::Binary::getNextFunction\fP (\fBFunction\fP *f)"Gets the next function in the binary
+.PP
+\fBParameters:\fP
+.RS 4
+\fIf\fP a function in the binary
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the function following f 
+.RE
+.PP
+
+.PP
+Definition at line 213 of file Binary\&.cpp\&.
+.SS "uint64_t \fBEPAX::Binary::getStartAddr\fP ()"
+.PP
+Definition at line 201 of file Binary\&.cpp\&.
+.SS "bool \fBEPAX::Binary::isExecutable\fP ()"
+.PP
+Definition at line 229 of file Binary\&.cpp\&.
+.SS "bool \fBEPAX::Binary::isLastFunction\fP (\fBFunction\fP *f)"Tells whether this is the last function in the binary
+.PP
+\fBParameters:\fP
+.RS 4
+\fIf\fP a function in the binary
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff f is the last function in the binary 
+.RE
+.PP
+
+.PP
+Definition at line 217 of file Binary\&.cpp\&.
+.SS "void \fBEPAX::Binary::printStaticFile\fP (std::string &fname)"
+.PP
+Definition at line 53 of file Binary\&.cpp\&.
+.SS "void \fBEPAX::Binary::printStaticFile\fP (const char *fname)"
+.PP
+Definition at line 57 of file Binary\&.cpp\&.
+.SS "void \fBEPAX::Binary::runBasic\fP (intargc, char *argv[])"
+.PP
+Definition at line 69 of file Binary\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

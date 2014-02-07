@@ -1,0 +1,55 @@
+.TH "EPAX::StringTable" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::StringTable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Symbol\&.hpp>\fP
+.PP
+Inherits \fBEPAX::Section\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::ElfStringTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStringTable\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t fs, uint64_t ma, uint64_t ms, uint32_t i, std::string n)"
+.br
+.ti -1c
+.RI "virtual \fB~StringTable\fP ()"
+.br
+.ti -1c
+.RI "virtual char * \fBgetStringAt\fP (uint32_t i)=0"
+.br
+.ti -1c
+.RI "bool \fBisString\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 60 of file Symbol\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::StringTable::StringTable\fP (\fBBaseBinary\fP *b, uint64_to, uint64_tfs, uint64_tma, uint64_tms, uint32_ti, std::stringn)"
+.PP
+Definition at line 61 of file Symbol\&.cpp\&.
+.SS "virtual \fBEPAX::StringTable::~StringTable\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 63 of file Symbol\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual char* \fBEPAX::StringTable::getStringAt\fP (uint32_ti)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfStringTable\fP\&.
+.SS "bool \fBEPAX::StringTable::isString\fP ()\fC [inline, virtual]\fP"
+.PP
+Reimplemented from \fBEPAX::Section\fP\&.
+.PP
+Definition at line 67 of file Symbol\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

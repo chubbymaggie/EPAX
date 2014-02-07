@@ -1,0 +1,159 @@
+.TH "EPAX::BasicBlock" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::BasicBlock \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BasicBlock\&.hpp>\fP
+.PP
+Inherits \fBEPAX::MemoryBase\fP, \fBEPAX::IndexBase\fP, and \fBEPAXExport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBasicBlock\fP (\fBFunction\fP *f, uint64_t a, uint32_t i)"
+.br
+.ti -1c
+.RI "virtual \fB~BasicBlock\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountInstructions\fP ()"
+.br
+.ti -1c
+.RI "void \fBaddInstruction\fP (\fBInstruction\fP *insn)"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBgetInstruction\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBhead\fP ()"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBtail\fP ()"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBfindInstruction\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "void \fBaddSource\fP (\fBBasicBlock\fP *bb)"
+.br
+.ti -1c
+.RI "void \fBaddTarget\fP (\fBBasicBlock\fP *bb)"
+.br
+.ti -1c
+.RI "uint32_t \fBcountSources\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountTargets\fP ()"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetSource\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetTarget\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "bool \fBisReachable\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetUnreachable\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFunction\fP ()"
+.br
+.ti -1c
+.RI "\fBLoop\fP * \fBgetLoop\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetLoop\fP (\fBLoop\fP *l)"
+.br
+.ti -1c
+.RI "\fBControlFlow\fP * \fBgetControlFlow\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisFallThrough\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 38 of file BasicBlock\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::BasicBlock::BasicBlock\fP (\fBFunction\fP *f, uint64_ta, uint32_ti)"
+.PP
+Definition at line 33 of file BasicBlock\&.cpp\&.
+.SS "\fBEPAX::BasicBlock::~BasicBlock\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 43 of file BasicBlock\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::BasicBlock::addInstruction\fP (\fBInstruction\fP *insn)"
+.PP
+Definition at line 138 of file BasicBlock\&.cpp\&.
+.SS "void \fBEPAX::BasicBlock::addSource\fP (\fBBasicBlock\fP *bb)"
+.PP
+Definition at line 50 of file BasicBlock\&.cpp\&.
+.SS "void \fBEPAX::BasicBlock::addTarget\fP (\fBBasicBlock\fP *bb)"
+.PP
+Definition at line 54 of file BasicBlock\&.cpp\&.
+.SS "uint32_t \fBEPAX::BasicBlock::countInstructions\fP ()"
+.PP
+Definition at line 134 of file BasicBlock\&.cpp\&.
+.SS "uint32_t \fBEPAX::BasicBlock::countSources\fP ()\fC [inline]\fP"
+.PP
+Definition at line 64 of file BasicBlock\&.hpp\&.
+.SS "uint32_t \fBEPAX::BasicBlock::countTargets\fP ()\fC [inline]\fP"
+.PP
+Definition at line 65 of file BasicBlock\&.hpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::BasicBlock::findInstruction\fP (uint64_taddr)"
+.PP
+Definition at line 86 of file BasicBlock\&.cpp\&.
+.SS "\fBControlFlow\fP * \fBEPAX::BasicBlock::getControlFlow\fP ()"
+.PP
+Definition at line 150 of file BasicBlock\&.cpp\&.
+.SS "\fBFunction\fP* \fBEPAX::BasicBlock::getFunction\fP ()\fC [inline]\fP"
+.PP
+Definition at line 72 of file BasicBlock\&.hpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::BasicBlock::getInstruction\fP (uint32_tidx)"
+.PP
+Definition at line 143 of file BasicBlock\&.cpp\&.
+.SS "\fBLoop\fP* \fBEPAX::BasicBlock::getLoop\fP ()\fC [inline]\fP"
+.PP
+Definition at line 74 of file BasicBlock\&.hpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::BasicBlock::getSource\fP (uint32_tidx)"
+.PP
+Definition at line 58 of file BasicBlock\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::BasicBlock::getTarget\fP (uint32_tidx)"
+.PP
+Definition at line 65 of file BasicBlock\&.cpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::BasicBlock::head\fP ()"
+.PP
+Definition at line 72 of file BasicBlock\&.cpp\&.
+.SS "bool \fBEPAX::BasicBlock::isFallThrough\fP ()"
+.PP
+Definition at line 157 of file BasicBlock\&.cpp\&.
+.SS "bool \fBEPAX::BasicBlock::isReachable\fP ()\fC [inline]\fP"
+.PP
+Definition at line 69 of file BasicBlock\&.hpp\&.
+.SS "void \fBEPAX::BasicBlock::print\fP (std::ostream &stream = \fCstd::cout\fP)"
+.PP
+Definition at line 100 of file BasicBlock\&.cpp\&.
+.SS "void \fBEPAX::BasicBlock::setLoop\fP (\fBLoop\fP *l)\fC [inline]\fP"
+.PP
+Definition at line 75 of file BasicBlock\&.hpp\&.
+.SS "void \fBEPAX::BasicBlock::setUnreachable\fP ()\fC [inline]\fP"
+.PP
+Definition at line 70 of file BasicBlock\&.hpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::BasicBlock::tail\fP ()"
+.PP
+Definition at line 79 of file BasicBlock\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

@@ -1,0 +1,142 @@
+\hypertarget{class_e_p_a_x_1_1_symbol_table}{\section{\-E\-P\-A\-X\-:\-:\-Symbol\-Table \-Class \-Reference}
+\label{class_e_p_a_x_1_1_symbol_table}\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+}
+
+
+{\ttfamily \#include $<$\-Symbol.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Symbol\-Table\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.666667cm]{class_e_p_a_x_1_1_symbol_table}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_symbol_table_a5a287e768e39c5bbb7325a5039c5569f}{\-Symbol\-Table} (\hyperlink{class_e_p_a_x_1_1_base_binary}{\-Base\-Binary} $\ast$b, uint64\-\_\-t o, uint64\-\_\-t fs, uint64\-\_\-t ma, uint64\-\_\-t ms, uint32\-\_\-t i, std\-::string n)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_symbol_table_a97d8c6f6517b3ae2ea39f0c47dd60a5b}{$\sim$\-Symbol\-Table} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_symbol_table_a229729af626ddb0763a1bff287b68918}{count\-Symbols} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_symbol}{\-Symbol} $\ast$ \hyperlink{class_e_p_a_x_1_1_symbol_table_a6a4a90088e81ef66cf665c241b9fa1f0}{get\-Symbol} (uint32\-\_\-t i)
+\item 
+virtual void \hyperlink{class_e_p_a_x_1_1_symbol_table_ac8a581679e678f1472bf684fdf877b9a}{print} (std\-::ostream \&stream=std\-::cout)=0
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_symbol_table_a86c210d632debcae293bd2167a3cbe62}{is\-Symbol} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\-::vector$<$ \hyperlink{class_e_p_a_x_1_1_symbol}{\-Symbol} $\ast$ $>$ $\ast$ \hyperlink{class_e_p_a_x_1_1_symbol_table_ae9f0215b62e323d3edecd86fddae58c2}{symbols}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 44 of file \-Symbol.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_symbol_table_a5a287e768e39c5bbb7325a5039c5569f}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!\-Symbol\-Table@{\-Symbol\-Table}}
+\index{\-Symbol\-Table@{\-Symbol\-Table}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{\-Symbol\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::\-Symbol\-Table} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Base\-Binary} $\ast$}]{b, }
+\item[{uint64\-\_\-t}]{o, }
+\item[{uint64\-\_\-t}]{fs, }
+\item[{uint64\-\_\-t}]{ma, }
+\item[{uint64\-\_\-t}]{ms, }
+\item[{uint32\-\_\-t}]{i, }
+\item[{std\-::string}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_symbol_table_a5a287e768e39c5bbb7325a5039c5569f}
+
+
+\-Definition at line 40 of file \-Symbol.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_symbol_table_a97d8c6f6517b3ae2ea39f0c47dd60a5b}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!$\sim$\-Symbol\-Table@{$\sim$\-Symbol\-Table}}
+\index{$\sim$\-Symbol\-Table@{$\sim$\-Symbol\-Table}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{$\sim$\-Symbol\-Table}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::$\sim$\-Symbol\-Table} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_symbol_table_a97d8c6f6517b3ae2ea39f0c47dd60a5b}
+
+
+\-Definition at line 46 of file \-Symbol.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_symbol_table_a229729af626ddb0763a1bff287b68918}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!count\-Symbols@{count\-Symbols}}
+\index{count\-Symbols@{count\-Symbols}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{count\-Symbols}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::count\-Symbols} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_symbol_table_a229729af626ddb0763a1bff287b68918}
+
+
+\-Definition at line 52 of file \-Symbol.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_symbol_table_a6a4a90088e81ef66cf665c241b9fa1f0}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!get\-Symbol@{get\-Symbol}}
+\index{get\-Symbol@{get\-Symbol}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{get\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Symbol} $\ast$ {\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::get\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_symbol_table_a6a4a90088e81ef66cf665c241b9fa1f0}
+
+
+\-Definition at line 56 of file \-Symbol.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_symbol_table_a86c210d632debcae293bd2167a3cbe62}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!is\-Symbol@{is\-Symbol}}
+\index{is\-Symbol@{is\-Symbol}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{is\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::is\-Symbol} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_symbol_table_a86c210d632debcae293bd2167a3cbe62}
+
+
+\-Reimplemented from \hyperlink{class_e_p_a_x_1_1_section_a6f8fdba06c4f3506d4dc2df97658157f}{\-E\-P\-A\-X\-::\-Section}.
+
+
+
+\-Definition at line 57 of file \-Symbol.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_symbol_table_ac8a581679e678f1472bf684fdf877b9a}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!print@{print}}
+\index{print@{print}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::print} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_symbol_table_ac8a581679e678f1472bf684fdf877b9a}
+
+
+\-Reimplemented from \hyperlink{class_e_p_a_x_1_1_section_ad79a91be22efd4499b78d2554ebc8285}{\-E\-P\-A\-X\-::\-Section}.
+
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_table_af8c0bb17c3b8c38ee49142def9ee0ed0}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-Table}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_symbol_table_ae9f0215b62e323d3edecd86fddae58c2}{\index{\-E\-P\-A\-X\-::\-Symbol\-Table@{\-E\-P\-A\-X\-::\-Symbol\-Table}!symbols@{symbols}}
+\index{symbols@{symbols}!EPAX::SymbolTable@{\-E\-P\-A\-X\-::\-Symbol\-Table}}
+\subsubsection[{symbols}]{\setlength{\rightskip}{0pt plus 5cm}std\-::vector$<${\bf \-Symbol}$\ast$$>$$\ast$ {\bf \-E\-P\-A\-X\-::\-Symbol\-Table\-::symbols}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_e_p_a_x_1_1_symbol_table_ae9f0215b62e323d3edecd86fddae58c2}
+
+
+\-Definition at line 46 of file \-Symbol.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_symbol_8hpp}{\-Symbol.\-hpp}\item 
+\hyperlink{_symbol_8cpp}{\-Symbol.\-cpp}\end{DoxyCompactItemize}

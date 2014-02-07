@@ -1,0 +1,117 @@
+.TH "EPAX::ControlFlow" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::ControlFlow \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ControlFlow\&.hpp>\fP
+.PP
+Inherits \fBEPAXExport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBControlFlow\fP (\fBFunction\fP *f, std::vector< \fBBasicBlock\fP * > bbs)"
+.br
+.ti -1c
+.RI "virtual \fB~ControlFlow\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFunction\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "void \fBdot_print\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "uint32_t \fBcountBasicBlocks\fP ()"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBfindBasicBlock\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetBasicBlock\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "uint32_t \fBcountInstructions\fP ()"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBfindInstruction\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBgetInstruction\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "uint32_t \fBcountLoops\fP ()"
+.br
+.ti -1c
+.RI "\fBLoop\fP * \fBfindLoop\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBLoop\fP * \fBgetLoop\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "\fBLoop\fP * \fBgetParentOf\fP (\fBLoop\fP *loop)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 37 of file ControlFlow\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::ControlFlow::ControlFlow\fP (\fBFunction\fP *f, std::vector< \fBBasicBlock\fP * >bbs)"
+.PP
+Definition at line 35 of file ControlFlow\&.cpp\&.
+.SS "\fBEPAX::ControlFlow::~ControlFlow\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 42 of file ControlFlow\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t \fBEPAX::ControlFlow::countBasicBlocks\fP ()"
+.PP
+Definition at line 300 of file ControlFlow\&.cpp\&.
+.SS "uint32_t \fBEPAX::ControlFlow::countInstructions\fP ()"
+.PP
+Definition at line 322 of file ControlFlow\&.cpp\&.
+.SS "uint32_t \fBEPAX::ControlFlow::countLoops\fP ()"
+.PP
+Definition at line 344 of file ControlFlow\&.cpp\&.
+.SS "void \fBEPAX::ControlFlow::dot_print\fP (std::ostream &stream = \fCstd::cout\fP)"
+.PP
+Definition at line 275 of file ControlFlow\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::ControlFlow::findBasicBlock\fP (uint64_taddr)"
+.PP
+Definition at line 304 of file ControlFlow\&.cpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::ControlFlow::findInstruction\fP (uint64_taddr)"
+.PP
+Definition at line 326 of file ControlFlow\&.cpp\&.
+.SS "\fBLoop\fP * \fBEPAX::ControlFlow::findLoop\fP (uint64_taddr)"
+.PP
+Definition at line 348 of file ControlFlow\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::ControlFlow::getBasicBlock\fP (uint32_tidx)"
+.PP
+Definition at line 315 of file ControlFlow\&.cpp\&.
+.SS "\fBFunction\fP* \fBEPAX::ControlFlow::getFunction\fP ()\fC [inline]\fP"
+.PP
+Definition at line 52 of file ControlFlow\&.hpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::ControlFlow::getInstruction\fP (uint32_tidx)"
+.PP
+Definition at line 337 of file ControlFlow\&.cpp\&.
+.SS "\fBLoop\fP * \fBEPAX::ControlFlow::getLoop\fP (uint32_tidx)"
+.PP
+Definition at line 368 of file ControlFlow\&.cpp\&.
+.SS "\fBLoop\fP * \fBEPAX::ControlFlow::getParentOf\fP (\fBLoop\fP *loop)"
+.PP
+Definition at line 291 of file ControlFlow\&.cpp\&.
+.SS "void \fBEPAX::ControlFlow::print\fP (std::ostream &stream = \fCstd::cout\fP)"
+.PP
+Definition at line 267 of file ControlFlow\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

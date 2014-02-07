@@ -1,0 +1,230 @@
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol}{\section{\-E\-P\-A\-X\-:\-:\-Elf\-:\-:\-Elf\-Symbol \-Class \-Reference}
+\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol}\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+}
+
+
+{\ttfamily \#include $<$\-Elf\-Binary.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Elf\-:\-:\-Elf\-Symbol\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.966887cm]{class_e_p_a_x_1_1_elf_1_1_elf_symbol}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3907cf60c70f5abf4c5c9522c7f63a74}{\-Elf\-Symbol} (\hyperlink{class_e_p_a_x_1_1_base_binary}{\-Base\-Binary} $\ast$b, uint64\-\_\-t o, uint64\-\_\-t s, uint32\-\_\-t i)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_af409dbd1b83de98f977c7d8eea73e66f}{$\sim$\-Elf\-Symbol} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a19338c302c20a71a101be47205a44908}{print} (std\-::ostream \&stream=std\-::cout)
+\item 
+virtual uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a84ccb1d566bee093da094e2c4b617ba7}{get\-Name\-Index} ()=0
+\item 
+virtual uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a20b9df356b7d4ef1481dc8fdeaf4b2fc}{get\-Value} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a92184692a8f808802963e1a7ca9606d7}{get\-Section} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a38fb6985ad991affbb10051eac2aa75e}{get\-Size} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a540aabaf19398d8512f7bdb9255fa9d6}{get\-Type} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3bed4c1dcd7d20cdd492c16977e59b93}{get\-Binding} ()=0
+\item 
+virtual uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a31b56e39f50f311ab23e878faba5d5b4}{get\-Visibility} ()=0
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_ad6142f5f07372bffd2f0b9a482696821}{is\-Function} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a4f27b2be55f35a4c9a75b5e52bce6e23}{is\-Thumb\-Function} ()
+\item 
+uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a81a2839b65f94ce09a1f65a70bb268e1}{get\-Function\-Address} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a17755bdd71c02e656c667b16de61dd7b}{rawbyte\-\_\-t} $\ast$ \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3c57705558738ca7aa9803260ff9da9e}{entry}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 170 of file \-Elf\-Binary.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3907cf60c70f5abf4c5c9522c7f63a74}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!\-Elf\-Symbol@{\-Elf\-Symbol}}
+\index{\-Elf\-Symbol@{\-Elf\-Symbol}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{\-Elf\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::\-Elf\-Symbol} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Base\-Binary} $\ast$}]{b, }
+\item[{uint64\-\_\-t}]{o, }
+\item[{uint64\-\_\-t}]{s, }
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3907cf60c70f5abf4c5c9522c7f63a74}
+
+
+\-Definition at line 496 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_af409dbd1b83de98f977c7d8eea73e66f}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!$\sim$\-Elf\-Symbol@{$\sim$\-Elf\-Symbol}}
+\index{$\sim$\-Elf\-Symbol@{$\sim$\-Elf\-Symbol}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{$\sim$\-Elf\-Symbol}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::$\sim$\-Elf\-Symbol} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_af409dbd1b83de98f977c7d8eea73e66f}
+
+
+\-Definition at line 502 of file \-Elf\-Binary.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3bed4c1dcd7d20cdd492c16977e59b93}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Binding@{get\-Binding}}
+\index{get\-Binding@{get\-Binding}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Binding}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Binding} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3bed4c1dcd7d20cdd492c16977e59b93}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_a341e642319d9b9f70ee9dfebdcad4f5b}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_a9361f33bf04cbfd6623392f1905aaef6}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a81a2839b65f94ce09a1f65a70bb268e1}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Function\-Address@{get\-Function\-Address}}
+\index{get\-Function\-Address@{get\-Function\-Address}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Function\-Address}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Function\-Address} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a81a2839b65f94ce09a1f65a70bb268e1}
+
+
+\-Definition at line 620 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a84ccb1d566bee093da094e2c4b617ba7}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Name\-Index@{get\-Name\-Index}}
+\index{get\-Name\-Index@{get\-Name\-Index}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Name\-Index}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Name\-Index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a84ccb1d566bee093da094e2c4b617ba7}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_a6e8651a83dfdd485e87e013b4a4790e2}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_a319c4e22fbb4b99667707a8b0d9412d1}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a92184692a8f808802963e1a7ca9606d7}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Section@{get\-Section}}
+\index{get\-Section@{get\-Section}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Section}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Section} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a92184692a8f808802963e1a7ca9606d7}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_ad2acb7dbbf88685b5bfcfbed2ac1dba4}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_a5ae0934c001dc2a81dbd88fb1d0ad786}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a38fb6985ad991affbb10051eac2aa75e}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a38fb6985ad991affbb10051eac2aa75e}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_a26225a3989efc89a50fa934c53f47276}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_ae5ef1d81c0a3d126441e147104f8ea85}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a540aabaf19398d8512f7bdb9255fa9d6}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Type@{get\-Type}}
+\index{get\-Type@{get\-Type}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a540aabaf19398d8512f7bdb9255fa9d6}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_a397faa7562b27ba2d543328a69e17077}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_a870365328bf8943618c3a3f907f26b24}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a20b9df356b7d4ef1481dc8fdeaf4b2fc}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Value@{get\-Value}}
+\index{get\-Value@{get\-Value}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Value}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Value} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a20b9df356b7d4ef1481dc8fdeaf4b2fc}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_a47e49dde9967bc7cf3f8caeb3b1880fd}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_a2b4bb23d3d59280ccbbdf0b239bc4ce2}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a31b56e39f50f311ab23e878faba5d5b4}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!get\-Visibility@{get\-Visibility}}
+\index{get\-Visibility@{get\-Visibility}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{get\-Visibility}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::get\-Visibility} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a31b56e39f50f311ab23e878faba5d5b4}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol64_a0df4c678ba3e7c3e756c6a81152244fa}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_elf_symbol32_a547bb437518ff680a5b35c36ebc5e39a}{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_ad6142f5f07372bffd2f0b9a482696821}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!is\-Function@{is\-Function}}
+\index{is\-Function@{is\-Function}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{is\-Function}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::is\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_ad6142f5f07372bffd2f0b9a482696821}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_symbol_a1dc3c27cb8debeda55cad9d3e04a7be5}{\-E\-P\-A\-X\-::\-Symbol}.
+
+
+
+\-Definition at line 612 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a4f27b2be55f35a4c9a75b5e52bce6e23}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!is\-Thumb\-Function@{is\-Thumb\-Function}}
+\index{is\-Thumb\-Function@{is\-Thumb\-Function}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{is\-Thumb\-Function}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::is\-Thumb\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a4f27b2be55f35a4c9a75b5e52bce6e23}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_symbol_a58d8007f908063fc4602c042a739bd8f}{\-E\-P\-A\-X\-::\-Symbol}.
+
+
+
+\-Definition at line 616 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a19338c302c20a71a101be47205a44908}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!print@{print}}
+\index{print@{print}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::print} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a19338c302c20a71a101be47205a44908}
+
+
+\-Definition at line 526 of file \-Elf\-Binary.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3c57705558738ca7aa9803260ff9da9e}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}!entry@{entry}}
+\index{entry@{entry}!EPAX::Elf::ElfSymbol@{\-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol}}
+\subsubsection[{entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rawbyte\-\_\-t}$\ast$ {\bf \-E\-P\-A\-X\-::\-Elf\-::\-Elf\-Symbol\-::entry}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_elf_symbol_a3c57705558738ca7aa9803260ff9da9e}
+
+
+\-Definition at line 172 of file \-Elf\-Binary.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_elf_binary_8hpp}{\-Elf\-Binary.\-hpp}\item 
+\hyperlink{_elf_binary_8cpp}{\-Elf\-Binary.\-cpp}\end{DoxyCompactItemize}

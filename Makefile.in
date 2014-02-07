@@ -1,0 +1,24 @@
+.PHONY: all lib bin clean local-install depend interface
+
+all: lib bin interface local-install
+
+lib: interface
+	$(MAKE) -C src/ lib
+
+bin: lib
+	$(MAKE) -C src/ bin
+
+local-install: bin lib
+	$(MAKE) -C src/ local-install
+
+interface:
+	$(MAKE) -C src/ interface
+
+docs:
+	$(MAKE) -C docs/
+
+depend: interface
+	$(MAKE) -C src/ depend
+
+clean:
+	$(MAKE) -C src/ clean

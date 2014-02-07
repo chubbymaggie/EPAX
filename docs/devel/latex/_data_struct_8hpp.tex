@@ -1,0 +1,84 @@
+\hypertarget{_data_struct_8hpp}{\section{\-Data\-Struct.\-hpp \-File \-Reference}
+\label{_data_struct_8hpp}\index{\-Data\-Struct.\-hpp@{\-Data\-Struct.\-hpp}}
+}
+{\ttfamily \#include \char`\"{}\-E\-P\-A\-X\-Common\-Internal.\-hpp\char`\"{}}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_e_p_a_x_1_1dyn__bitset}{\-E\-P\-A\-X\-::dyn\-\_\-bitset}
+\end{DoxyCompactItemize}
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_data_struct_8hpp_a8efd6223d9570fc81d29fcada04d8caf}{\-\_\-\-\_\-get\-\_\-index}(\-\_\-\-\_\-idx)~(\-\_\-\-\_\-idx $>$$>$ div)
+\item 
+\#define \hyperlink{_data_struct_8hpp_ae2946662f5d37ff653bfe910d79124b2}{\-\_\-\-\_\-has\-\_\-bit}(\-\_\-\-\_\-idx)~((\-\_\-elements\mbox{[}\hyperlink{_data_struct_8hpp_a8efd6223d9570fc81d29fcada04d8caf}{\-\_\-\-\_\-get\-\_\-index}(\-\_\-\-\_\-idx)\mbox{]} $>$$>$ (\-\_\-\-\_\-idx \& mask)) \& 1)
+\item 
+\#define \hyperlink{_data_struct_8hpp_ac8e899ea645407531fa292f302adb43d}{\-\_\-\-\_\-set\-\_\-bit}(\-\_\-\-\_\-idx)~\-\_\-elements\mbox{[}\hyperlink{_data_struct_8hpp_a8efd6223d9570fc81d29fcada04d8caf}{\-\_\-\-\_\-get\-\_\-index}(\-\_\-\-\_\-idx)\mbox{]} $|$= (1 $<$$<$ (\-\_\-\-\_\-idx \& mask))
+\item 
+\#define \hyperlink{_data_struct_8hpp_abeeea84821965f78e7d640883ce4e004}{\-\_\-\-\_\-internal\-\_\-size}~(\hyperlink{_data_struct_8hpp_a8efd6223d9570fc81d29fcada04d8caf}{\-\_\-\-\_\-get\-\_\-index}(\-\_\-size) + 1)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_data_struct_8hpp_source}{\-Data\-Struct.\-hpp}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_data_struct_8hpp_a8efd6223d9570fc81d29fcada04d8caf}{\index{\-Data\-Struct.\-hpp@{\-Data\-Struct.\-hpp}!\-\_\-\-\_\-get\-\_\-index@{\-\_\-\-\_\-get\-\_\-index}}
+\index{\-\_\-\-\_\-get\-\_\-index@{\-\_\-\-\_\-get\-\_\-index}!DataStruct.hpp@{\-Data\-Struct.\-hpp}}
+\subsubsection[{\-\_\-\-\_\-get\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-\_\-\-\_\-get\-\_\-index}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-idx}
+\end{DoxyParamCaption}
+)~(\-\_\-\-\_\-idx $>$$>$ div)}}\label{_data_struct_8hpp_a8efd6223d9570fc81d29fcada04d8caf}
+
+
+\-Definition at line 43 of file \-Data\-Struct.\-hpp.
+
+\hypertarget{_data_struct_8hpp_ae2946662f5d37ff653bfe910d79124b2}{\index{\-Data\-Struct.\-hpp@{\-Data\-Struct.\-hpp}!\-\_\-\-\_\-has\-\_\-bit@{\-\_\-\-\_\-has\-\_\-bit}}
+\index{\-\_\-\-\_\-has\-\_\-bit@{\-\_\-\-\_\-has\-\_\-bit}!DataStruct.hpp@{\-Data\-Struct.\-hpp}}
+\subsubsection[{\-\_\-\-\_\-has\-\_\-bit}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-\_\-\-\_\-has\-\_\-bit}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-idx}
+\end{DoxyParamCaption}
+)~((\-\_\-elements\mbox{[}{\bf \-\_\-\-\_\-get\-\_\-index}(\-\_\-\-\_\-idx)\mbox{]} $>$$>$ (\-\_\-\-\_\-idx \& mask)) \& 1)}}\label{_data_struct_8hpp_ae2946662f5d37ff653bfe910d79124b2}
+
+
+\-Definition at line 44 of file \-Data\-Struct.\-hpp.
+
+\hypertarget{_data_struct_8hpp_abeeea84821965f78e7d640883ce4e004}{\index{\-Data\-Struct.\-hpp@{\-Data\-Struct.\-hpp}!\-\_\-\-\_\-internal\-\_\-size@{\-\_\-\-\_\-internal\-\_\-size}}
+\index{\-\_\-\-\_\-internal\-\_\-size@{\-\_\-\-\_\-internal\-\_\-size}!DataStruct.hpp@{\-Data\-Struct.\-hpp}}
+\subsubsection[{\-\_\-\-\_\-internal\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-\_\-\-\_\-internal\-\_\-size}~({\bf \-\_\-\-\_\-get\-\_\-index}(\-\_\-size) + 1)}}\label{_data_struct_8hpp_abeeea84821965f78e7d640883ce4e004}
+
+
+\-Definition at line 46 of file \-Data\-Struct.\-hpp.
+
+\hypertarget{_data_struct_8hpp_ac8e899ea645407531fa292f302adb43d}{\index{\-Data\-Struct.\-hpp@{\-Data\-Struct.\-hpp}!\-\_\-\-\_\-set\-\_\-bit@{\-\_\-\-\_\-set\-\_\-bit}}
+\index{\-\_\-\-\_\-set\-\_\-bit@{\-\_\-\-\_\-set\-\_\-bit}!DataStruct.hpp@{\-Data\-Struct.\-hpp}}
+\subsubsection[{\-\_\-\-\_\-set\-\_\-bit}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-\_\-\-\_\-set\-\_\-bit}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-idx}
+\end{DoxyParamCaption}
+)~\-\_\-elements\mbox{[}{\bf \-\_\-\-\_\-get\-\_\-index}(\-\_\-\-\_\-idx)\mbox{]} $|$= (1 $<$$<$ (\-\_\-\-\_\-idx \& mask))}}\label{_data_struct_8hpp_ac8e899ea645407531fa292f302adb43d}
+
+
+\-Definition at line 45 of file \-Data\-Struct.\-hpp.
+

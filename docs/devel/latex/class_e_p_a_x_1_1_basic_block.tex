@@ -1,0 +1,323 @@
+\hypertarget{class_e_p_a_x_1_1_basic_block}{\section{\-E\-P\-A\-X\-:\-:\-Basic\-Block \-Class \-Reference}
+\label{class_e_p_a_x_1_1_basic_block}\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+}
+
+
+{\ttfamily \#include $<$\-Basic\-Block.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Basic\-Block\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_p_a_x_1_1_basic_block}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block_adf527ffb872f3969f891d6506973fac7}{\-Basic\-Block} (\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$f, uint64\-\_\-t a, uint32\-\_\-t i)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_basic_block_ad142c305b9158af0a3eb0d7dceb95b3f}{$\sim$\-Basic\-Block} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_basic_block_a72cd48f6ceb9f2d0085ff56b6936f21d}{count\-Instructions} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_basic_block_a113ee43c4b6d28faabc9a07cd6ffdbef}{add\-Instruction} (\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$insn)
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_af786852087748a3b29b562936da3e8ba}{get\-Instruction} (uint32\-\_\-t idx)
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_ac27e14d15376e0741deb54ad108f8c32}{head} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a3e4a6d47bdb5fbb33d6bfbca91a1166e}{tail} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a840f0766e1a9f722c5fa45b9f80ea851}{find\-Instruction} (uint64\-\_\-t addr)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_basic_block_a818a061ab831a990433768592a0d0e34}{add\-Source} (\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$bb)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_basic_block_ac8a478ce07ea5579259e8e8f3c96224c}{add\-Target} (\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$bb)
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_basic_block_a315a66b3a674593333254f214894be5d}{count\-Sources} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_basic_block_a2d9e1867b5d1dbbd0ab8d6feb3b0f236}{count\-Targets} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a9b7d0cd1393c05a1953a220656397e32}{get\-Source} (uint32\-\_\-t idx)
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a512b57294aa6304a46dbe6078a3136c6}{get\-Target} (uint32\-\_\-t idx)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_basic_block_a88793cef3edbefc895901a79a13960af}{is\-Reachable} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_basic_block_a66989faa2f50f05ef54f590804da67d6}{set\-Unreachable} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a4093d6913b2268f3598001afdcea64be}{get\-Function} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_loop}{\-Loop} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a52b1b3f29e3e9a3b2e5bf5fc0b9057b4}{get\-Loop} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_basic_block_a068cccb297ebae18119a804a2474e45a}{set\-Loop} (\hyperlink{class_e_p_a_x_1_1_loop}{\-Loop} $\ast$l)
+\item 
+\hyperlink{class_e_p_a_x_1_1_control_flow}{\-Control\-Flow} $\ast$ \hyperlink{class_e_p_a_x_1_1_basic_block_a4ec01047f0b018b4f0e13815c1fd7d38}{get\-Control\-Flow} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_basic_block_a3629d78dc7e8602a3368662f7c1aff8b}{is\-Fall\-Through} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_basic_block_a9c896274d03999978e255ab2332c649c}{print} (std\-::ostream \&stream=std\-::cout)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 38 of file \-Basic\-Block.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_basic_block_adf527ffb872f3969f891d6506973fac7}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!\-Basic\-Block@{\-Basic\-Block}}
+\index{\-Basic\-Block@{\-Basic\-Block}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Function} $\ast$}]{f, }
+\item[{uint64\-\_\-t}]{a, }
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_adf527ffb872f3969f891d6506973fac7}
+
+
+\-Definition at line 33 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_ad142c305b9158af0a3eb0d7dceb95b3f}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!$\sim$\-Basic\-Block@{$\sim$\-Basic\-Block}}
+\index{$\sim$\-Basic\-Block@{$\sim$\-Basic\-Block}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{$\sim$\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::$\sim$\-Basic\-Block} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_ad142c305b9158af0a3eb0d7dceb95b3f}
+
+
+\-Definition at line 43 of file \-Basic\-Block.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_basic_block_a113ee43c4b6d28faabc9a07cd6ffdbef}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!add\-Instruction@{add\-Instruction}}
+\index{add\-Instruction@{add\-Instruction}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{add\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::add\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Instruction} $\ast$}]{insn}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a113ee43c4b6d28faabc9a07cd6ffdbef}
+
+
+\-Definition at line 138 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a818a061ab831a990433768592a0d0e34}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!add\-Source@{add\-Source}}
+\index{add\-Source@{add\-Source}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{add\-Source}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::add\-Source} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Basic\-Block} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a818a061ab831a990433768592a0d0e34}
+
+
+\-Definition at line 50 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_ac8a478ce07ea5579259e8e8f3c96224c}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!add\-Target@{add\-Target}}
+\index{add\-Target@{add\-Target}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{add\-Target}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::add\-Target} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Basic\-Block} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_ac8a478ce07ea5579259e8e8f3c96224c}
+
+
+\-Definition at line 54 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a72cd48f6ceb9f2d0085ff56b6936f21d}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!count\-Instructions@{count\-Instructions}}
+\index{count\-Instructions@{count\-Instructions}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{count\-Instructions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::count\-Instructions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a72cd48f6ceb9f2d0085ff56b6936f21d}
+
+
+\-Definition at line 134 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a315a66b3a674593333254f214894be5d}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!count\-Sources@{count\-Sources}}
+\index{count\-Sources@{count\-Sources}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{count\-Sources}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::count\-Sources} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a315a66b3a674593333254f214894be5d}
+
+
+\-Definition at line 64 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a2d9e1867b5d1dbbd0ab8d6feb3b0f236}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!count\-Targets@{count\-Targets}}
+\index{count\-Targets@{count\-Targets}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{count\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::count\-Targets} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a2d9e1867b5d1dbbd0ab8d6feb3b0f236}
+
+
+\-Definition at line 65 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a840f0766e1a9f722c5fa45b9f80ea851}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!find\-Instruction@{find\-Instruction}}
+\index{find\-Instruction@{find\-Instruction}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{find\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::find\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a840f0766e1a9f722c5fa45b9f80ea851}
+
+
+\-Definition at line 86 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a4ec01047f0b018b4f0e13815c1fd7d38}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!get\-Control\-Flow@{get\-Control\-Flow}}
+\index{get\-Control\-Flow@{get\-Control\-Flow}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{get\-Control\-Flow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Control\-Flow} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::get\-Control\-Flow} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a4ec01047f0b018b4f0e13815c1fd7d38}
+
+
+\-Definition at line 150 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a4093d6913b2268f3598001afdcea64be}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!get\-Function@{get\-Function}}
+\index{get\-Function@{get\-Function}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{get\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Function}$\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::get\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a4093d6913b2268f3598001afdcea64be}
+
+
+\-Definition at line 72 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_af786852087748a3b29b562936da3e8ba}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!get\-Instruction@{get\-Instruction}}
+\index{get\-Instruction@{get\-Instruction}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{get\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::get\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_af786852087748a3b29b562936da3e8ba}
+
+
+\-Definition at line 143 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a52b1b3f29e3e9a3b2e5bf5fc0b9057b4}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!get\-Loop@{get\-Loop}}
+\index{get\-Loop@{get\-Loop}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{get\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Loop}$\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::get\-Loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a52b1b3f29e3e9a3b2e5bf5fc0b9057b4}
+
+
+\-Definition at line 74 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a9b7d0cd1393c05a1953a220656397e32}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!get\-Source@{get\-Source}}
+\index{get\-Source@{get\-Source}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{get\-Source}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::get\-Source} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a9b7d0cd1393c05a1953a220656397e32}
+
+
+\-Definition at line 58 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a512b57294aa6304a46dbe6078a3136c6}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!get\-Target@{get\-Target}}
+\index{get\-Target@{get\-Target}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{get\-Target}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::get\-Target} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a512b57294aa6304a46dbe6078a3136c6}
+
+
+\-Definition at line 65 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_ac27e14d15376e0741deb54ad108f8c32}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!head@{head}}
+\index{head@{head}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::head} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_ac27e14d15376e0741deb54ad108f8c32}
+
+
+\-Definition at line 72 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a3629d78dc7e8602a3368662f7c1aff8b}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!is\-Fall\-Through@{is\-Fall\-Through}}
+\index{is\-Fall\-Through@{is\-Fall\-Through}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{is\-Fall\-Through}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::is\-Fall\-Through} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a3629d78dc7e8602a3368662f7c1aff8b}
+
+
+\-Definition at line 157 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a88793cef3edbefc895901a79a13960af}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!is\-Reachable@{is\-Reachable}}
+\index{is\-Reachable@{is\-Reachable}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{is\-Reachable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::is\-Reachable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a88793cef3edbefc895901a79a13960af}
+
+
+\-Definition at line 69 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a9c896274d03999978e255ab2332c649c}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!print@{print}}
+\index{print@{print}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::print} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a9c896274d03999978e255ab2332c649c}
+
+
+\-Definition at line 100 of file \-Basic\-Block.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a068cccb297ebae18119a804a2474e45a}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!set\-Loop@{set\-Loop}}
+\index{set\-Loop@{set\-Loop}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{set\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::set\-Loop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Loop} $\ast$}]{l}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a068cccb297ebae18119a804a2474e45a}
+
+
+\-Definition at line 75 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a66989faa2f50f05ef54f590804da67d6}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!set\-Unreachable@{set\-Unreachable}}
+\index{set\-Unreachable@{set\-Unreachable}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{set\-Unreachable}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::set\-Unreachable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_basic_block_a66989faa2f50f05ef54f590804da67d6}
+
+
+\-Definition at line 70 of file \-Basic\-Block.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_basic_block_a3e4a6d47bdb5fbb33d6bfbca91a1166e}{\index{\-E\-P\-A\-X\-::\-Basic\-Block@{\-E\-P\-A\-X\-::\-Basic\-Block}!tail@{tail}}
+\index{tail@{tail}!EPAX::BasicBlock@{\-E\-P\-A\-X\-::\-Basic\-Block}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Basic\-Block\-::tail} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_basic_block_a3e4a6d47bdb5fbb33d6bfbca91a1166e}
+
+
+\-Definition at line 79 of file \-Basic\-Block.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_basic_block_8hpp}{\-Basic\-Block.\-hpp}\item 
+\hyperlink{_basic_block_8cpp}{\-Basic\-Block.\-cpp}\end{DoxyCompactItemize}

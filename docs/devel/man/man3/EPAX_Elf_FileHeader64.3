@@ -1,0 +1,135 @@
+.TH "EPAX::Elf::FileHeader64" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Elf::FileHeader64 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ElfBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::Elf::FileHeader\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileHeader64\fP (\fBBaseBinary\fP *b, uint64_t o)"
+.br
+.ti -1c
+.RI "virtual \fB~FileHeader64\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetStartAddr\fP ()"
+.br
+.ti -1c
+.RI "bool \fBverify\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisARM\fP ()"
+.br
+.ti -1c
+.RI "void \fBdescribe\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSectionCount\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetSecTableOffset\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetShdrSize\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetShdrStringIndex\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSegmentCount\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetSegTableOffset\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetPhdrSize\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetFileType\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 149 of file ElfBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Elf::FileHeader64::FileHeader64\fP (\fBBaseBinary\fP *b, uint64_to)"
+.PP
+Definition at line 404 of file ElfBinary\&.cpp\&.
+.SS "virtual \fBEPAX::Elf::FileHeader64::~FileHeader64\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 152 of file ElfBinary\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::Elf::FileHeader64::describe\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 490 of file ElfBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Elf::FileHeader64::getFileType\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 393 of file ElfBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Elf::FileHeader64::getPhdrSize\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 361 of file ElfBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::Elf::FileHeader64::getSecTableOffset\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 337 of file ElfBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Elf::FileHeader64::getSectionCount\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 377 of file ElfBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Elf::FileHeader64::getSegmentCount\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 385 of file ElfBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::Elf::FileHeader64::getSegTableOffset\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 353 of file ElfBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Elf::FileHeader64::getShdrSize\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 345 of file ElfBinary\&.cpp\&.
+.SS "uint32_t \fBEPAX::Elf::FileHeader64::getShdrStringIndex\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 369 of file ElfBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::Elf::FileHeader64::getStartAddr\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 415 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::FileHeader64::isARM\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 453 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::FileHeader64::verify\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Elf::FileHeader\fP\&.
+.PP
+Definition at line 433 of file ElfBinary\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

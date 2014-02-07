@@ -1,0 +1,6 @@
+#!/usr/bin/env csh
+
+setenv EPAX_ROOT @abs_top_builddir@
+echo "***** initializing environment using EPAX_ROOT=$EPAX_ROOT"
+setenv LD_LIBRARY_PATH ${EPAX_ROOT}/lib:${LD_LIBRARY_PATH}
+setenv PATH ${EPAX_ROOT}/bin:${PATH}

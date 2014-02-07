@@ -1,0 +1,123 @@
+.TH "EPAX::Elf::ElfSymbol" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Elf::ElfSymbol \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ElfBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::Symbol\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::ElfSymbol32\fP, and \fBEPAX::Elf::ElfSymbol64\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElfSymbol\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s, uint32_t i)"
+.br
+.ti -1c
+.RI "virtual \fB~ElfSymbol\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetNameIndex\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetValue\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetSection\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetSize\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetType\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetBinding\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetVisibility\fP ()=0"
+.br
+.ti -1c
+.RI "bool \fBisFunction\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisThumbFunction\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetFunctionAddress\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBrawbyte_t\fP * \fBentry\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 170 of file ElfBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Elf::ElfSymbol::ElfSymbol\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts, uint32_ti)"
+.PP
+Definition at line 496 of file ElfBinary\&.cpp\&.
+.SS "\fBEPAX::Elf::ElfSymbol::~ElfSymbol\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 502 of file ElfBinary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual uint32_t \fBEPAX::Elf::ElfSymbol::getBinding\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "uint64_t \fBEPAX::Elf::ElfSymbol::getFunctionAddress\fP ()"
+.PP
+Definition at line 620 of file ElfBinary\&.cpp\&.
+.SS "virtual uint64_t \fBEPAX::Elf::ElfSymbol::getNameIndex\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::ElfSymbol::getSection\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::ElfSymbol::getSize\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::ElfSymbol::getType\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::ElfSymbol::getValue\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::ElfSymbol::getVisibility\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol64\fP, and \fBEPAX::Elf::ElfSymbol32\fP\&.
+.SS "bool \fBEPAX::Elf::ElfSymbol::isFunction\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Symbol\fP\&.
+.PP
+Definition at line 612 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::ElfSymbol::isThumbFunction\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::Symbol\fP\&.
+.PP
+Definition at line 616 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfSymbol::print\fP (std::ostream &stream = \fCstd::cout\fP)"
+.PP
+Definition at line 526 of file ElfBinary\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBrawbyte_t\fP* \fBEPAX::Elf::ElfSymbol::entry\fP\fC [protected]\fP"
+.PP
+Definition at line 172 of file ElfBinary\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

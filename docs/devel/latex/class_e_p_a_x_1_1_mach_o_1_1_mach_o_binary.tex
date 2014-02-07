@@ -1,0 +1,355 @@
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary}{\section{\-E\-P\-A\-X\-:\-:\-Mach\-O\-:\-:\-Mach\-O\-Binary \-Class \-Reference}
+\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary}\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+}
+
+
+{\ttfamily \#include $<$\-Mach\-O\-Binary.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Mach\-O\-:\-:\-Mach\-O\-Binary\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a753d91d032788ea99e964c5f7b59a003}{\-Mach\-O\-Binary} (std\-::string n)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a5a255df5d7799f13411d3ecb2dda045d}{$\sim$\-Mach\-O\-Binary} ()
+\item 
+virtual \hyperlink{namespace_e_p_a_x_a4be639c006ef14def4708b37ee6dd67d}{\-Binary\-Format} \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a435106c1f40d1ec16ac539fbdecd88bd}{get\-Format} ()=0
+\item 
+uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a426e6fdd744908571c46e10608211df4}{get\-Start\-Addr} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a3a4b9b3138d22d2455fbddb4c694f532}{emit} (std\-::string n)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_aa0eb9a16309170238ca0d3cc027a116b}{verify} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a7d857ef9a99dc9d553e7e764234db957}{is\-A\-R\-M} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a7142994ba41ef1a5fad2d34e75278764}{describe} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a6c3c547d72fe13a51b702fcfc6c1c271}{is32\-Bit} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a892a753783fa1feaa3f98fcad476da8a}{is64\-Bit} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a6031c2f4420ec57b008d33a27f490a51}{is\-Executable} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a06e7ed071e394bd70b2a371b1360f591}{find\-Functions} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a4c92ec8fe5a4c63d57b101f1e35f9291}{find\-Symbols} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a91a0d99f8a2bf0ff9c6a0870eaf232cb}{find\-Sections} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a37bd8cd22a68dc0fe4836c5781568725}{inside\-Text\-Range} (uint64\-\_\-t a)
+\item 
+uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a5b58a3105ffe8aff09dc2c20421e8744}{function\-End\-Address} (\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$f, \hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$nextf)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a654a69dcd9a459f5e78b740047b94fa0}{print\-Sections} (std\-::ostream \&stream=std\-::cout)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_ad6b3af54bfd54fa0f37f22efc94fc985}{print\-Functions} (std\-::ostream \&stream=std\-::cout)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_header}{\-Mach\-Header} $\ast$ \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a3ce1fa66447d472ddf807a42777cd099}{machheader}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 37 of file \-Mach\-O\-Binary.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a753d91d032788ea99e964c5f7b59a003}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!\-Mach\-O\-Binary@{\-Mach\-O\-Binary}}
+\index{\-Mach\-O\-Binary@{\-Mach\-O\-Binary}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{\-Mach\-O\-Binary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::\-Mach\-O\-Binary} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a753d91d032788ea99e964c5f7b59a003}
+
+
+\-Definition at line 40 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a5a255df5d7799f13411d3ecb2dda045d}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!$\sim$\-Mach\-O\-Binary@{$\sim$\-Mach\-O\-Binary}}
+\index{$\sim$\-Mach\-O\-Binary@{$\sim$\-Mach\-O\-Binary}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{$\sim$\-Mach\-O\-Binary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::$\sim$\-Mach\-O\-Binary} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a5a255df5d7799f13411d3ecb2dda045d}
+
+
+\-Definition at line 45 of file \-Mach\-O\-Binary.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a7142994ba41ef1a5fad2d34e75278764}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!describe@{describe}}
+\index{describe@{describe}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{describe}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::describe} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a7142994ba41ef1a5fad2d34e75278764}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a501175cac7fb1650bf378d6b4729c1ec}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 95 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a3a4b9b3138d22d2455fbddb4c694f532}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!emit@{emit}}
+\index{emit@{emit}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{emit}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::emit} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a3a4b9b3138d22d2455fbddb4c694f532}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a8883d3b0580cae0f5a1960c6fbfd6a1f}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 83 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a06e7ed071e394bd70b2a371b1360f591}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!find\-Functions@{find\-Functions}}
+\index{find\-Functions@{find\-Functions}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{find\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::find\-Functions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a06e7ed071e394bd70b2a371b1360f591}
+\-Finds and internally stores all functions in the image
+
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_abcd76218158ab20a2f81d68a537b21cb}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 99 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a91a0d99f8a2bf0ff9c6a0870eaf232cb}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!find\-Sections@{find\-Sections}}
+\index{find\-Sections@{find\-Sections}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{find\-Sections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::find\-Sections} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a91a0d99f8a2bf0ff9c6a0870eaf232cb}
+
+
+\-Definition at line 107 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a4c92ec8fe5a4c63d57b101f1e35f9291}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!find\-Symbols@{find\-Symbols}}
+\index{find\-Symbols@{find\-Symbols}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{find\-Symbols}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::find\-Symbols} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a4c92ec8fe5a4c63d57b101f1e35f9291}
+\-Finds and internally stores all symbols in the image
+
+\begin{DoxyReturn}{\-Returns}
+none 
+\end{DoxyReturn}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_adc22abd64f6a873fbce30c79508322fe}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 103 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a5b58a3105ffe8aff09dc2c20421e8744}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!function\-End\-Address@{function\-End\-Address}}
+\index{function\-End\-Address@{function\-End\-Address}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{function\-End\-Address}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::function\-End\-Address} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Function} $\ast$}]{f, }
+\item[{{\bf \-Function} $\ast$}]{nextf}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a5b58a3105ffe8aff09dc2c20421e8744}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a3ebaa616622aaca98685ece5d59c05d8}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 51 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a435106c1f40d1ec16ac539fbdecd88bd}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!get\-Format@{get\-Format}}
+\index{get\-Format@{get\-Format}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{get\-Format}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-Binary\-Format} {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::get\-Format} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a435106c1f40d1ec16ac539fbdecd88bd}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a456741cd16605e5035ab89ab813f4373}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary64_ab2aa03d22ba0339c415a9dc9e6a0912b}{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary64}, and \hyperlink{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary32_a37eab3a09ee0f670f2633a56c890100e}{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary32}.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a426e6fdd744908571c46e10608211df4}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!get\-Start\-Addr@{get\-Start\-Addr}}
+\index{get\-Start\-Addr@{get\-Start\-Addr}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{get\-Start\-Addr}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::get\-Start\-Addr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a426e6fdd744908571c46e10608211df4}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_ad23fe3f3a6f5b387df2f4eb7e4a4f23d}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 67 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a37bd8cd22a68dc0fe4836c5781568725}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!inside\-Text\-Range@{inside\-Text\-Range}}
+\index{inside\-Text\-Range@{inside\-Text\-Range}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{inside\-Text\-Range}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::inside\-Text\-Range} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a37bd8cd22a68dc0fe4836c5781568725}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_aa0f29bfa881c2199911465c64e421be6}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 55 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a6c3c547d72fe13a51b702fcfc6c1c271}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!is32\-Bit@{is32\-Bit}}
+\index{is32\-Bit@{is32\-Bit}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{is32\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::is32\-Bit} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a6c3c547d72fe13a51b702fcfc6c1c271}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_ac71bc6c28fe40456ddf626a8bbca257f}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 59 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a892a753783fa1feaa3f98fcad476da8a}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!is64\-Bit@{is64\-Bit}}
+\index{is64\-Bit@{is64\-Bit}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{is64\-Bit}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::is64\-Bit} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a892a753783fa1feaa3f98fcad476da8a}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a303cdafe0782ed63d8115bc225f169ee}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 63 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a7d857ef9a99dc9d553e7e764234db957}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!is\-A\-R\-M@{is\-A\-R\-M}}
+\index{is\-A\-R\-M@{is\-A\-R\-M}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{is\-A\-R\-M}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::is\-A\-R\-M} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a7d857ef9a99dc9d553e7e764234db957}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_ac544fc0d096ca8a555b30fe7126ae846}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 91 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a6031c2f4420ec57b008d33a27f490a51}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!is\-Executable@{is\-Executable}}
+\index{is\-Executable@{is\-Executable}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{is\-Executable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::is\-Executable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a6031c2f4420ec57b008d33a27f490a51}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_aeeb90ae234b0f661ef387ee31d3c4762}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 190 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_ad6b3af54bfd54fa0f37f22efc94fc985}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!print\-Functions@{print\-Functions}}
+\index{print\-Functions@{print\-Functions}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{print\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::print\-Functions} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_ad6b3af54bfd54fa0f37f22efc94fc985}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a879d43acc68de4f468c26d5cfe4ab59d}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 115 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a654a69dcd9a459f5e78b740047b94fa0}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!print\-Sections@{print\-Sections}}
+\index{print\-Sections@{print\-Sections}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{print\-Sections}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::print\-Sections} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a654a69dcd9a459f5e78b740047b94fa0}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a9ef8978bbd895a198b68cc04974c57cc}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 111 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_aa0eb9a16309170238ca0d3cc027a116b}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!verify@{verify}}
+\index{verify@{verify}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{verify}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::verify} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_aa0eb9a16309170238ca0d3cc027a116b}
+
+
+\-Implements \hyperlink{class_e_p_a_x_1_1_base_binary_a3e00d0fecc2defaab16a3ee4b72a32ca}{\-E\-P\-A\-X\-::\-Base\-Binary}.
+
+
+
+\-Definition at line 87 of file \-Mach\-O\-Binary.\-cpp.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a3ce1fa66447d472ddf807a42777cd099}{\index{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}!machheader@{machheader}}
+\index{machheader@{machheader}!EPAX::MachO::MachOBinary@{\-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary}}
+\subsubsection[{machheader}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Mach\-Header}$\ast$ {\bf \-E\-P\-A\-X\-::\-Mach\-O\-::\-Mach\-O\-Binary\-::machheader}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_e_p_a_x_1_1_mach_o_1_1_mach_o_binary_a3ce1fa66447d472ddf807a42777cd099}
+
+
+\-Definition at line 39 of file \-Mach\-O\-Binary.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_mach_o_binary_8hpp}{\-Mach\-O\-Binary.\-hpp}\item 
+\hyperlink{_mach_o_binary_8cpp}{\-Mach\-O\-Binary.\-cpp}\end{DoxyCompactItemize}

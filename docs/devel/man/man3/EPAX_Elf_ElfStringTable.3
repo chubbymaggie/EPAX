@@ -1,0 +1,55 @@
+.TH "EPAX::Elf::ElfStringTable" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Elf::ElfStringTable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ElfBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::StringTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBElfStringTable\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t fs, uint64_t ma, uint64_t ms, uint32_t i, std::string n)"
+.br
+.ti -1c
+.RI "\fB~ElfStringTable\fP ()"
+.br
+.ti -1c
+.RI "char * \fBgetStringAt\fP (uint32_t i)"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 223 of file ElfBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Elf::ElfStringTable::ElfStringTable\fP (\fBBaseBinary\fP *b, uint64_to, uint64_tfs, uint64_tma, uint64_tms, uint32_ti, std::stringn)"
+.PP
+Definition at line 629 of file ElfBinary\&.cpp\&.
+.SS "\fBEPAX::Elf::ElfStringTable::~ElfStringTable\fP ()"
+.PP
+Definition at line 638 of file ElfBinary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "char * \fBEPAX::Elf::ElfStringTable::getStringAt\fP (uint32_ti)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::StringTable\fP\&.
+.PP
+Definition at line 644 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::ElfStringTable::print\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Reimplemented from \fBEPAX::Section\fP\&.
+.PP
+Definition at line 508 of file ElfBinary\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

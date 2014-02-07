@@ -1,0 +1,261 @@
+.TH "EPAX::BaseBinary" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::BaseBinary \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BaseClass\&.hpp>\fP
+.PP
+Inherits \fBEPAX::NameBase\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseBinary\fP (std::string n)"
+.br
+.ti -1c
+.RI "virtual \fB~BaseBinary\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBBinaryFormat\fP \fBgetFormat\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetStartAddr\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBemit\fP (std::string n)=0"
+.br
+.ti -1c
+.RI "virtual bool \fBverify\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisARM\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBdescribe\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBis32Bit\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBis64Bit\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisExecutable\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBfunctionEndAddress\fP (\fBFunction\fP *f, \fBFunction\fP *nextf)=0"
+.br
+.ti -1c
+.RI "uint32_t \fBcountFunctions\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetFirstFunction\fP ()"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBgetNextFunction\fP (\fBFunction\fP *f)"
+.br
+.ti -1c
+.RI "bool \fBisLastFunction\fP (\fBFunction\fP *f)"
+.br
+.ti -1c
+.RI "\fBFunction\fP * \fBfindFunction\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBInputFile\fP * \fBgetInputFile\fP ()"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetFileSize\fP ()"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetID\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBinsideTextRange\fP (uint64_t a)=0"
+.br
+.ti -1c
+.RI "virtual void \fBprintSections\fP (std::ostream &stream=std::cout)=0"
+.br
+.ti -1c
+.RI "virtual void \fBprintFunctions\fP (std::ostream &stream=std::cout)=0"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static const char * \fBgetFormatName\fP (\fBBinaryFormat\fP f)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBfindFunctions\fP ()=0"
+.br
+.ti -1c
+.RI "void \fBlazyFunctions\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBfindSymbols\fP ()=0"
+.br
+.ti -1c
+.RI "void \fBlazySymbols\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBInputFile\fP * \fBinputfile\fP"
+.br
+.ti -1c
+.RI "bool \fBfoundfunctions\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBFunction\fP * > * \fBfunctions\fP"
+.br
+.ti -1c
+.RI "bool \fBfoundsymbols\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBSymbolTable\fP * > * \fBsymtabs\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBStringTable\fP * > * \fBstrtabs\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 132 of file BaseClass\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::BaseBinary::BaseBinary\fP (std::stringn)"
+.PP
+Definition at line 58 of file BaseClass\&.cpp\&.
+.SS "\fBEPAX::BaseBinary::~BaseBinary\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 67 of file BaseClass\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t \fBEPAX::BaseBinary::countFunctions\fP ()"
+.PP
+Definition at line 125 of file BaseClass\&.cpp\&.
+.SS "virtual void \fBEPAX::BaseBinary::describe\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual void \fBEPAX::BaseBinary::emit\fP (std::stringn)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "\fBFunction\fP * \fBEPAX::BaseBinary::findFunction\fP (uint64_taddr)"
+.PP
+Definition at line 153 of file BaseClass\&.cpp\&.
+.SS "virtual void \fBEPAX::BaseBinary::findFunctions\fP ()\fC [protected, pure virtual]\fP"Finds and internally stores all functions in the image
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual void \fBEPAX::BaseBinary::findSymbols\fP ()\fC [protected, pure virtual]\fP"Finds and internally stores all symbols in the image
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual uint64_t \fBEPAX::BaseBinary::functionEndAddress\fP (\fBFunction\fP *f, \fBFunction\fP *nextf)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "uint64_t \fBEPAX::BaseBinary::getFileSize\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 149 of file BaseClass\&.cpp\&.
+.SS "\fBFunction\fP * \fBEPAX::BaseBinary::getFirstFunction\fP ()"
+.PP
+Definition at line 115 of file BaseClass\&.cpp\&.
+.SS "virtual \fBBinaryFormat\fP \fBEPAX::BaseBinary::getFormat\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary64\fP, \fBEPAX::Elf::ElfBinary32\fP, \fBEPAX::MachO::MachOBinary64\fP, \fBEPAX::MachO::MachOBinary32\fP, \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "const char * \fBEPAX::BaseBinary::getFormatName\fP (\fBBinaryFormat\fPf)\fC [static]\fP"
+.PP
+Definition at line 98 of file BaseClass\&.cpp\&.
+.SS "virtual uint32_t \fBEPAX::BaseBinary::getID\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 190 of file BaseClass\&.hpp\&.
+.SS "\fBInputFile\fP* \fBEPAX::BaseBinary::getInputFile\fP ()\fC [inline]\fP"
+.PP
+Definition at line 186 of file BaseClass\&.hpp\&.
+.SS "\fBFunction\fP * \fBEPAX::BaseBinary::getNextFunction\fP (\fBFunction\fP *f)"
+.PP
+Definition at line 130 of file BaseClass\&.cpp\&.
+.SS "virtual uint64_t \fBEPAX::BaseBinary::getStartAddr\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual bool \fBEPAX::BaseBinary::insideTextRange\fP (uint64_ta)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual bool \fBEPAX::BaseBinary::is32Bit\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual bool \fBEPAX::BaseBinary::is64Bit\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual bool \fBEPAX::BaseBinary::isARM\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual bool \fBEPAX::BaseBinary::isExecutable\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "bool \fBEPAX::BaseBinary::isLastFunction\fP (\fBFunction\fP *f)"
+.PP
+Definition at line 138 of file BaseClass\&.cpp\&.
+.SS "void \fBEPAX::BaseBinary::lazyFunctions\fP ()\fC [protected]\fP"
+.PP
+Definition at line 103 of file BaseClass\&.cpp\&.
+.SS "void \fBEPAX::BaseBinary::lazySymbols\fP ()\fC [protected]\fP"
+.PP
+Definition at line 109 of file BaseClass\&.cpp\&.
+.SS "virtual void \fBEPAX::BaseBinary::printFunctions\fP (std::ostream &stream = \fCstd::cout\fP)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual void \fBEPAX::BaseBinary::printSections\fP (std::ostream &stream = \fCstd::cout\fP)\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SS "virtual bool \fBEPAX::BaseBinary::verify\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfBinary\fP, and \fBEPAX::MachO::MachOBinary\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool \fBEPAX::BaseBinary::foundfunctions\fP\fC [protected]\fP"
+.PP
+Definition at line 147 of file BaseClass\&.hpp\&.
+.SS "bool \fBEPAX::BaseBinary::foundsymbols\fP\fC [protected]\fP"
+.PP
+Definition at line 157 of file BaseClass\&.hpp\&.
+.SS "std::vector<\fBFunction\fP*>* \fBEPAX::BaseBinary::functions\fP\fC [protected]\fP"
+.PP
+Definition at line 148 of file BaseClass\&.hpp\&.
+.SS "\fBInputFile\fP* \fBEPAX::BaseBinary::inputfile\fP\fC [protected]\fP"The image file 
+.PP
+Definition at line 138 of file BaseClass\&.hpp\&.
+.SS "std::vector<\fBStringTable\fP*>* \fBEPAX::BaseBinary::strtabs\fP\fC [protected]\fP"
+.PP
+Definition at line 159 of file BaseClass\&.hpp\&.
+.SS "std::vector<\fBSymbolTable\fP*>* \fBEPAX::BaseBinary::symtabs\fP\fC [protected]\fP"
+.PP
+Definition at line 158 of file BaseClass\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

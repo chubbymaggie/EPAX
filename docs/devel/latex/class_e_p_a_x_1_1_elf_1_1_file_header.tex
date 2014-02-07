@@ -1,0 +1,254 @@
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header}{\section{\-E\-P\-A\-X\-:\-:\-Elf\-:\-:\-File\-Header \-Class \-Reference}
+\label{class_e_p_a_x_1_1_elf_1_1_file_header}\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+}
+
+
+{\ttfamily \#include $<$\-Elf\-Binary.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Elf\-:\-:\-File\-Header\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_e_p_a_x_1_1_elf_1_1_file_header}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a17ca2c27f8cf31a488aaee78b7314ec0}{\-File\-Header} (\hyperlink{class_e_p_a_x_1_1_base_binary}{\-Base\-Binary} $\ast$b, uint64\-\_\-t o, uint64\-\_\-t s)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a3b9e79ac6ed14a656537ed57f1bb1235}{$\sim$\-File\-Header} ()
+\item 
+virtual uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_abdf6ca1b4c9bb4e4467ad7467c44730e}{get\-Start\-Addr} ()=0
+\item 
+virtual bool \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a3ca4cd831fa0b4406c0d4864b659c91c}{verify} ()=0
+\item 
+virtual bool \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a7213d758b36fccdb80c7c3068155cdee}{is\-A\-R\-M} ()=0
+\item 
+virtual void \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_aeb0eeb9a943fe3382edc7e6b10c3d0d5}{describe} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a80f2c4f1a3a4caee7bf6b9b6b7d20d92}{get\-Section\-Count} ()=0
+\item 
+virtual uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a465040eb608f51272cb889e4fd0c61f1}{get\-Sec\-Table\-Offset} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a52a8d42476216d7946039581f570958f}{get\-Shdr\-Size} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_aa1d63391748e17afd6ee45c9124d3cc1}{get\-Shdr\-String\-Index} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a016aee53224e8350e3b8452b1525aad5}{get\-Segment\-Count} ()=0
+\item 
+virtual uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a428d1229cb7324696436d62b8c099239}{get\-Seg\-Table\-Offset} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a6d180c7702995629f962abd1cce29e2d}{get\-Phdr\-Size} ()=0
+\item 
+virtual uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_ae36441d44c2fba9f42709566823b7d08}{get\-File\-Type} ()=0
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a08520331febff683d5090d71ea762367}{describe\-I\-S\-A} (uint32\-\_\-t ctype)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a17755bdd71c02e656c667b16de61dd7b}{rawbyte\-\_\-t} $\ast$ \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header_a7c2db25209f5833010086dcfe200e67e}{entry}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 101 of file \-Elf\-Binary.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a17ca2c27f8cf31a488aaee78b7314ec0}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!\-File\-Header@{\-File\-Header}}
+\index{\-File\-Header@{\-File\-Header}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{\-File\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::\-File\-Header} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Base\-Binary} $\ast$}]{b, }
+\item[{uint64\-\_\-t}]{o, }
+\item[{uint64\-\_\-t}]{s}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a17ca2c27f8cf31a488aaee78b7314ec0}
+
+
+\-Definition at line 321 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a3b9e79ac6ed14a656537ed57f1bb1235}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!$\sim$\-File\-Header@{$\sim$\-File\-Header}}
+\index{$\sim$\-File\-Header@{$\sim$\-File\-Header}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{$\sim$\-File\-Header}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::$\sim$\-File\-Header} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a3b9e79ac6ed14a656537ed57f1bb1235}
+
+
+\-Definition at line 327 of file \-Elf\-Binary.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_aeb0eeb9a943fe3382edc7e6b10c3d0d5}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!describe@{describe}}
+\index{describe@{describe}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{describe}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::describe} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_aeb0eeb9a943fe3382edc7e6b10c3d0d5}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a121602d4ffb4f401b59cdb63303fc6c4}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_a85d8cd834a2410f5f51b8a92ca499058}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+
+
+\-Definition at line 462 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a08520331febff683d5090d71ea762367}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!describe\-I\-S\-A@{describe\-I\-S\-A}}
+\index{describe\-I\-S\-A@{describe\-I\-S\-A}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{describe\-I\-S\-A}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::describe\-I\-S\-A} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{ctype}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static, protected\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a08520331febff683d5090d71ea762367}
+
+
+\-Definition at line 466 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_ae36441d44c2fba9f42709566823b7d08}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-File\-Type@{get\-File\-Type}}
+\index{get\-File\-Type@{get\-File\-Type}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-File\-Type}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-File\-Type} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_ae36441d44c2fba9f42709566823b7d08}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a84696d5ac94bd884141c4306025b8ba4}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_af3a51f4aeb49bc78ac18cbb3e8931a5a}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a6d180c7702995629f962abd1cce29e2d}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Phdr\-Size@{get\-Phdr\-Size}}
+\index{get\-Phdr\-Size@{get\-Phdr\-Size}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Phdr\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Phdr\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a6d180c7702995629f962abd1cce29e2d}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a389cfa8997b78c7da91bfd980ad61a94}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_ac888b12b41b187273440a028e1b704ca}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a465040eb608f51272cb889e4fd0c61f1}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Sec\-Table\-Offset@{get\-Sec\-Table\-Offset}}
+\index{get\-Sec\-Table\-Offset@{get\-Sec\-Table\-Offset}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Sec\-Table\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Sec\-Table\-Offset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a465040eb608f51272cb889e4fd0c61f1}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_ab4bf35526aa8997cdacbe51f401e15a2}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_a8d5c87c8f17e8e6666fde733f9267bae}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a80f2c4f1a3a4caee7bf6b9b6b7d20d92}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Section\-Count@{get\-Section\-Count}}
+\index{get\-Section\-Count@{get\-Section\-Count}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Section\-Count}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Section\-Count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a80f2c4f1a3a4caee7bf6b9b6b7d20d92}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a525b2d31bb8ad212c197172006cd8b90}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_ac1dd93429930f0a1f5991cb6270a383e}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a016aee53224e8350e3b8452b1525aad5}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Segment\-Count@{get\-Segment\-Count}}
+\index{get\-Segment\-Count@{get\-Segment\-Count}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Segment\-Count}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Segment\-Count} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a016aee53224e8350e3b8452b1525aad5}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_af0e3dc9b8ae0832bd9a24d2c72e09011}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_ac38fc67d4991960a64e43418355847dc}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a428d1229cb7324696436d62b8c099239}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Seg\-Table\-Offset@{get\-Seg\-Table\-Offset}}
+\index{get\-Seg\-Table\-Offset@{get\-Seg\-Table\-Offset}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Seg\-Table\-Offset}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Seg\-Table\-Offset} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a428d1229cb7324696436d62b8c099239}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_ad05c5e3abb06032413b058f5db1f3f9c}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_a726775497585b20e7b5bfcf523492824}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a52a8d42476216d7946039581f570958f}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Shdr\-Size@{get\-Shdr\-Size}}
+\index{get\-Shdr\-Size@{get\-Shdr\-Size}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Shdr\-Size}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Shdr\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a52a8d42476216d7946039581f570958f}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_ad4c76f6ef875eccd6e453c61736d7e40}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_a0ed67a18b9abbe58cd2527e4c67d04e6}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_aa1d63391748e17afd6ee45c9124d3cc1}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Shdr\-String\-Index@{get\-Shdr\-String\-Index}}
+\index{get\-Shdr\-String\-Index@{get\-Shdr\-String\-Index}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Shdr\-String\-Index}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Shdr\-String\-Index} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_aa1d63391748e17afd6ee45c9124d3cc1}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a1e776b6ef8858287951a39a15626a6da}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_a06e25aa5ff7df704d070abaa8ba3c1aa}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_abdf6ca1b4c9bb4e4467ad7467c44730e}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!get\-Start\-Addr@{get\-Start\-Addr}}
+\index{get\-Start\-Addr@{get\-Start\-Addr}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{get\-Start\-Addr}]{\setlength{\rightskip}{0pt plus 5cm}virtual uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::get\-Start\-Addr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_abdf6ca1b4c9bb4e4467ad7467c44730e}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a0d5fb6bb80415565bec58de93526a2ea}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_ab8a7bf656d86963f9324b2c3686090e1}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a7213d758b36fccdb80c7c3068155cdee}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!is\-A\-R\-M@{is\-A\-R\-M}}
+\index{is\-A\-R\-M@{is\-A\-R\-M}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{is\-A\-R\-M}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::is\-A\-R\-M} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a7213d758b36fccdb80c7c3068155cdee}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a6d992697b0003b0c63f9e9b6271de94a}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_af3918b11e74da5f92738df8c70c34258}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a3ca4cd831fa0b4406c0d4864b659c91c}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!verify@{verify}}
+\index{verify@{verify}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{verify}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::verify} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}pure virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a3ca4cd831fa0b4406c0d4864b659c91c}
+
+
+\-Implemented in \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header64_a6a94d18eaee683c6bbe05f3b57f08efc}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header64}, and \hyperlink{class_e_p_a_x_1_1_elf_1_1_file_header32_a39dbffddc4e4503da772ebcd66c9c760}{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header32}.
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_elf_1_1_file_header_a7c2db25209f5833010086dcfe200e67e}{\index{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}!entry@{entry}}
+\index{entry@{entry}!EPAX::Elf::FileHeader@{\-E\-P\-A\-X\-::\-Elf\-::\-File\-Header}}
+\subsubsection[{entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf rawbyte\-\_\-t}$\ast$ {\bf \-E\-P\-A\-X\-::\-Elf\-::\-File\-Header\-::entry}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_e_p_a_x_1_1_elf_1_1_file_header_a7c2db25209f5833010086dcfe200e67e}
+
+
+\-Definition at line 103 of file \-Elf\-Binary.\-hpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_elf_binary_8hpp}{\-Elf\-Binary.\-hpp}\item 
+\hyperlink{_elf_binary_8cpp}{\-Elf\-Binary.\-cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+.TH "ElfBinary.cpp" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ElfBinary.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'EPAXCommonInternal\&.hpp'\fP
+.br
+\fC#include 'Elf/elf\&.h'\fP
+.br
+\fC#include 'Binary\&.hpp'\fP
+.br
+\fC#include 'ElfBinary\&.hpp'\fP
+.br
+\fC#include 'Function\&.hpp'\fP
+.br
+\fC#include 'InputFile\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBEPAX\fP"
+.br
+.ti -1c
+.RI "namespace \fBEPAX::Elf\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBEHDR32_ENTRY\fP   ((Elf32_Ehdr*)entry)"
+.br
+.ti -1c
+.RI "#define \fBEHDR64_ENTRY\fP   ((Elf64_Ehdr*)entry)"
+.br
+.ti -1c
+.RI "#define \fBSYM32_ENTRY\fP   ((Elf32_Sym*)entry)"
+.br
+.ti -1c
+.RI "#define \fBSYM64_ENTRY\fP   ((Elf64_Sym*)entry)"
+.br
+.ti -1c
+.RI "#define \fBSHDR32_ENTRY\fP   ((Elf32_Shdr*)entry)"
+.br
+.ti -1c
+.RI "#define \fBSHDR64_ENTRY\fP   ((Elf64_Shdr*)entry)"
+.br
+.ti -1c
+.RI "#define \fBPHDR32_ENTRY\fP   ((Elf32_Phdr*)entry)"
+.br
+.ti -1c
+.RI "#define \fBPHDR64_ENTRY\fP   ((Elf64_Phdr*)entry)"
+.br
+.ti -1c
+.RI "#define \fBCASE\fP(__typ__)   case EM_ ## __typ__: std::cout << 'isa=' << #__typ__ ; break"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "LICENSE"
+.PP
+This file is part of the \fBEPAX\fP toolkit\&.
+.PP
+Copyright (c) 2013, EP Analytics, Inc\&. All rights reserved\&.
+.PP
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program\&. If not, see <http://www.gnu.org/licenses/>\&. 
+.PP
+Definition in file \fBElfBinary\&.cpp\fP\&.
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBCASE\fP(__typ__)   case EM_ ## __typ__: std::cout << 'isa=' << #__typ__ ; break"
+.SS "#define \fBEHDR32_ENTRY\fP   ((Elf32_Ehdr*)entry)"
+.PP
+Definition at line 38 of file ElfBinary\&.cpp\&.
+.SS "#define \fBEHDR64_ENTRY\fP   ((Elf64_Ehdr*)entry)"
+.PP
+Definition at line 39 of file ElfBinary\&.cpp\&.
+.SS "#define \fBPHDR32_ENTRY\fP   ((Elf32_Phdr*)entry)"
+.PP
+Definition at line 44 of file ElfBinary\&.cpp\&.
+.SS "#define \fBPHDR64_ENTRY\fP   ((Elf64_Phdr*)entry)"
+.PP
+Definition at line 45 of file ElfBinary\&.cpp\&.
+.SS "#define \fBSHDR32_ENTRY\fP   ((Elf32_Shdr*)entry)"
+.PP
+Definition at line 42 of file ElfBinary\&.cpp\&.
+.SS "#define \fBSHDR64_ENTRY\fP   ((Elf64_Shdr*)entry)"
+.PP
+Definition at line 43 of file ElfBinary\&.cpp\&.
+.SS "#define \fBSYM32_ENTRY\fP   ((Elf32_Sym*)entry)"
+.PP
+Definition at line 40 of file ElfBinary\&.cpp\&.
+.SS "#define \fBSYM64_ENTRY\fP   ((Elf64_Sym*)entry)"
+.PP
+Definition at line 41 of file ElfBinary\&.cpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

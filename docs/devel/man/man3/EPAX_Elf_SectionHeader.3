@@ -1,0 +1,187 @@
+.TH "EPAX::Elf::SectionHeader" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Elf::SectionHeader \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ElfBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::FileBase\fP, \fBEPAX::NameBase\fP, and \fBEPAX::IndexBase\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::SectionHeader32\fP, and \fBEPAX::Elf::SectionHeader64\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSectionHeader\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s, uint32_t i)"
+.br
+.ti -1c
+.RI "virtual \fB~SectionHeader\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "bool \fBisText\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisData\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisBSS\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisDebug\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisString\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisSymbol\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisRead\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisWrite\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisExec\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisAlloc\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisMerge\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinRange\fP (uint64_t a)"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetNameIndex\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetType\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetVirtAddr\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetFileOffset\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetSectionLink\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetAlignment\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetEntrySize\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetFlags\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetSize\fP ()=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBrawbyte_t\fP * \fBentry\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 248 of file ElfBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Elf::SectionHeader::SectionHeader\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts, uint32_ti)"
+.PP
+Definition at line 677 of file ElfBinary\&.cpp\&.
+.SS "\fBEPAX::Elf::SectionHeader::~SectionHeader\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 685 of file ElfBinary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getAlignment\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getEntrySize\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getFileOffset\fP ()\fC [pure virtual]\fP"
+.PP
+Reimplemented from \fBEPAX::FileBase\fP\&.
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getFlags\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getNameIndex\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getSectionLink\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getSize\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getType\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::SectionHeader::getVirtAddr\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::SectionHeader64\fP, and \fBEPAX::Elf::SectionHeader32\fP\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::inRange\fP (uint64_ta)"
+.PP
+Definition at line 736 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isAlloc\fP ()"
+.PP
+Definition at line 779 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isBSS\fP ()"
+.PP
+Definition at line 751 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isData\fP ()"
+.PP
+Definition at line 747 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isDebug\fP ()"
+.PP
+Definition at line 755 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isExec\fP ()"
+.PP
+Definition at line 775 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isMerge\fP ()"
+.PP
+Definition at line 783 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isRead\fP ()"
+.PP
+Definition at line 767 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isString\fP ()"
+.PP
+Definition at line 759 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isSymbol\fP ()"
+.PP
+Definition at line 763 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isText\fP ()"
+.PP
+Definition at line 743 of file ElfBinary\&.cpp\&.
+.SS "bool \fBEPAX::Elf::SectionHeader::isWrite\fP ()"
+.PP
+Definition at line 771 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::SectionHeader::print\fP (std::ostream &stream = \fCstd::cout\fP)"
+.PP
+Definition at line 724 of file ElfBinary\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBrawbyte_t\fP* \fBEPAX::Elf::SectionHeader::entry\fP\fC [protected]\fP"
+.PP
+Definition at line 250 of file ElfBinary\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

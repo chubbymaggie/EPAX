@@ -1,0 +1,121 @@
+.TH "EPAX::dyn_bitset" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::dyn_bitset \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <DataStruct\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBdyn_bitset\fP (uint32_t s)"
+.br
+.ti -1c
+.RI "\fB~dyn_bitset\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBsize\fP ()"
+.br
+.ti -1c
+.RI "void \fBclear\fP ()"
+.br
+.ti -1c
+.RI "void \fBset\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "void \fBset\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhas\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "const \fBdyn_bitset\fP & \fBoperator&=\fP (const \fBdyn_bitset\fP &a)"
+.br
+.ti -1c
+.RI "const \fBdyn_bitset\fP & \fBoperator|=\fP (const \fBdyn_bitset\fP &a)"
+.br
+.ti -1c
+.RI "const \fBdyn_bitset\fP & \fBoperator=\fP (const \fBdyn_bitset\fP &a)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBdyn_bitset\fP &a)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBdyn_bitset\fP &a)"
+.br
+.ti -1c
+.RI "void \fBprint\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "uint8_t * \fB_elements\fP"
+.br
+.ti -1c
+.RI "uint32_t \fB_size\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 32 of file DataStruct\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::dyn_bitset::dyn_bitset\fP (uint32_ts)\fC [inline]\fP"
+.PP
+Definition at line 49 of file DataStruct\&.hpp\&.
+.SS "\fBEPAX::dyn_bitset::~dyn_bitset\fP ()\fC [inline]\fP"
+.PP
+Definition at line 54 of file DataStruct\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::dyn_bitset::clear\fP ()\fC [inline]\fP"
+.PP
+Definition at line 64 of file DataStruct\&.hpp\&.
+.SS "bool \fBEPAX::dyn_bitset::has\fP (uint32_tidx)\fC [inline]\fP"
+.PP
+Definition at line 81 of file DataStruct\&.hpp\&.
+.SS "bool EPAX::dyn_bitset::operator!= (const \fBdyn_bitset\fP &a)\fC [inline]\fP"
+.PP
+Definition at line 120 of file DataStruct\&.hpp\&.
+.SS "const \fBdyn_bitset\fP& EPAX::dyn_bitset::operator&= (const \fBdyn_bitset\fP &a)\fC [inline]\fP"
+.PP
+Definition at line 86 of file DataStruct\&.hpp\&.
+.SS "const \fBdyn_bitset\fP& EPAX::dyn_bitset::operator= (const \fBdyn_bitset\fP &a)\fC [inline]\fP"
+.PP
+Definition at line 102 of file DataStruct\&.hpp\&.
+.SS "bool EPAX::dyn_bitset::operator== (const \fBdyn_bitset\fP &a)\fC [inline]\fP"
+.PP
+Definition at line 110 of file DataStruct\&.hpp\&.
+.SS "const \fBdyn_bitset\fP& EPAX::dyn_bitset::operator|= (const \fBdyn_bitset\fP &a)\fC [inline]\fP"
+.PP
+Definition at line 94 of file DataStruct\&.hpp\&.
+.SS "void \fBEPAX::dyn_bitset::print\fP ()\fC [inline]\fP"
+.PP
+Definition at line 124 of file DataStruct\&.hpp\&.
+.SS "void \fBEPAX::dyn_bitset::set\fP (uint32_tidx)\fC [inline]\fP"
+.PP
+Definition at line 70 of file DataStruct\&.hpp\&.
+.SS "void \fBEPAX::dyn_bitset::set\fP ()\fC [inline]\fP"
+.PP
+Definition at line 75 of file DataStruct\&.hpp\&.
+.SS "uint32_t \fBEPAX::dyn_bitset::size\fP ()\fC [inline]\fP"
+.PP
+Definition at line 60 of file DataStruct\&.hpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "uint8_t* \fBEPAX::dyn_bitset::_elements\fP"
+.PP
+Definition at line 34 of file DataStruct\&.hpp\&.
+.SS "uint32_t \fBEPAX::dyn_bitset::_size\fP"
+.PP
+Definition at line 35 of file DataStruct\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

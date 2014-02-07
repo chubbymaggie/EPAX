@@ -1,0 +1,69 @@
+.TH "EPAX::MemoryBase" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::MemoryBase \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BaseClass\&.hpp>\fP
+.PP
+Inherited by \fBEPAX::BasicBlock\fP, \fBEPAX::DetachedText\fP, \fBEPAX::Elf::ProgramHeader\fP, \fBEPAX::Instruction\fP, \fBEPAX::Section\fP, and \fBEPAX::Symbol\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMemoryBase\fP (uint64_t a, uint64_t s)"
+.br
+.ti -1c
+.RI "\fBMemoryBase\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~MemoryBase\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetMemoryAddress\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetMemorySize\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetMemorySize\fP (uint64_t s)"
+.br
+.ti -1c
+.RI "bool \fBinRange\fP (uint64_t a)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 61 of file BaseClass\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::MemoryBase::MemoryBase\fP (uint64_ta, uint64_ts)\fC [inline]\fP"
+.PP
+Definition at line 67 of file BaseClass\&.hpp\&.
+.SS "\fBEPAX::MemoryBase::MemoryBase\fP ()\fC [inline]\fP"
+.PP
+Definition at line 69 of file BaseClass\&.hpp\&.
+.SS "virtual \fBEPAX::MemoryBase::~MemoryBase\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 71 of file BaseClass\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint64_t \fBEPAX::MemoryBase::getMemoryAddress\fP ()\fC [inline]\fP"
+.PP
+Definition at line 73 of file BaseClass\&.hpp\&.
+.SS "uint64_t \fBEPAX::MemoryBase::getMemorySize\fP ()\fC [inline]\fP"
+.PP
+Definition at line 74 of file BaseClass\&.hpp\&.
+.SS "bool \fBEPAX::MemoryBase::inRange\fP (uint64_ta)"
+.PP
+Definition at line 54 of file BaseClass\&.cpp\&.
+.SS "void \fBEPAX::MemoryBase::setMemorySize\fP (uint64_ts)\fC [inline]\fP"
+.PP
+Definition at line 75 of file BaseClass\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

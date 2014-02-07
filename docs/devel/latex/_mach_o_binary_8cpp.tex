@@ -1,0 +1,73 @@
+\hypertarget{_mach_o_binary_8cpp}{\section{\-Mach\-O\-Binary.\-cpp \-File \-Reference}
+\label{_mach_o_binary_8cpp}\index{\-Mach\-O\-Binary.\-cpp@{\-Mach\-O\-Binary.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}\-E\-P\-A\-X\-Common\-Internal.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Mach\-O/loader.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Input\-File.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Mach\-O\-Binary.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Base\-Class.\-hpp\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\item 
+namespace \hyperlink{namespace_e_p_a_x_1_1_mach_o}{\-E\-P\-A\-X\-::\-Mach\-O}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_mach_o_binary_8cpp_a62498551da1d6637f02a5c3d286c7eb4}{\-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((mach\-\_\-header$\ast$)entry)
+\item 
+\#define \hyperlink{_mach_o_binary_8cpp_a7bf05761fe8f113ffa866dd772a3cbba}{\-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((mach\-\_\-header\-\_\-64$\ast$)entry)
+\item 
+\#define \hyperlink{_mach_o_binary_8cpp_aae4b214aec744a73e927c667b3106b92}{\-S\-C\-A\-S\-E}(\-\_\-\-\_\-typ\-\_\-\-\_\-)~case \-C\-P\-U\-\_\-\-S\-U\-B\-T\-Y\-P\-E\-\_\-\-A\-R\-M\-\_\- \#\# \-\_\-\-\_\-typ\-\_\-\-\_\-\-: std\-::cout $<$$<$ \char`\"{}isa=\-A\-R\-M\-\_\-\char`\"{} $<$$<$ \#\-\_\-\-\_\-typ\-\_\-\-\_\-; break
+\item 
+\#define \hyperlink{_mach_o_binary_8cpp_a52e2971b03e6cb8f37cc1b8a8f202e26}{\-C\-C\-A\-S\-E}(\-\_\-\-\_\-typ\-\_\-\-\_\-)~case \-C\-P\-U\-\_\-\-T\-Y\-P\-E\-\_\- \#\# \-\_\-\-\_\-typ\-\_\-\-\_\-\-: std\-::cout $<$$<$ \char`\"{}isa=\char`\"{} $<$$<$ \#\-\_\-\-\_\-typ\-\_\-\-\_\-; break
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_mach_o_binary_8cpp_source}{\-Mach\-O\-Binary.\-cpp}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_mach_o_binary_8cpp_a52e2971b03e6cb8f37cc1b8a8f202e26}{\index{\-Mach\-O\-Binary.\-cpp@{\-Mach\-O\-Binary.\-cpp}!\-C\-C\-A\-S\-E@{\-C\-C\-A\-S\-E}}
+\index{\-C\-C\-A\-S\-E@{\-C\-C\-A\-S\-E}!MachOBinary.cpp@{\-Mach\-O\-Binary.\-cpp}}
+\subsubsection[{\-C\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-C\-A\-S\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-typ\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~case \-C\-P\-U\-\_\-\-T\-Y\-P\-E\-\_\- \#\# \-\_\-\-\_\-typ\-\_\-\-\_\-\-: std\-::cout $<$$<$ \char`\"{}isa=\char`\"{} $<$$<$ \#\-\_\-\-\_\-typ\-\_\-\-\_\-; break}}\label{_mach_o_binary_8cpp_a52e2971b03e6cb8f37cc1b8a8f202e26}
+\hypertarget{_mach_o_binary_8cpp_a62498551da1d6637f02a5c3d286c7eb4}{\index{\-Mach\-O\-Binary.\-cpp@{\-Mach\-O\-Binary.\-cpp}!\-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}!MachOBinary.cpp@{\-Mach\-O\-Binary.\-cpp}}
+\subsubsection[{\-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((mach\-\_\-header$\ast$)entry)}}\label{_mach_o_binary_8cpp_a62498551da1d6637f02a5c3d286c7eb4}
+
+
+\-Definition at line 37 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{_mach_o_binary_8cpp_a7bf05761fe8f113ffa866dd772a3cbba}{\index{\-Mach\-O\-Binary.\-cpp@{\-Mach\-O\-Binary.\-cpp}!\-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}!MachOBinary.cpp@{\-Mach\-O\-Binary.\-cpp}}
+\subsubsection[{\-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((mach\-\_\-header\-\_\-64$\ast$)entry)}}\label{_mach_o_binary_8cpp_a7bf05761fe8f113ffa866dd772a3cbba}
+
+
+\-Definition at line 38 of file \-Mach\-O\-Binary.\-cpp.
+
+\hypertarget{_mach_o_binary_8cpp_aae4b214aec744a73e927c667b3106b92}{\index{\-Mach\-O\-Binary.\-cpp@{\-Mach\-O\-Binary.\-cpp}!\-S\-C\-A\-S\-E@{\-S\-C\-A\-S\-E}}
+\index{\-S\-C\-A\-S\-E@{\-S\-C\-A\-S\-E}!MachOBinary.cpp@{\-Mach\-O\-Binary.\-cpp}}
+\subsubsection[{\-S\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-C\-A\-S\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-typ\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~case \-C\-P\-U\-\_\-\-S\-U\-B\-T\-Y\-P\-E\-\_\-\-A\-R\-M\-\_\- \#\# \-\_\-\-\_\-typ\-\_\-\-\_\-\-: std\-::cout $<$$<$ \char`\"{}isa=\-A\-R\-M\-\_\-\char`\"{} $<$$<$ \#\-\_\-\-\_\-typ\-\_\-\-\_\-; break}}\label{_mach_o_binary_8cpp_aae4b214aec744a73e927c667b3106b92}

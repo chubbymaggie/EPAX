@@ -1,0 +1,241 @@
+\hypertarget{_interface_8hpp}{\section{\-Interface.\-hpp \-File \-Reference}
+\label{_interface_8hpp}\index{\-Interface.\-hpp@{\-Interface.\-hpp}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \-Binary $\ast$ \hyperlink{namespace_e_p_a_x_ad71db9d891528e4a8b303787dff8ac0b}{\-E\-P\-A\-X\-::\-B\-I\-N}
+\item 
+typedef \-Section $\ast$ \hyperlink{namespace_e_p_a_x_a6c4fe59392073737d60d4b99f37ba154}{\-E\-P\-A\-X\-::\-S\-E\-C\-T}
+\item 
+typedef \-Function $\ast$ \hyperlink{namespace_e_p_a_x_a5b05cc89d633ec2241cb3af828c03024}{\-E\-P\-A\-X\-::\-F\-U\-N\-C}
+\item 
+typedef \-Control\-Flow $\ast$ \hyperlink{namespace_e_p_a_x_a6edfef502c4f06240ec12097855e17dd}{\-E\-P\-A\-X\-::\-C\-F\-G}
+\item 
+typedef \-Loop $\ast$ \hyperlink{namespace_e_p_a_x_ac236645423e99e8ccc784040ff1f881e}{\-E\-P\-A\-X\-::\-L\-O\-O\-P}
+\item 
+typedef \-Basic\-Block $\ast$ \hyperlink{namespace_e_p_a_x_a0ad4f6573b03fa5c375bed0e68d4fab0}{\-E\-P\-A\-X\-::\-B\-B\-L}
+\item 
+typedef \-Instruction $\ast$ \hyperlink{namespace_e_p_a_x_a601da5f2ead9a877d566da6cfc9026eb}{\-E\-P\-A\-X\-::\-I\-N\-S\-N}
+\item 
+typedef \-Symbol $\ast$ \hyperlink{namespace_e_p_a_x_acad75cfc5d20dbf9de18b17dfe451b42}{\-E\-P\-A\-X\-::\-S\-Y\-M}
+\item 
+typedef \-Flow\-Equation $\ast$ \hyperlink{namespace_e_p_a_x_a289a37f4d34ed51ee92cbd8c601db421}{\-E\-P\-A\-X\-::\-F\-L\-O\-W}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-B\-I\-N \hyperlink{namespace_e_p_a_x_a68500dbda3daf6e66dc6bf0067ec34b7}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-create} (std\-::string file\-Name)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_af6914ca60796cbbf43e9996bed07763d}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-get\-Name} (\-B\-I\-N bin)
+\item 
+void \hyperlink{namespace_e_p_a_x_a8df16d3fb7f820014a3d6105514420a5}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-destroy} (\-B\-I\-N bin)
+\item 
+void \hyperlink{namespace_e_p_a_x_a3d3f6035b509ee30f07ab3fecdd374e8}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-run} (\-B\-I\-N bin, int argc, char $\ast$$\ast$argv)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a40aa644870b9dea8ae37b804724534fb}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-first\-Func} (\-B\-I\-N bin)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_aa71e749763e7bb1f923858e3141349e1}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-next\-Func} (\-B\-I\-N bin, \-F\-U\-N\-C func)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ab584e84ccd83e8c3a381df43cf935087}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-is\-Last\-Func} (\-B\-I\-N bin, \-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a34c62237f68d75bc1741dd752f769bd7}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-count\-Func} (\-B\-I\-N bin)
+\item 
+bool \hyperlink{namespace_e_p_a_x_aa3b4c872835797815fc1a3c4414a042b}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-is\-Executable} (\-B\-I\-N bin)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a911161a84c22b522a7198e84c21addef}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-file\-Size} (\-B\-I\-N bin)
+\item 
+void \hyperlink{namespace_e_p_a_x_a83802d152a35f151ed90b556ad0e6399}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-print\-Static\-File} (\-B\-I\-N bin, std\-::string fname)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_aa4717cb67238e53b20f5562b04e3c53d}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-find\-Func} (\-B\-I\-N bin, uint64\-\_\-t addr)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a349bd4305d0560dbb1bff601ec634423}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-create} (uint8\-\_\-t $\ast$bytes, uint32\-\_\-t size)
+\item 
+void \hyperlink{namespace_e_p_a_x_a39671871fe999507b8954f9ba594b529}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-\-Destroy} (\-F\-U\-N\-C func)
+\item 
+void \hyperlink{namespace_e_p_a_x_a76df7a31941ac5d79d74ff25e39eaeab}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-print} (\-F\-U\-N\-C func)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_a936650368bfe6e19721ebd681f74ffa3}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-name} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a5b37b2f8b8b1ebd3047a9604b77aa76a}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-size} (\-F\-U\-N\-C func)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_a5c258325decee9b0a23b7990a17afa2f}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-addr} (\-F\-U\-N\-C func)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_a39739003523680adf73ed7ed87e942c5}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-sec\-Name} (\-F\-U\-N\-C func)
+\item 
+\-B\-I\-N \hyperlink{namespace_e_p_a_x_adbcaca9d4ee50185bb1411c4fd08a363}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-bin} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a8f76374258b736961b5639bda6995dce}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-count\-Bbl} (\-F\-U\-N\-C func)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a470fc4dbe2581ab80d711a4fad19b622}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-find\-Bbl} (\-F\-U\-N\-C func, uint64\-\_\-t addr)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a9b124903dac64c103c7279863e2909b5}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-first\-Bbl} (\-F\-U\-N\-C func)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a47f4ceea61874416a382b7a44e1b8ec3}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-next\-Bbl} (\-F\-U\-N\-C func, \-B\-B\-L bbl)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a71eb98e3e6cf284cfe8f03a7d0801f7c}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-is\-Last\-Bbl} (\-F\-U\-N\-C func, \-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_addb0add86b6e8ad05daf12e17d697c4a}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-count\-Insn} (\-F\-U\-N\-C func)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a327e3b3f02444f7c66dab479b7620354}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-find\-Insn} (\-F\-U\-N\-C func, uint64\-\_\-t addr)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a3dd9ce87396bb246839d0ec21c9f5b21}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-first\-Insn} (\-F\-U\-N\-C func)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a145f1ce40606d3b366f8b4705c2026a2}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-next\-Insn} (\-F\-U\-N\-C func, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_af0c27ad1ac87e63188bc038a0b414158}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-is\-Last\-Insn} (\-F\-U\-N\-C func, \-I\-N\-S\-N insn)
+\item 
+\-C\-F\-G \hyperlink{namespace_e_p_a_x_a596ee3e43b9dd3619accda65c795196f}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-cfg} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a720c03d407153acf3d865472a8b02c67}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-count\-Targets} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a885d02ec5f424dba1843a0fe9151b259}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-targets} (\-F\-U\-N\-C func, std\-::vector$<$ \-F\-U\-N\-C $>$ \&func\-List)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a54a9a341cf427538ba7fff7440552029}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-count\-Loop} (\-C\-F\-G cfg)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_a2074303b5d993b837aeca2eaf5eeba93}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-find\-Loop} (\-C\-F\-G cfg, uint64\-\_\-t addr)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_a9f6859da3e0f26714de039f65aa9a1ba}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-first\-Loop} (\-C\-F\-G cfg)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_ae7cdc3a7daff14e58341508c038b8b46}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-next\-Loop} (\-C\-F\-G cfg, \-L\-O\-O\-P loop)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a37a23556b1f2779ba46b743e67d652ff}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-is\-Last\-Loop} (\-C\-F\-G cfg, \-L\-O\-O\-P loop)
+\item 
+\-C\-F\-G \hyperlink{namespace_e_p_a_x_a57f2035c3219eb2a060e09f6c818f198}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-cfg} (\-L\-O\-O\-P loop)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a94294b6d245c0d7cfb704e7a01516f1c}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-func} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_abdf304f94200c8d774135557f7c1296b}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-size} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a7b98c99a632a12145b19bfade17308e7}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-count\-Bbl} (\-L\-O\-O\-P loop)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_ad82d4c1acb743db14b2476214a778079}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-find\-Bbl} (\-L\-O\-O\-P loop, uint64\-\_\-t addr)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a6b9e75c45e3cb864db99583d88f8e816}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-first\-Bbl} (\-L\-O\-O\-P loop)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_ad4cd439532c10a473b3af726890cd6f2}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-next\-Bbl} (\-L\-O\-O\-P loop, \-B\-B\-L bbl)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a454f4e0f7be8107f0d2c10567fe0d019}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-is\-Last\-Bbl} (\-L\-O\-O\-P loop, \-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ae66ccc27713c07236294b6a1fb201354}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-count\-Insn} (\-L\-O\-O\-P loop)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a231dbea6084a2f5ce35bc46c01020c91}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-find\-Insn} (\-L\-O\-O\-P loop, uint64\-\_\-t addr)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a3b0698af1d614968710c24f8b364f4ef}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-first\-Insn} (\-L\-O\-O\-P loop)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_ac3169a4cb9dda70bb837ddcab42566ae}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-next\-Insn} (\-L\-O\-O\-P loop, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a2548faca0cd72cd585cf39b0c32262b5}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-is\-Last\-Insn} (\-L\-O\-O\-P loop, \-I\-N\-S\-N insn)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_ae8b4e880feb5c2176e80f080d6ef8a9b}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-head} (\-L\-O\-O\-P loop)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a51a87aa43f27e1c634c9515f6fd510fb}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-tail} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_aae01d41cf0c4f34ac24db95e0efd4df3}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-count\-Exits} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a0562acd48d56e4abcd0be7a04412039e}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-exits} (\-L\-O\-O\-P loop, std\-::vector$<$ \-I\-N\-S\-N $>$ \&insn\-List)
+\item 
+bool \hyperlink{namespace_e_p_a_x_adcf5a5412d67c5a3a4ae4aa3c8aa1498}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-is\-Inner\-Loop} (\-L\-O\-O\-P loop1, \-L\-O\-O\-P loop2)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_ae59c1fe1b7a28c2f8c73593999c3eb77}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-parent} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ab4763dab5b758823eea993ec7b9c6f40}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-index} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a97473ca1f7ba4b714fb78e4bd024c5f2}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-depth} (\-L\-O\-O\-P loop)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a0fbf67e181120081bc763df0a6a7419e}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-is\-Head} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ade8cd00d01f6efb5d1fbbb912fae91b4}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-is\-Tail} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a28444e0dbe8d9105a8737fc429b352f2}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-head} (\-B\-B\-L bbl)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a3cb39eafd1bba241ad89bc43180c0b80}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-tail} (\-B\-B\-L bbl)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a25db62a0c469406c77b2c95391f6f5a9}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-func} (\-B\-B\-L bbl)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_a5c9b5e6ff0101132a1236de3c273eae1}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-loop} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a299e464f40fa0feebf8acb255e5cb73b}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-size} (\-B\-B\-L bbl)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_ab186f92cd67ba3027c6baaddb5f8dc3a}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-addr} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a68e86603f8333b45334d126228f1887b}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Insn} (\-B\-B\-L bbl)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_ae365455b9f876c505ef7b57d7085f788}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-find\-Insn} (\-B\-B\-L bbl, uint64\-\_\-t addr)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a12456a3f644f733fea42a1789f25e253}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-first\-Insn} (\-B\-B\-L bbl)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a6a61743efee9f1d514f700439188ae35}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-next\-Insn} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a74200da4cf0db88248f6c349d85799bf}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-is\-Last\-Insn} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a48ec506044b94cd90da90048d6bedb20}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Targets} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a578637b1f975f74d475e0e4b5fdf6527}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-targets} (\-B\-B\-L bbl, std\-::vector$<$ \-B\-B\-L $>$ \&bbl\-List)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ad737f9e0fcf37a929d40989b8b04afc7}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-has\-Fallthrough\-Target} (\-B\-B\-L bbl)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a406a64b3b42d7c7e85d2f505b9d72fb2}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-fallthrough\-Target} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_af4bf20df6784bc507a3a87749657b5c8}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Jump\-Targets} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a6f2365a9c52698332312d510f1310568}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-jump\-Targets} (\-B\-B\-L bbl, std\-::vector$<$ \-B\-B\-L $>$ \&bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_aa23a09b89b8217fde08a9969c60a315c}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Sources} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ab69107bac3121671c9fe14992c88daab}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-sources} (\-B\-B\-L bbl, std\-::vector$<$ \-B\-B\-L $>$ \&bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a614cdfc7733f9ba151a7be30277808c4}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-targets} (\-I\-N\-S\-N insn, std\-::vector$<$ uint64\-\_\-t $>$ \&tlist)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a50bbfd9bb7bc673f43c980bdfb33b6bc}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-bbl} (\-I\-N\-S\-N insn)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a454c39a6a6075713f08d459276daf3c5}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-func} (\-I\-N\-S\-N insn)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_aa1f4ced523c0a0cb562e877d46fdc8b1}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-loop} (\-I\-N\-S\-N insn)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_a07290c51b68be1f32d0411e5c0f612dc}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-addr} (\-I\-N\-S\-N insn)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_a6606e3913aeb19f5d863723e6ae63e7f}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-string} (\-I\-N\-S\-N insn)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_a9fb272028d299f7ce5c49e9e2f6d362b}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-call\-Target} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a52a202189d478fbc50c54ed887ef001f}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-is\-Branch} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a995404839753a8da4b2fe7d27d9b32d2}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-is\-Fpop} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ad79c932f05a0e9b3a54d6625072ab087}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-is\-Memop} (\-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ac633c15baaafa3d0fc43e61a7701dc77}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-size} (\-I\-N\-S\-N insn)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_aea916ea62f9be2c075a9fdc65675d68e}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-cond\-Name} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a753a61ab7cbf2d2cf3894f87b05575d2}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-falls\-Through} (\-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a14b8ff0be25a61fa32905f2114ab278e}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-source\-Register\-Size\-In\-Bits} (\-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a0a072c84ca3855c0bd6abf775ccbe448}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-source\-Datatype\-Size\-In\-Bits} (\-I\-N\-S\-N insn)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_interface_8hpp_source}{\-Interface.\-hpp}.
+

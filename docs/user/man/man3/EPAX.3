@@ -1,0 +1,1653 @@
+.TH "EPAX" 3 "Fri Feb 7 2014" "Version 0.01" "EPAX" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef Binary * \fBBIN\fP"
+.br
+.ti -1c
+.RI "typedef Section * \fBSECT\fP"
+.br
+.ti -1c
+.RI "typedef Function * \fBFUNC\fP"
+.br
+.ti -1c
+.RI "typedef ControlFlow * \fBCFG\fP"
+.br
+.ti -1c
+.RI "typedef Loop * \fBLOOP\fP"
+.br
+.ti -1c
+.RI "typedef BasicBlock * \fBBBL\fP"
+.br
+.ti -1c
+.RI "typedef Instruction * \fBINSN\fP"
+.br
+.ti -1c
+.RI "typedef Symbol * \fBSYM\fP"
+.br
+.ti -1c
+.RI "typedef FlowEquation * \fBFLOW\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBIN\fP \fBBIN_create\fP (std::string fileName)"
+.br
+.ti -1c
+.RI "std::string \fBBIN_getName\fP (\fBBIN\fP bin)"
+.br
+.ti -1c
+.RI "void \fBBIN_destroy\fP (\fBBIN\fP bin)"
+.br
+.ti -1c
+.RI "void \fBBIN_run\fP (\fBBIN\fP bin, int argc, char **argv)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBBIN_firstFunc\fP (\fBBIN\fP bin)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBBIN_nextFunc\fP (\fBBIN\fP bin, \fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "bool \fBBIN_isLastFunc\fP (\fBBIN\fP bin, \fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "uint32_t \fBBIN_countFunc\fP (\fBBIN\fP bin)"
+.br
+.ti -1c
+.RI "bool \fBBIN_isExecutable\fP (\fBBIN\fP bin)"
+.br
+.ti -1c
+.RI "uint32_t \fBBIN_fileSize\fP (\fBBIN\fP bin)"
+.br
+.ti -1c
+.RI "void \fBBIN_printStaticFile\fP (\fBBIN\fP bin, std::string fname)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBBIN_findFunc\fP (\fBBIN\fP bin, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBFUNC_create\fP (uint8_t *bytes, uint32_t size)"
+.br
+.ti -1c
+.RI "void \fBFUNC_Destroy\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "void \fBFUNC_print\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "std::string \fBFUNC_name\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "uint32_t \fBFUNC_size\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "uint64_t \fBFUNC_addr\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "std::string \fBFUNC_secName\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "\fBBIN\fP \fBFUNC_bin\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "uint32_t \fBFUNC_countBbl\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBFUNC_findBbl\fP (\fBFUNC\fP func, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBFUNC_firstBbl\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBFUNC_nextBbl\fP (\fBFUNC\fP func, \fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "bool \fBFUNC_isLastBbl\fP (\fBFUNC\fP func, \fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBFUNC_countInsn\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBFUNC_findInsn\fP (\fBFUNC\fP func, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBFUNC_firstInsn\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBFUNC_nextInsn\fP (\fBFUNC\fP func, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBFUNC_isLastInsn\fP (\fBFUNC\fP func, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "\fBCFG\fP \fBFUNC_cfg\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "uint32_t \fBFUNC_countTargets\fP (\fBFUNC\fP func)"
+.br
+.ti -1c
+.RI "uint32_t \fBFUNC_targets\fP (\fBFUNC\fP func, std::vector< \fBFUNC\fP > &funcList)"
+.br
+.ti -1c
+.RI "uint32_t \fBCFG_countLoop\fP (\fBCFG\fP cfg)"
+.br
+.ti -1c
+.RI "\fBLOOP\fP \fBCFG_findLoop\fP (\fBCFG\fP cfg, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBLOOP\fP \fBCFG_firstLoop\fP (\fBCFG\fP cfg)"
+.br
+.ti -1c
+.RI "\fBLOOP\fP \fBCFG_nextLoop\fP (\fBCFG\fP cfg, \fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "bool \fBCFG_isLastLoop\fP (\fBCFG\fP cfg, \fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBCFG\fP \fBLOOP_cfg\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBLOOP_func\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_size\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_countBbl\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBLOOP_findBbl\fP (\fBLOOP\fP loop, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBLOOP_firstBbl\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBLOOP_nextBbl\fP (\fBLOOP\fP loop, \fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "bool \fBLOOP_isLastBbl\fP (\fBLOOP\fP loop, \fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_countInsn\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBLOOP_findInsn\fP (\fBLOOP\fP loop, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBLOOP_firstInsn\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBLOOP_nextInsn\fP (\fBLOOP\fP loop, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBLOOP_isLastInsn\fP (\fBLOOP\fP loop, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBLOOP_head\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBLOOP_tail\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_countExits\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_exits\fP (\fBLOOP\fP loop, std::vector< \fBINSN\fP > &insnList)"
+.br
+.ti -1c
+.RI "bool \fBLOOP_isInnerLoop\fP (\fBLOOP\fP loop1, \fBLOOP\fP loop2)"
+.br
+.ti -1c
+.RI "\fBLOOP\fP \fBLOOP_parent\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_index\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBLOOP_depth\fP (\fBLOOP\fP loop)"
+.br
+.ti -1c
+.RI "bool \fBBBL_isHead\fP (\fBBBL\fP bbl, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBBBL_isTail\fP (\fBBBL\fP bbl, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBBBL_head\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBBBL_tail\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBBBL_func\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "\fBLOOP\fP \fBBBL_loop\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_size\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint64_t \fBBBL_addr\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_countInsn\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBBBL_findInsn\fP (\fBBBL\fP bbl, uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBBBL_firstInsn\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "\fBINSN\fP \fBBBL_nextInsn\fP (\fBBBL\fP bbl, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBBBL_isLastInsn\fP (\fBBBL\fP bbl, \fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_countTargets\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_targets\fP (\fBBBL\fP bbl, std::vector< \fBBBL\fP > &bblList)"
+.br
+.ti -1c
+.RI "bool \fBBBL_hasFallthroughTarget\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBBBL_fallthroughTarget\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_countJumpTargets\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_jumpTargets\fP (\fBBBL\fP bbl, std::vector< \fBBBL\fP > &bblList)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_countSources\fP (\fBBBL\fP bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBBBL_sources\fP (\fBBBL\fP bbl, std::vector< \fBBBL\fP > &bblList)"
+.br
+.ti -1c
+.RI "uint32_t \fBINSN_targets\fP (\fBINSN\fP insn, std::vector< uint64_t > &tlist)"
+.br
+.ti -1c
+.RI "\fBBBL\fP \fBINSN_bbl\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "\fBFUNC\fP \fBINSN_func\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "\fBLOOP\fP \fBINSN_loop\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "uint64_t \fBINSN_addr\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "std::string \fBINSN_string\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "uint64_t \fBINSN_callTarget\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBINSN_isBranch\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBINSN_isFpop\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBINSN_isMemop\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBINSN_size\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "std::string \fBINSN_condName\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "bool \fBINSN_fallsThrough\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBINSN_sourceRegisterSizeInBits\fP (\fBINSN\fP insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBINSN_sourceDatatypeSizeInBits\fP (\fBINSN\fP insn)"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef BasicBlock* \fBEPAX::BBL\fP"
+.PP
+Definition at line 52 of file Interface\&.hpp\&.
+.SS "typedef Binary* \fBEPAX::BIN\fP"
+.PP
+Definition at line 43 of file Interface\&.hpp\&.
+.SS "typedef ControlFlow* \fBEPAX::CFG\fP"
+.PP
+Definition at line 50 of file Interface\&.hpp\&.
+.SS "typedef FlowEquation* \fBEPAX::FLOW\fP"
+.PP
+Definition at line 55 of file Interface\&.hpp\&.
+.SS "typedef Function* \fBEPAX::FUNC\fP"
+.PP
+Definition at line 49 of file Interface\&.hpp\&.
+.SS "typedef Instruction* \fBEPAX::INSN\fP"
+.PP
+Definition at line 53 of file Interface\&.hpp\&.
+.SS "typedef Loop* \fBEPAX::LOOP\fP"
+.PP
+Definition at line 51 of file Interface\&.hpp\&.
+.SS "typedef Section* \fBEPAX::SECT\fP"
+.PP
+Definition at line 48 of file Interface\&.hpp\&.
+.SS "typedef Symbol* \fBEPAX::SYM\fP"
+.PP
+Definition at line 54 of file Interface\&.hpp\&.
+.SH "Function Documentation"
+.PP 
+.SS "uint64_t \fBEPAX::BBL_addr\fP (BBLbbl)"
+.SS "uint32_t \fBEPAX::BBL_countInsn\fP (BBLbbl)"Get the number of INSNs in a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of INSNs in a BBL 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_countJumpTargets\fP (BBLbbl)"Counts the number of non-fallthrough targets for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of targets for bbl that are not fallthrough targets 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_countSources\fP (BBLbbl)"Counts the number of control source blocks for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of control source blocks for bbl 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_countTargets\fP (BBLbbl)"Gets the number of control flow targets for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of BBLs that are control flow targets for bbl 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::BBL_fallthroughTarget\fP (BBLbbl)"Gets the fallthrough target for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BBL that is the fallthrough target of bbl, or NULL if no such BBL exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::BBL_findInsn\fP (BBLbbl, uint64_taddr)"Find the INSN within a BBL at a given address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the INSN within BBL that intersects with addr, or NULL if no such INSN exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::BBL_firstInsn\fP (BBLbbl)"Get the first INSN object in a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first INSN in bbl 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::BBL_func\fP (BBLbbl)"Get the function containing a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the FUNC containing bbl 
+.RE
+.PP
+
+.SS "bool \fBEPAX::BBL_hasFallthroughTarget\fP (BBLbbl)"Tells whether control can fall through the end of a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff control can fall through the end of bbl 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::BBL_head\fP (BBLbbl)"Get the head INSN of a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the head INSN of bbl 
+.RE
+.PP
+
+.SS "bool \fBEPAX::BBL_isHead\fP (BBLbbl, INSNinsn)"Is an insn the head of a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff insn is the head of bbl 
+.RE
+.PP
+
+.SS "bool \fBEPAX::BBL_isLastInsn\fP (BBLbbl, INSNinsn)"Tests whether a INSN is the last in a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fIinsn\fP a INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff insn is the last INSN object in bbl, false otherwise 
+.RE
+.PP
+
+.SS "bool \fBEPAX::BBL_isTail\fP (BBLbbl, INSNinsn)"Is an insn the tail of a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff insn is the tail of bbl 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_jumpTargets\fP (BBLbbl, std::vector< BBL > &bblList)"Gets the non-fallthrough targets for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fI(out)\fP the non-fallthrough targets for bbl 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of non-fallthrough targets for bbl 
+.RE
+.PP
+
+.SS "\fBLOOP\fP \fBEPAX::BBL_loop\fP (BBLbbl)"Get the loop containing a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the LOOP containing bbl, of NULL if no such LOOP exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::BBL_nextInsn\fP (BBLbbl, INSNinsn)"Get the next INSN object in a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fIinsn\fP a INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the INSN from bbl that is subsequent to insn, or NULL if no such INSN exists 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_size\fP (BBLbbl)"Get the size of a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size in bytes of bbl 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_sources\fP (BBLbbl, std::vector< BBL > &bblList)"Gets the control source blocks for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fI(out)\fP bblList the control source blocks for bbl 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of control source blocks for bbl 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::BBL_tail\fP (BBLbbl)"Get the tail INSN of a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the tail INSN of bbl 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BBL_targets\fP (BBLbbl, std::vector< BBL > &bblList)"Gets the control flow targets for a BBL
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbbl\fP a BBL object 
+.br
+\fI(out)\fP the BBLs that are control flow targets for bbl 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of BBLs that are control targets for bbl 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BIN_countFunc\fP (BINbin)"Count the functions in a BIN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of FUNCs in bin 
+.RE
+.PP
+
+.SS "\fBBIN\fP \fBEPAX::BIN_create\fP (std::stringfileName)"Creates a BIN object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfileName\fP The name of a binary file\&. Allowed formats are: ELF, MachO 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a BIN object created using the input parameter 
+.RE
+.PP
+
+.SS "void \fBEPAX::BIN_destroy\fP (BINbin)"frees all memory associated with a BIN object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN object, which is set to NULL during this operation\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::BIN_fileSize\fP (BINbin)"Find the file size of a BIN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of the file used to create bin 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::BIN_findFunc\fP (BINbin, uint64_taddr)"Find the function at a given virtual address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the FUNC at addr in bin 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::BIN_firstFunc\fP (BINbin)"Gets the first function in a BIN object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first logical function in binary 
+.RE
+.PP
+
+.SS "std::string \fBEPAX::BIN_getName\fP (BINbin)"returns the name of a BIN object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the name of the file used to create bin 
+.RE
+.PP
+
+.SS "bool \fBEPAX::BIN_isExecutable\fP (BINbin)"Is the BIN executable
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff bin is an executable file 
+.RE
+.PP
+
+.SS "bool \fBEPAX::BIN_isLastFunc\fP (BINbin, FUNCfunc)"Is a FUNC the last logical function in its BIN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.br
+\fIfunc\fP a FUNC from bin 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff func is the last logical function in bin 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::BIN_nextFunc\fP (BINbin, FUNCfunc)"Gets the next logical function in a BIN object
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN object 
+.br
+\fIfunc\fP a FUNC from binary 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the logical function following func from bin, or NULL if func is the last such function 
+.RE
+.PP
+
+.SS "void \fBEPAX::BIN_printStaticFile\fP (BINbin, std::stringfname)"Print a static file containing detailed information about the structures found in a BIN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN 
+.br
+\fIfname\fP the name of the output file to catch static analysis 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "void \fBEPAX::BIN_run\fP (BINbin, intargc, char **argv)"Runs a the program represented by BIN with arguments; does not return\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbin\fP a BIN object for which BIN_isExecutable returns true 
+.br
+\fIargc\fP the number of program arguments 
+.br
+\fIargv\fP the program arguments 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::CFG_countLoop\fP (CFGcfg)"Count the number of loops in a CFG
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcfg\fP a CFG object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of loops in cfg 
+.RE
+.PP
+
+.SS "\fBLOOP\fP \fBEPAX::CFG_findLoop\fP (CFGcfg, uint64_taddr)"Find the LOOP within a CFG ad a given address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcfg\fP a CFG object 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the loop within cfg at addr, or NULL if no such loop exists 
+.RE
+.PP
+
+.SS "\fBLOOP\fP \fBEPAX::CFG_firstLoop\fP (CFGcfg)"Get the first loop in a CFG
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcfg\fP a CFG object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first loop in cfg 
+.RE
+.PP
+
+.SS "bool \fBEPAX::CFG_isLastLoop\fP (CFGcfg, LOOPloop)"Tests whether a LOOP is the last in a CFG
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcfg\fP a CFG object 
+.br
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff loop is the last LOOP in cfg 
+.RE
+.PP
+
+.SS "\fBLOOP\fP \fBEPAX::CFG_nextLoop\fP (CFGcfg, LOOPloop)"Get the next loop in a CFG
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcfg\fP a CFG object 
+.br
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the successor to loop within cfg, or NULL if no such LOOP exists 
+.RE
+.PP
+
+.SS "uint64_t \fBEPAX::FUNC_addr\fP (FUNCfunc)"Get the virtual address of a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the virtual address of func 
+.RE
+.PP
+
+.SS "\fBBIN\fP \fBEPAX::FUNC_bin\fP (FUNCfunc)"Get the BIN object that contains a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BIN object associated with func 
+.RE
+.PP
+
+.SS "\fBCFG\fP \fBEPAX::FUNC_cfg\fP (FUNCfunc)"Get the CFG attached to a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the CFG attached to func 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::FUNC_countBbl\fP (FUNCfunc)"Get the number of BBL objects in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of BBL objects in func 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::FUNC_countInsn\fP (FUNCfunc)"Get the number of INSNs in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of INSNs in a FUNC 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::FUNC_countTargets\fP (FUNCfunc)"Get the number of targets of (functions called by) a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of unique targets of the text of func 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::FUNC_create\fP (uint8_t *bytes, uint32_tsize)"Generate a function using the supplied bytes\&. Note that the size of the function found may be smaller than the size of the input buffer supplied\&. Use FUNC_size on the returned FUNC to find its size\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIbytes\fP a buffer of raw instruction bytes 
+.br
+\fIsize\fP the size of the buffer 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+a FUNC generated using the bytes supplied in buf 
+.RE
+.PP
+
+.SS "void \fBEPAX::FUNC_Destroy\fP (FUNCfunc)"Destroy a function; note that it is an error to destroy a function that was not created with FUNC_create
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object that was created with FUNC_Create 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::FUNC_findBbl\fP (FUNCfunc, uint64_taddr)"Find the BBL within a FUNC at a given address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BBL within FUNC that intersects with addr, or NULL if no such BBL exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::FUNC_findInsn\fP (FUNCfunc, uint64_taddr)"Find the INSN within a FUNC at a given address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the INSN within FUNC that intersects with addr, or NULL if no such INSN exists 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::FUNC_firstBbl\fP (FUNCfunc)"Get the first BBL object in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first BBL in func 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::FUNC_firstInsn\fP (FUNCfunc)"Get the first INSN object in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first INSN in func 
+.RE
+.PP
+
+.SS "bool \fBEPAX::FUNC_isLastBbl\fP (FUNCfunc, BBLbbl)"Tests whether a BBL is the last in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff bbl is the last BBL object in func, false otherwise 
+.RE
+.PP
+
+.SS "bool \fBEPAX::FUNC_isLastInsn\fP (FUNCfunc, INSNinsn)"Tests whether a INSN is the last in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fIinsn\fP a INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff insn is the last INSN object in func, false otherwise 
+.RE
+.PP
+
+.SS "std::string \fBEPAX::FUNC_name\fP (FUNCfunc)"Get the name of a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the name of func, or NULL if no name can be found 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::FUNC_nextBbl\fP (FUNCfunc, BBLbbl)"Get the next BBL object in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BBL from func that is subsequent to bbl, or NULL if no such BBL exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::FUNC_nextInsn\fP (FUNCfunc, INSNinsn)"Get the next INSN object in a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fIinsn\fP a INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the INSN from func that is subsequent to insn, or NULL if no such INSN exists 
+.RE
+.PP
+
+.SS "void \fBEPAX::FUNC_print\fP (FUNCfunc)"Print a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.SS "std::string \fBEPAX::FUNC_secName\fP (FUNCfunc)"Get the name of the section that contains a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the name of the section containing func, or NULL if it is unknown 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::FUNC_size\fP (FUNCfunc)"Get the size of a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size of func in bytes 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::FUNC_targets\fP (FUNCfunc, std::vector< FUNC > &funcList)"Get the unique targets of (functions called by) a FUNC
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP a FUNC object 
+.br
+\fI(out)\fP funcList the unique targets of func 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of unique targets of func 
+.RE
+.PP
+
+.SS "uint64_t \fBEPAX::INSN_addr\fP (INSNinsn)"Get the virtual address of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the virtual address of insn 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::INSN_bbl\fP (INSNinsn)"Get the basic block of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BBL that contains insn, or NULL if no such BBL exists 
+.RE
+.PP
+
+.SS "uint64_t \fBEPAX::INSN_callTarget\fP (INSNinsn)"Get the call target of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the address of the call target of insn, or 0 if the target cannot be found 
+.RE
+.PP
+
+.SS "std::string \fBEPAX::INSN_condName\fP (INSNinsn)"Get the string rep of the predicate condition of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the string representation of the predicate condition of insn 
+.RE
+.PP
+
+.SS "bool \fBEPAX::INSN_fallsThrough\fP (INSNinsn)"Can control fall through an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff control can fall through insn 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::INSN_func\fP (INSNinsn)"Get the function of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the FUNC that contains insn, or NULL if no such FUNC exists 
+.RE
+.PP
+
+.SS "bool \fBEPAX::INSN_isBranch\fP (INSNinsn)"Is an INSN a branch
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff insn is a branch instruction of any kind 
+.RE
+.PP
+
+.SS "bool \fBEPAX::INSN_isFpop\fP (INSNinsn)"Is an INSN an fp op 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff either source or destination operands is fp data 
+.RE
+.PP
+
+.SS "bool \fBEPAX::INSN_isMemop\fP (INSNinsn)"Is an INSN a mem op 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff the insns touches memory 
+.RE
+.PP
+
+.SS "\fBLOOP\fP \fBEPAX::INSN_loop\fP (INSNinsn)"Get the loop of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the LOOP that contains insn, or NULL if no such LOOP exists 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::INSN_size\fP (INSNinsn)"Get the size in of an INSN in bytes
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size (in bytes) of insn 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::INSN_sourceDatatypeSizeInBits\fP (INSNinsn)"Size of source datatype in bits
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of bits in a source operand 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::INSN_sourceRegisterSizeInBits\fP (INSNinsn)"Size of a source register in bits
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of bits in a source register 
+.RE
+.PP
+
+.SS "std::string \fBEPAX::INSN_string\fP (INSNinsn)"Get a string representation of an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the decoded string representation of insn 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::INSN_targets\fP (INSNinsn, std::vector< uint64_t > &tlist)"Get the control target INSNs for an INSN
+.PP
+\fBParameters:\fP
+.RS 4
+\fIinsn\fP an INSN object 
+.br
+\fItlist\fP (out) the target INSNs of insn 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of control targets of insn 
+.RE
+.PP
+
+.SS "\fBCFG\fP \fBEPAX::LOOP_cfg\fP (LOOPloop)"Get the CFG associated with a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the CFG associated with loop 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_countBbl\fP (LOOPloop)"Get the number of BBL objects in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of BBL objects in loop 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_countExits\fP (LOOPloop)"Get the number of exit points from a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of exit points in loop 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_countInsn\fP (LOOPloop)"Get the number of INSNs in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of INSNs in a LOOP 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_depth\fP (LOOPloop)"Get the depth of a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the depth of loop 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_exits\fP (LOOPloop, std::vector< INSN > &insnList)"Get the instructions that are exit points from a particular LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fI(out)\fP insnList loop's exit points 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the number of exit points in loop 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::LOOP_findBbl\fP (LOOPloop, uint64_taddr)"Find the BBL within a LOOP at a given address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BBL within LOOP that intersects with addr, or NULL if no such BBL exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::LOOP_findInsn\fP (LOOPloop, uint64_taddr)"Find the INSN within a LOOP at a given address
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIaddr\fP a virtual address 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the INSN within LOOP that intersects with addr, or NULL if no such INSN exists 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::LOOP_firstBbl\fP (LOOPloop)"Get the first BBL object in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first BBL in loop 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::LOOP_firstInsn\fP (LOOPloop)"Get the first INSN object in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the first INSN in loop 
+.RE
+.PP
+
+.SS "\fBFUNC\fP \fBEPAX::LOOP_func\fP (LOOPloop)"Get the FUNC associated with a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the FUNC associated with loop 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::LOOP_head\fP (LOOPloop)"Get the head basic block from a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the head (target of the back edge) BBL in loop 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_index\fP (LOOPloop)"Get the index of a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the index of loop, which is unique within the containing FUNC/CFG 
+.RE
+.PP
+
+.SS "bool \fBEPAX::LOOP_isInnerLoop\fP (LOOPloop1, LOOPloop2)"Find out whether a LOOP is an inner loop of another LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIother\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff loop2 is an inner loop of loop1 
+.RE
+.PP
+
+.SS "bool \fBEPAX::LOOP_isLastBbl\fP (LOOPloop, BBLbbl)"Tests whether a BBL is the last in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff bbl is the last BBL object in loop, false otherwise 
+.RE
+.PP
+
+.SS "bool \fBEPAX::LOOP_isLastInsn\fP (LOOPloop, INSNinsn)"Tests whether a INSN is the last in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIinsn\fP a INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true iff insn is the last INSN object in loop, false otherwise 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::LOOP_nextBbl\fP (LOOPloop, BBLbbl)"Get the next BBL object in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIbbl\fP a BBL object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the BBL from loop that is subsequent to bbl, or NULL if no such BBL exists 
+.RE
+.PP
+
+.SS "\fBINSN\fP \fBEPAX::LOOP_nextInsn\fP (LOOPloop, INSNinsn)"Get the next INSN object in a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.br
+\fIinsn\fP a INSN object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the INSN from loop that is subsequent to insn, or NULL if no such INSN exists 
+.RE
+.PP
+
+.SS "\fBLOOP\fP \fBEPAX::LOOP_parent\fP (LOOPloop)"Get the parent LOOP of a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the parent LOOP of loop, or NULL no such loop exists 
+.RE
+.PP
+
+.SS "uint32_t \fBEPAX::LOOP_size\fP (LOOPloop)"Get the size of a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the size in bytes of loop 
+.RE
+.PP
+
+.SS "\fBBBL\fP \fBEPAX::LOOP_tail\fP (LOOPloop)"Get the tail basic block from a LOOP
+.PP
+\fBParameters:\fP
+.RS 4
+\fIloop\fP a LOOP object 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+the tail (source of the back edge) BBL in loop 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAX from the source code\&.

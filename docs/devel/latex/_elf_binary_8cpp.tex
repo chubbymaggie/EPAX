@@ -1,0 +1,119 @@
+\hypertarget{_elf_binary_8cpp}{\section{\-Elf\-Binary.\-cpp \-File \-Reference}
+\label{_elf_binary_8cpp}\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}\-E\-P\-A\-X\-Common\-Internal.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Elf/elf.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Binary.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Elf\-Binary.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Function.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Input\-File.\-hpp\char`\"{}}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\item 
+namespace \hyperlink{namespace_e_p_a_x_1_1_elf}{\-E\-P\-A\-X\-::\-Elf}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_elf_binary_8cpp_a09ade31a9390d6ff4843f4d0eab4fa39}{\-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Ehdr$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_adee8c7920607b19b82064b43a2075924}{\-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Ehdr$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_abd78d0bd3478762602df1232d10d1321}{\-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Sym$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_a64f5c655a7547a00865a3102c75abbf1}{\-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Sym$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_a824b027d2116797a3dfd9cde0ff56987}{\-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Shdr$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_a69a1f1681babbf982bec2f34e81495bf}{\-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Shdr$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_a4c6cc2a3e7348952337e55693edf021b}{\-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Phdr$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_a2520b959decfd5851eb04a64f47f06fa}{\-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Phdr$\ast$)entry)
+\item 
+\#define \hyperlink{_elf_binary_8cpp_abce2a449151634d02cb08a333b9c5cc0}{\-C\-A\-S\-E}(\-\_\-\-\_\-typ\-\_\-\-\_\-)~case \-E\-M\-\_\- \#\# \-\_\-\-\_\-typ\-\_\-\-\_\-\-: std\-::cout $<$$<$ \char`\"{}isa=\char`\"{} $<$$<$ \#\-\_\-\-\_\-typ\-\_\-\-\_\- ; break
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_elf_binary_8cpp_source}{\-Elf\-Binary.\-cpp}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_elf_binary_8cpp_abce2a449151634d02cb08a333b9c5cc0}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-C\-A\-S\-E@{\-C\-A\-S\-E}}
+\index{\-C\-A\-S\-E@{\-C\-A\-S\-E}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-C\-A\-S\-E}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-typ\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~case \-E\-M\-\_\- \#\# \-\_\-\-\_\-typ\-\_\-\-\_\-\-: std\-::cout $<$$<$ \char`\"{}isa=\char`\"{} $<$$<$ \#\-\_\-\-\_\-typ\-\_\-\-\_\- ; break}}\label{_elf_binary_8cpp_abce2a449151634d02cb08a333b9c5cc0}
+\hypertarget{_elf_binary_8cpp_a09ade31a9390d6ff4843f4d0eab4fa39}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Ehdr$\ast$)entry)}}\label{_elf_binary_8cpp_a09ade31a9390d6ff4843f4d0eab4fa39}
+
+
+\-Definition at line 38 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_adee8c7920607b19b82064b43a2075924}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Ehdr$\ast$)entry)}}\label{_elf_binary_8cpp_adee8c7920607b19b82064b43a2075924}
+
+
+\-Definition at line 39 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_a4c6cc2a3e7348952337e55693edf021b}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Phdr$\ast$)entry)}}\label{_elf_binary_8cpp_a4c6cc2a3e7348952337e55693edf021b}
+
+
+\-Definition at line 44 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_a2520b959decfd5851eb04a64f47f06fa}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-P\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Phdr$\ast$)entry)}}\label{_elf_binary_8cpp_a2520b959decfd5851eb04a64f47f06fa}
+
+
+\-Definition at line 45 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_a824b027d2116797a3dfd9cde0ff56987}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y@{\-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-H\-D\-R32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Shdr$\ast$)entry)}}\label{_elf_binary_8cpp_a824b027d2116797a3dfd9cde0ff56987}
+
+
+\-Definition at line 42 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_a69a1f1681babbf982bec2f34e81495bf}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y@{\-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-H\-D\-R64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Shdr$\ast$)entry)}}\label{_elf_binary_8cpp_a69a1f1681babbf982bec2f34e81495bf}
+
+
+\-Definition at line 43 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_abd78d0bd3478762602df1232d10d1321}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y@{\-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y@{\-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-Y\-M32\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf32\-\_\-\-Sym$\ast$)entry)}}\label{_elf_binary_8cpp_abd78d0bd3478762602df1232d10d1321}
+
+
+\-Definition at line 40 of file \-Elf\-Binary.\-cpp.
+
+\hypertarget{_elf_binary_8cpp_a64f5c655a7547a00865a3102c75abbf1}{\index{\-Elf\-Binary.\-cpp@{\-Elf\-Binary.\-cpp}!\-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y@{\-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y}}
+\index{\-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y@{\-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y}!ElfBinary.cpp@{\-Elf\-Binary.\-cpp}}
+\subsubsection[{\-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-S\-Y\-M64\-\_\-\-E\-N\-T\-R\-Y}~((\-Elf64\-\_\-\-Sym$\ast$)entry)}}\label{_elf_binary_8cpp_a64f5c655a7547a00865a3102c75abbf1}
+
+
+\-Definition at line 41 of file \-Elf\-Binary.\-cpp.
+

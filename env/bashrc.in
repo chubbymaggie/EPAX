@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+epaxdir="@abs_top_builddir@"
+export EPAX_ROOT=$epaxdir
+echo "***** initializing environment using EPAX_ROOT=$EPAX_ROOT"
+export LD_LIBRARY_PATH=${EPAX_ROOT}/lib:${LD_LIBRARY_PATH}:@DARM_LIBDIR@
+export PATH=${EPAX_ROOT}/bin:${PATH}
+

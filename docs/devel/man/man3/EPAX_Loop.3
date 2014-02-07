@@ -1,0 +1,137 @@
+.TH "EPAX::Loop" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Loop \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Loop\&.hpp>\fP
+.PP
+Inherits \fBEPAX::IndexBase\fP, and \fBEPAXExport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLoop\fP (\fBControlFlow\fP *c, uint32_t h, uint32_t t, uint32_t d, \fBdyn_bitset\fP *m, uint32_t i)"
+.br
+.ti -1c
+.RI "virtual \fB~Loop\fP ()"
+.br
+.ti -1c
+.RI "\fBControlFlow\fP * \fBgetControlFlow\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountBasicBlocks\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountInstructions\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSize\fP ()"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBfindBasicBlock\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "bool \fBhasBasicBlock\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetBasicBlock\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetNextBasicBlock\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "bool \fBisLastBasicBlock\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBhead\fP ()"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBtail\fP ()"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBfindInstruction\fP (uint64_t addr)"
+.br
+.ti -1c
+.RI "\fBInstruction\fP * \fBgetInstruction\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "bool \fBisLastInstruction\fP (uint32_t idx)"
+.br
+.ti -1c
+.RI "void \fBsetDepth\fP (uint32_t d)"
+.br
+.ti -1c
+.RI "uint32_t \fBgetDepth\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisChildOf\fP (\fBLoop\fP *lp)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 37 of file Loop\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Loop::Loop\fP (\fBControlFlow\fP *c, uint32_th, uint32_tt, uint32_td, \fBdyn_bitset\fP *m, uint32_ti)"
+.PP
+Definition at line 34 of file Loop\&.cpp\&.
+.SS "\fBEPAX::Loop::~Loop\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 50 of file Loop\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t \fBEPAX::Loop::countBasicBlocks\fP ()"
+.PP
+Definition at line 98 of file Loop\&.cpp\&.
+.SS "uint32_t \fBEPAX::Loop::countInstructions\fP ()"
+.PP
+Definition at line 86 of file Loop\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::Loop::findBasicBlock\fP (uint64_taddr)"
+.PP
+Definition at line 120 of file Loop\&.cpp\&.
+.SS "\fBInstruction\fP * \fBEPAX::Loop::findInstruction\fP (uint64_taddr)"
+.PP
+Definition at line 78 of file Loop\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::Loop::getBasicBlock\fP (uint32_tidx)"
+.PP
+Definition at line 139 of file Loop\&.cpp\&.
+.SS "\fBControlFlow\fP* \fBEPAX::Loop::getControlFlow\fP ()\fC [inline]\fP"
+.PP
+Definition at line 50 of file Loop\&.hpp\&.
+.SS "uint32_t \fBEPAX::Loop::getDepth\fP ()"
+.PP
+Definition at line 201 of file Loop\&.cpp\&.
+.SS "\fBInstruction\fP* \fBEPAX::Loop::getInstruction\fP (uint32_tidx)"
+.SS "\fBBasicBlock\fP * \fBEPAX::Loop::getNextBasicBlock\fP (uint32_tidx)"
+.PP
+Definition at line 149 of file Loop\&.cpp\&.
+.SS "uint32_t \fBEPAX::Loop::getSize\fP ()"
+.PP
+Definition at line 108 of file Loop\&.cpp\&.
+.SS "bool \fBEPAX::Loop::hasBasicBlock\fP (uint32_tidx)"
+.PP
+Definition at line 135 of file Loop\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::Loop::head\fP ()"
+.PP
+Definition at line 56 of file Loop\&.cpp\&.
+.SS "bool \fBEPAX::Loop::isChildOf\fP (\fBLoop\fP *lp)"
+.PP
+Definition at line 182 of file Loop\&.cpp\&.
+.SS "bool \fBEPAX::Loop::isLastBasicBlock\fP (uint32_tidx)"
+.PP
+Definition at line 165 of file Loop\&.cpp\&.
+.SS "bool \fBEPAX::Loop::isLastInstruction\fP (uint32_tidx)"
+.SS "void \fBEPAX::Loop::setDepth\fP (uint32_td)"
+.PP
+Definition at line 197 of file Loop\&.cpp\&.
+.SS "\fBBasicBlock\fP * \fBEPAX::Loop::tail\fP ()"
+.PP
+Definition at line 67 of file Loop\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

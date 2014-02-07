@@ -1,0 +1,53 @@
+.TH "EPAX::Symbol" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Symbol \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Symbol\&.hpp>\fP
+.PP
+Inherits \fBEPAX::MemoryBase\fP, \fBEPAX::FileBase\fP, \fBEPAX::IndexBase\fP, \fBEPAX::NameBase\fP, and \fBEPAXExport\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::ElfSymbol\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSymbol\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s, uint32_t i)"
+.br
+.ti -1c
+.RI "virtual \fB~Symbol\fP ()"
+.br
+.ti -1c
+.RI "virtual bool \fBisFunction\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisThumbFunction\fP ()=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 35 of file Symbol\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Symbol::Symbol\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts, uint32_ti)"
+.PP
+Definition at line 31 of file Symbol\&.cpp\&.
+.SS "virtual \fBEPAX::Symbol::~Symbol\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 38 of file Symbol\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual bool \fBEPAX::Symbol::isFunction\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol\fP\&.
+.SS "virtual bool \fBEPAX::Symbol::isThumbFunction\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbol\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

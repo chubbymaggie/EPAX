@@ -1,0 +1,361 @@
+\hypertarget{_e_p_a_x_common_internal_8hpp}{\section{\-E\-P\-A\-X\-Common\-Internal.\-hpp \-File \-Reference}
+\label{_e_p_a_x_common_internal_8hpp}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+}
+{\ttfamily \#include $<$stdint.\-h$>$}\*
+{\ttfamily \#include $<$stdlib.\-h$>$}\*
+{\ttfamily \#include $<$stddef.\-h$>$}\*
+{\ttfamily \#include $<$string.\-h$>$}\*
+{\ttfamily \#include $<$sys/ptrace.\-h$>$}\*
+{\ttfamily \#include $<$sys/user.\-h$>$}\*
+{\ttfamily \#include $<$errno.\-h$>$}\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\*
+{\ttfamily \#include $<$sys/wait.\-h$>$}\*
+{\ttfamily \#include $<$unistd.\-h$>$}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$iomanip$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+{\ttfamily \#include $<$string$>$}\*
+{\ttfamily \#include $<$vector$>$}\*
+{\ttfamily \#include $<$map$>$}\*
+{\ttfamily \#include $<$bitset$>$}\*
+{\ttfamily \#include $<$stack$>$}\*
+{\ttfamily \#include $<$set$>$}\*
+{\ttfamily \#include $<$algorithm$>$}\*
+\subsection*{\-Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_e_p_a_x_export}{\-E\-P\-A\-X\-Export}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_ad060118c2df58d974a9f5526d820c184}{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}~(\-N\-U\-L\-L)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_acb70e5a725963e9f75d6550f12d86081}{\-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}(\-\_\-\-\_\-p\-\_\-\-\_\-)~((\-\_\-\-\_\-p\-\_\-\-\_\- != \hyperlink{_e_p_a_x_common_internal_8hpp_ad060118c2df58d974a9f5526d820c184}{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}))
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a220f38b26fa99d4d91b574f42d991516}{\-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E}~(1024)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a3cc3b0a8b0ca4f403e81573989fd2cd2}{\-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}~\char`\"{}\-\_\-\-\_\-unknown\-\_\-\-\_\-\char`\"{}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_aaddfc377a9df88d0c95d42241a8df25f}{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}~\char`\"{}-\/\-E\-P\-A\-X-\/ \char`\"{}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a90dc3f3ee970394e0080300526390a84}{\-E\-N\-D\-L}~\char`\"{}$\backslash$n\char`\"{}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_ad58a1fbfc85c7e4790fc55e654f50221}{\-T\-A\-B}~\char`\"{}$\backslash$t\char`\"{}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_af6f4c2c170f7cbe89cdec2d3c2d7cfce}{\-D\-E\-C}(\-\_\-\-\_\-n\-\_\-\-\_\-)~std\-::dec $<$$<$ (\-\_\-\-\_\-n\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_ad3e71bdc71a21aa498036894462719e2}{\-H\-E\-X}(\-\_\-\-\_\-n\-\_\-\-\_\-)~std\-::hex $<$$<$ \char`\"{}0x\char`\"{} $<$$<$ (\-\_\-\-\_\-n\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a5323f96be387258cf23fc4e8cad93348}{\-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T}~64
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a0537042c81f2d8a469b65f5304c4daac}{\-E\-P\-A\-X\-Err}~std\-::cerr $<$$<$ \hyperlink{_e_p_a_x_common_internal_8hpp_aaddfc377a9df88d0c95d42241a8df25f}{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a4ae2ad536d683dc6eeb730de19823b34}{\-E\-P\-A\-X\-Out}~std\-::cout $<$$<$ \hyperlink{_e_p_a_x_common_internal_8hpp_aaddfc377a9df88d0c95d42241a8df25f}{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a10f0137c0b3fb42375df9ee4dc75ac17}{\-E\-P\-A\-X\-Warn}~\hyperlink{_e_p_a_x_common_internal_8hpp_a0537042c81f2d8a469b65f5304c4daac}{\-E\-P\-A\-X\-Err} $<$$<$ \char`\"{} warning\-: \char`\"{}
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a7b41ef1769db498d904361f6eb56a0eb}{\-E\-P\-A\-X\-Assert}(\-\_\-\-\_\-stmt\-\_\-\-\_\-, \-\_\-\-\_\-msg\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_acb395fe410e8ede25d9276421605e0c1}{\-E\-P\-A\-X\-Die}(\-\_\-\-\_\-msg\-\_\-\-\_\-)~\hyperlink{_e_p_a_x_common_internal_8hpp_a7b41ef1769db498d904361f6eb56a0eb}{\-E\-P\-A\-X\-Assert}(false, \-\_\-\-\_\-msg\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_aa17cf3c974e6bcb3e1ce5a7a380d3065}{\-Should\-Not\-Arrive}~\hyperlink{_e_p_a_x_common_internal_8hpp_acb395fe410e8ede25d9276421605e0c1}{\-E\-P\-A\-X\-Die}(\char`\"{}\-This function is not yet implemented\char`\"{})
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_affe2bb042d9a5e168091380a37420e4d}{\-E\-P\-A\-X\-Verify\-Type}(\-\_\-\-\_\-type\-\_\-\-\_\-, \-\_\-\-\_\-obj\-\_\-\-\_\-)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a100d6ecdfdd16c810baf2306c066abb9}{\-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-}~\hyperlink{_e_p_a_x_common_internal_8hpp_a7b41ef1769db498d904361f6eb56a0eb}{\-E\-P\-A\-X\-Assert}(false, \char`\"{}\-This function cannot be called.\char`\"{})
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_a34d59e13e2a96f6f8cdecfd5356c5e6e}{\-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2}(\-\_\-\-\_\-addr, \-\_\-\-\_\-exp)~(\-\_\-\-\_\-addr \& $\sim$((1 $<$$<$ \-\_\-\-\_\-exp) -\/ 1))
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_ac0e87c1d66cacc61454b23cdc12ff764}{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S}~(0x0)
+\item 
+\#define \hyperlink{_e_p_a_x_common_internal_8hpp_ad19561cc41062db213664fb462defc57}{\-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B}(\-\_\-\-\_\-a)~((\-\_\-\-\_\-a \& 0x1) == 1)
+\end{DoxyCompactItemize}
+\subsection*{\-Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef char \hyperlink{_e_p_a_x_common_internal_8hpp_a17755bdd71c02e656c667b16de61dd7b}{rawbyte\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{\-Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376}{\-E\-P\-A\-X\-Export\-Class} \{ \*
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a332f4a9522545d58e2402d7c297e2557}{\-E\-P\-A\-X\-Export\-Class\-\_\-undefined} =  0, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376ae3aa39f8e061a73acab28a42a2c47604}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-I\-N}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a3637dc8c5b832afe3dbe7837ee212cf3}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-E\-C\-T}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376add23567ec844a18f7a65b3d1306aaa40}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-U\-N\-C}, 
+\*
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376af0ec78faa952155f4ea838b5a6163eb9}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-C\-F\-G}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a4fe3c19b8570a3b2ff28ed6bfc77a7af}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-L\-O\-O\-P}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a9ef56b39e9c63e768b4913896d677894}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-B\-L}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a05af777a16f8c2c2d7e1643c55c32823}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-I\-N\-S\-N}, 
+\*
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a57171fc3bf7e634f96b0fdeb0bc45acc}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-Y\-M}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376adf8516522dfa7d31e9ebc22b21617ab6}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-L\-O\-W}, 
+\hyperlink{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a68872eb2621fa452a4ec33d75f395493}{\-E\-P\-A\-X\-Export\-Class\-\_\-total}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_e_p_a_x_common_internal_8hpp_source}{\-E\-P\-A\-X\-Common\-Internal.\-hpp}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_e_p_a_x_common_internal_8hpp_a100d6ecdfdd16c810baf2306c066abb9}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-@{\-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-}}
+\index{\-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-@{\-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-\_\-\-\_\-do\-\_\-not\-\_\-call\-\_\-\-\_\-}~{\bf \-E\-P\-A\-X\-Assert}(false, \char`\"{}\-This function cannot be called.\char`\"{})}}\label{_e_p_a_x_common_internal_8hpp_a100d6ecdfdd16c810baf2306c066abb9}
+
+
+\-Definition at line 126 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_ad19561cc41062db213664fb462defc57}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B@{\-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B}}
+\index{\-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B@{\-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-D\-D\-R\-E\-S\-S\-\_\-\-I\-S\-\_\-\-T\-H\-U\-M\-B}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-a}
+\end{DoxyParamCaption}
+)~((\-\_\-\-\_\-a \& 0x1) == 1)}}\label{_e_p_a_x_common_internal_8hpp_ad19561cc41062db213664fb462defc57}
+
+
+\-Definition at line 132 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a34d59e13e2a96f6f8cdecfd5356c5e6e}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2@{\-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2}}
+\index{\-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2@{\-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-A\-L\-I\-G\-N\-\_\-\-P\-W\-R2}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-addr, }
+\item[{}]{\-\_\-\-\_\-exp}
+\end{DoxyParamCaption}
+)~(\-\_\-\-\_\-addr \& $\sim$((1 $<$$<$ \-\_\-\-\_\-exp) -\/ 1))}}\label{_e_p_a_x_common_internal_8hpp_a34d59e13e2a96f6f8cdecfd5356c5e6e}
+
+
+\-Definition at line 127 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a5323f96be387258cf23fc4e8cad93348}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T@{\-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T}}
+\index{\-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T@{\-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-B\-A\-C\-K\-T\-R\-A\-C\-E\-\_\-\-L\-I\-M\-I\-T}~64}}\label{_e_p_a_x_common_internal_8hpp_a5323f96be387258cf23fc4e8cad93348}
+
+
+\-Definition at line 67 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_af6f4c2c170f7cbe89cdec2d3c2d7cfce}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-D\-E\-C@{\-D\-E\-C}}
+\index{\-D\-E\-C@{\-D\-E\-C}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-D\-E\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-E\-C}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-n\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~std\-::dec $<$$<$ (\-\_\-\-\_\-n\-\_\-\-\_\-)}}\label{_e_p_a_x_common_internal_8hpp_af6f4c2c170f7cbe89cdec2d3c2d7cfce}
+
+
+\-Definition at line 64 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a90dc3f3ee970394e0080300526390a84}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-N\-D\-L@{\-E\-N\-D\-L}}
+\index{\-E\-N\-D\-L@{\-E\-N\-D\-L}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-N\-D\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-N\-D\-L}~\char`\"{}$\backslash$n\char`\"{}}}\label{_e_p_a_x_common_internal_8hpp_a90dc3f3ee970394e0080300526390a84}
+
+
+\-Definition at line 62 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_aaddfc377a9df88d0c95d42241a8df25f}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E@{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}}
+\index{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E@{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}~\char`\"{}-\/\-E\-P\-A\-X-\/ \char`\"{}}}\label{_e_p_a_x_common_internal_8hpp_aaddfc377a9df88d0c95d42241a8df25f}
+
+
+\-Definition at line 61 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a7b41ef1769db498d904361f6eb56a0eb}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Assert@{\-E\-P\-A\-X\-Assert}}
+\index{\-E\-P\-A\-X\-Assert@{\-E\-P\-A\-X\-Assert}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Assert}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-Assert}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-stmt\-\_\-\-\_\-, }
+\item[{}]{\-\_\-\-\_\-msg\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{_e_p_a_x_common_internal_8hpp_a7b41ef1769db498d904361f6eb56a0eb}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+if (!(__stmt__)){                                                   \
+        EPAXErr << "Assert failure: " << __PRETTY_FUNCTION__ << " at " << 
+      __FILE__ << ":" << __LINE__ << ENDL; \
+        EPAXErr << __msg__ << ENDL;                                   \
+        exit(1); }
+\end{DoxyCode}
+
+
+\-Definition at line 87 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_acb395fe410e8ede25d9276421605e0c1}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Die@{\-E\-P\-A\-X\-Die}}
+\index{\-E\-P\-A\-X\-Die@{\-E\-P\-A\-X\-Die}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Die}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-Die}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-msg\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~{\bf \-E\-P\-A\-X\-Assert}(false, \-\_\-\-\_\-msg\-\_\-\-\_\-)}}\label{_e_p_a_x_common_internal_8hpp_acb395fe410e8ede25d9276421605e0c1}
+
+
+\-Definition at line 95 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a0537042c81f2d8a469b65f5304c4daac}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Err@{\-E\-P\-A\-X\-Err}}
+\index{\-E\-P\-A\-X\-Err@{\-E\-P\-A\-X\-Err}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Err}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-Err}~std\-::cerr $<$$<$ {\bf \-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}}}\label{_e_p_a_x_common_internal_8hpp_a0537042c81f2d8a469b65f5304c4daac}
+
+
+\-Definition at line 73 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a4ae2ad536d683dc6eeb730de19823b34}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Out@{\-E\-P\-A\-X\-Out}}
+\index{\-E\-P\-A\-X\-Out@{\-E\-P\-A\-X\-Out}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Out}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-Out}~std\-::cout $<$$<$ {\bf \-E\-P\-A\-X\-\_\-\-P\-R\-E\-F\-A\-C\-E}}}\label{_e_p_a_x_common_internal_8hpp_a4ae2ad536d683dc6eeb730de19823b34}
+
+
+\-Definition at line 74 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_affe2bb042d9a5e168091380a37420e4d}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Verify\-Type@{\-E\-P\-A\-X\-Verify\-Type}}
+\index{\-E\-P\-A\-X\-Verify\-Type@{\-E\-P\-A\-X\-Verify\-Type}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Verify\-Type}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-Verify\-Type}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-type\-\_\-\-\_\-, }
+\item[{}]{\-\_\-\-\_\-obj\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)}}\label{_e_p_a_x_common_internal_8hpp_affe2bb042d9a5e168091380a37420e4d}
+{\bfseries \-Value\-:}
+\begin{DoxyCode}
+EPAXAssert(IS_VALID_PTR(__obj__), "invalid object (NULL) found instead of " # 
+      __type__);\
+    EPAXAssert(__obj__->getClass() == EPAXExportClass_ ## __type__, "Non-" # 
+      __type__ << " object found");
+\end{DoxyCode}
+
+
+\-Definition at line 122 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a10f0137c0b3fb42375df9ee4dc75ac17}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Warn@{\-E\-P\-A\-X\-Warn}}
+\index{\-E\-P\-A\-X\-Warn@{\-E\-P\-A\-X\-Warn}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Warn}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-E\-P\-A\-X\-Warn}~{\bf \-E\-P\-A\-X\-Err} $<$$<$ \char`\"{} warning\-: \char`\"{}}}\label{_e_p_a_x_common_internal_8hpp_a10f0137c0b3fb42375df9ee4dc75ac17}
+
+
+\-Definition at line 75 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_ad3e71bdc71a21aa498036894462719e2}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-H\-E\-X@{\-H\-E\-X}}
+\index{\-H\-E\-X@{\-H\-E\-X}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-H\-E\-X}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-H\-E\-X}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-n\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~std\-::hex $<$$<$ \char`\"{}0x\char`\"{} $<$$<$ (\-\_\-\-\_\-n\-\_\-\-\_\-)}}\label{_e_p_a_x_common_internal_8hpp_ad3e71bdc71a21aa498036894462719e2}
+
+
+\-Definition at line 65 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_ac0e87c1d66cacc61454b23cdc12ff764}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S@{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S}}
+\index{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S@{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-V\-A\-L\-I\-D\-\_\-\-A\-D\-D\-R\-E\-S\-S}~(0x0)}}\label{_e_p_a_x_common_internal_8hpp_ac0e87c1d66cacc61454b23cdc12ff764}
+
+
+\-Definition at line 131 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_ad060118c2df58d974a9f5526d820c184}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R@{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}}
+\index{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R@{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}~(\-N\-U\-L\-L)}}\label{_e_p_a_x_common_internal_8hpp_ad060118c2df58d974a9f5526d820c184}
+
+
+\-Definition at line 56 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_acb70e5a725963e9f75d6550f12d86081}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R@{\-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}}
+\index{\-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R@{\-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-I\-S\-\_\-\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-p\-\_\-\-\_\-}
+\end{DoxyParamCaption}
+)~((\-\_\-\-\_\-p\-\_\-\-\_\- != {\bf \-I\-N\-V\-A\-L\-I\-D\-\_\-\-P\-T\-R}))}}\label{_e_p_a_x_common_internal_8hpp_acb70e5a725963e9f75d6550f12d86081}
+
+
+\-Definition at line 57 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a220f38b26fa99d4d91b574f42d991516}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E@{\-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E}}
+\index{\-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E@{\-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-M\-A\-X\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-S\-I\-Z\-E}~(1024)}}\label{_e_p_a_x_common_internal_8hpp_a220f38b26fa99d4d91b574f42d991516}
+
+
+\-Definition at line 58 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_a3cc3b0a8b0ca4f403e81573989fd2cd2}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{\-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}}
+\index{\-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N@{\-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-N\-A\-M\-E\-\_\-\-U\-N\-K\-N\-O\-W\-N}~\char`\"{}\-\_\-\-\_\-unknown\-\_\-\-\_\-\char`\"{}}}\label{_e_p_a_x_common_internal_8hpp_a3cc3b0a8b0ca4f403e81573989fd2cd2}
+
+
+\-Definition at line 59 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_aa17cf3c974e6bcb3e1ce5a7a380d3065}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-Should\-Not\-Arrive@{\-Should\-Not\-Arrive}}
+\index{\-Should\-Not\-Arrive@{\-Should\-Not\-Arrive}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-Should\-Not\-Arrive}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-Should\-Not\-Arrive}~{\bf \-E\-P\-A\-X\-Die}(\char`\"{}\-This function is not yet implemented\char`\"{})}}\label{_e_p_a_x_common_internal_8hpp_aa17cf3c974e6bcb3e1ce5a7a380d3065}
+
+
+\-Definition at line 96 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+\hypertarget{_e_p_a_x_common_internal_8hpp_ad58a1fbfc85c7e4790fc55e654f50221}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-T\-A\-B@{\-T\-A\-B}}
+\index{\-T\-A\-B@{\-T\-A\-B}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-T\-A\-B}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-T\-A\-B}~\char`\"{}$\backslash$t\char`\"{}}}\label{_e_p_a_x_common_internal_8hpp_ad58a1fbfc85c7e4790fc55e654f50221}
+
+
+\-Definition at line 63 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+
+
+\subsection{\-Typedef \-Documentation}
+\hypertarget{_e_p_a_x_common_internal_8hpp_a17755bdd71c02e656c667b16de61dd7b}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!rawbyte\-\_\-t@{rawbyte\-\_\-t}}
+\index{rawbyte\-\_\-t@{rawbyte\-\_\-t}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{rawbyte\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef char {\bf rawbyte\-\_\-t}}}\label{_e_p_a_x_common_internal_8hpp_a17755bdd71c02e656c667b16de61dd7b}
+
+
+\-Definition at line 129 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+
+
+
+\subsection{\-Enumeration \-Type \-Documentation}
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376}{\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class@{\-E\-P\-A\-X\-Export\-Class}}
+\index{\-E\-P\-A\-X\-Export\-Class@{\-E\-P\-A\-X\-Export\-Class}!EPAXCommonInternal.hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}
+\subsubsection[{\-E\-P\-A\-X\-Export\-Class}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf \-E\-P\-A\-X\-Export\-Class}}}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376}
+\begin{Desc}
+\item[\-Enumerator\-: ]\par
+\begin{description}
+\index{\-E\-P\-A\-X\-Export\-Class\-\_\-undefined@{\-E\-P\-A\-X\-Export\-Class\-\_\-undefined}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-undefined@{\-E\-P\-A\-X\-Export\-Class\-\_\-undefined}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a332f4a9522545d58e2402d7c297e2557}{\-E\-P\-A\-X\-Export\-Class\-\_\-undefined}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a332f4a9522545d58e2402d7c297e2557}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-I\-N@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-I\-N}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-I\-N@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-I\-N}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376ae3aa39f8e061a73acab28a42a2c47604}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-I\-N}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376ae3aa39f8e061a73acab28a42a2c47604}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-E\-C\-T@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-E\-C\-T}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-E\-C\-T@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-E\-C\-T}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a3637dc8c5b832afe3dbe7837ee212cf3}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-E\-C\-T}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a3637dc8c5b832afe3dbe7837ee212cf3}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-U\-N\-C@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-U\-N\-C}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-U\-N\-C@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-U\-N\-C}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376add23567ec844a18f7a65b3d1306aaa40}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-U\-N\-C}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376add23567ec844a18f7a65b3d1306aaa40}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-C\-F\-G@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-C\-F\-G}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-C\-F\-G@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-C\-F\-G}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376af0ec78faa952155f4ea838b5a6163eb9}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-C\-F\-G}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376af0ec78faa952155f4ea838b5a6163eb9}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-L\-O\-O\-P@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-L\-O\-O\-P}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-L\-O\-O\-P@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-L\-O\-O\-P}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a4fe3c19b8570a3b2ff28ed6bfc77a7af}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-L\-O\-O\-P}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a4fe3c19b8570a3b2ff28ed6bfc77a7af}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-B\-L@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-B\-L}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-B\-L@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-B\-L}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a9ef56b39e9c63e768b4913896d677894}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-B\-B\-L}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a9ef56b39e9c63e768b4913896d677894}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-I\-N\-S\-N@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-I\-N\-S\-N}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-I\-N\-S\-N@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-I\-N\-S\-N}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a05af777a16f8c2c2d7e1643c55c32823}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-I\-N\-S\-N}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a05af777a16f8c2c2d7e1643c55c32823}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-Y\-M@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-Y\-M}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-Y\-M@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-Y\-M}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a57171fc3bf7e634f96b0fdeb0bc45acc}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-S\-Y\-M}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a57171fc3bf7e634f96b0fdeb0bc45acc}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-L\-O\-W@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-L\-O\-W}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-L\-O\-W@{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-L\-O\-W}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376adf8516522dfa7d31e9ebc22b21617ab6}{\-E\-P\-A\-X\-Export\-Class\-\_\-\-F\-L\-O\-W}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376adf8516522dfa7d31e9ebc22b21617ab6}
+}]\index{\-E\-P\-A\-X\-Export\-Class\-\_\-total@{\-E\-P\-A\-X\-Export\-Class\-\_\-total}!\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}}\index{\-E\-P\-A\-X\-Common\-Internal.\-hpp@{\-E\-P\-A\-X\-Common\-Internal.\-hpp}!\-E\-P\-A\-X\-Export\-Class\-\_\-total@{\-E\-P\-A\-X\-Export\-Class\-\_\-total}}\item[{\em 
+\hypertarget{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a68872eb2621fa452a4ec33d75f395493}{\-E\-P\-A\-X\-Export\-Class\-\_\-total}\label{_e_p_a_x_common_internal_8hpp_a9cc5d1140a7b3f3840983c0e1a032376a68872eb2621fa452a4ec33d75f395493}
+}]\end{description}
+\end{Desc}
+
+
+
+\-Definition at line 98 of file \-E\-P\-A\-X\-Common\-Internal.\-hpp.
+

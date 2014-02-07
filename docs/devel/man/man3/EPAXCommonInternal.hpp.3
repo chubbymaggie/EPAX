@@ -1,0 +1,268 @@
+.TH "EPAXCommonInternal.hpp" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAXCommonInternal.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <sys/ptrace\&.h>\fP
+.br
+\fC#include <sys/user\&.h>\fP
+.br
+\fC#include <errno\&.h>\fP
+.br
+\fC#include <sys/types\&.h>\fP
+.br
+\fC#include <sys/wait\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include <iomanip>\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <bitset>\fP
+.br
+\fC#include <stack>\fP
+.br
+\fC#include <set>\fP
+.br
+\fC#include <algorithm>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBEPAXExport\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBINVALID_PTR\fP   (NULL)"
+.br
+.ti -1c
+.RI "#define \fBIS_VALID_PTR\fP(__p__)   ((__p__ != \fBINVALID_PTR\fP))"
+.br
+.ti -1c
+.RI "#define \fBMAX_STRING_SIZE\fP   (1024)"
+.br
+.ti -1c
+.RI "#define \fBNAME_UNKNOWN\fP   '__unknown__'"
+.br
+.ti -1c
+.RI "#define \fBEPAX_PREFACE\fP   '-EPAX- '"
+.br
+.ti -1c
+.RI "#define \fBENDL\fP   '\\n'"
+.br
+.ti -1c
+.RI "#define \fBTAB\fP   '\\t'"
+.br
+.ti -1c
+.RI "#define \fBDEC\fP(__n__)   std::dec << (__n__)"
+.br
+.ti -1c
+.RI "#define \fBHEX\fP(__n__)   std::hex << '0x' << (__n__)"
+.br
+.ti -1c
+.RI "#define \fBBACKTRACE_LIMIT\fP   64"
+.br
+.ti -1c
+.RI "#define \fBEPAXErr\fP   std::cerr << \fBEPAX_PREFACE\fP"
+.br
+.ti -1c
+.RI "#define \fBEPAXOut\fP   std::cout << \fBEPAX_PREFACE\fP"
+.br
+.ti -1c
+.RI "#define \fBEPAXWarn\fP   \fBEPAXErr\fP << ' warning: '"
+.br
+.ti -1c
+.RI "#define \fBEPAXAssert\fP(__stmt__, __msg__)"
+.br
+.ti -1c
+.RI "#define \fBEPAXDie\fP(__msg__)   \fBEPAXAssert\fP(false, __msg__)"
+.br
+.ti -1c
+.RI "#define \fBShouldNotArrive\fP   \fBEPAXDie\fP('This function is not yet implemented')"
+.br
+.ti -1c
+.RI "#define \fBEPAXVerifyType\fP(__type__, __obj__)"
+.br
+.ti -1c
+.RI "#define \fB__do_not_call__\fP   \fBEPAXAssert\fP(false, 'This function cannot be called\&.')"
+.br
+.ti -1c
+.RI "#define \fBALIGN_PWR2\fP(__addr, __exp)   (__addr & ~((1 << __exp) - 1))"
+.br
+.ti -1c
+.RI "#define \fBINVALID_ADDRESS\fP   (0x0)"
+.br
+.ti -1c
+.RI "#define \fBADDRESS_IS_THUMB\fP(__a)   ((__a & 0x1) == 1)"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef char \fBrawbyte_t\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBEPAXExportClass\fP { \fBEPAXExportClass_undefined\fP =  0, \fBEPAXExportClass_BIN\fP, \fBEPAXExportClass_SECT\fP, \fBEPAXExportClass_FUNC\fP, \fBEPAXExportClass_CFG\fP, \fBEPAXExportClass_LOOP\fP, \fBEPAXExportClass_BBL\fP, \fBEPAXExportClass_INSN\fP, \fBEPAXExportClass_SYM\fP, \fBEPAXExportClass_FLOW\fP, \fBEPAXExportClass_total\fP }"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "LICENSE"
+.PP
+This file is part of the \fBEPAX\fP toolkit\&.
+.PP
+Copyright (c) 2013, EP Analytics, Inc\&. All rights reserved\&.
+.PP
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program\&. If not, see <http://www.gnu.org/licenses/>\&. 
+.PP
+Definition in file \fBEPAXCommonInternal\&.hpp\fP\&.
+.SH "Define Documentation"
+.PP 
+.SS "#define \fB__do_not_call__\fP   \fBEPAXAssert\fP(false, 'This function cannot be called\&.')"
+.PP
+Definition at line 126 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBADDRESS_IS_THUMB\fP(__a)   ((__a & 0x1) == 1)"
+.PP
+Definition at line 132 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBALIGN_PWR2\fP(__addr, __exp)   (__addr & ~((1 << __exp) - 1))"
+.PP
+Definition at line 127 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBBACKTRACE_LIMIT\fP   64"
+.PP
+Definition at line 67 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBDEC\fP(__n__)   std::dec << (__n__)"
+.PP
+Definition at line 64 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBENDL\fP   '\\n'"
+.PP
+Definition at line 62 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAX_PREFACE\fP   '-EPAX- '"
+.PP
+Definition at line 61 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAXAssert\fP(__stmt__, __msg__)"\fBValue:\fP
+.PP
+.nf
+if (!(__stmt__)){                                                   \
+        EPAXErr << 'Assert failure: ' << __PRETTY_FUNCTION__ << ' at ' << __FILE__ << ':' << __LINE__ << ENDL; \
+        EPAXErr << __msg__ << ENDL;                                   \
+        exit(1); }
+.fi
+.PP
+Definition at line 87 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAXDie\fP(__msg__)   \fBEPAXAssert\fP(false, __msg__)"
+.PP
+Definition at line 95 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAXErr\fP   std::cerr << \fBEPAX_PREFACE\fP"
+.PP
+Definition at line 73 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAXOut\fP   std::cout << \fBEPAX_PREFACE\fP"
+.PP
+Definition at line 74 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAXVerifyType\fP(__type__, __obj__)"\fBValue:\fP
+.PP
+.nf
+EPAXAssert(IS_VALID_PTR(__obj__), 'invalid object (NULL) found instead of ' # __type__);\
+    EPAXAssert(__obj__->getClass() == EPAXExportClass_ ## __type__, 'Non-' # __type__ << ' object found');
+.fi
+.PP
+Definition at line 122 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBEPAXWarn\fP   \fBEPAXErr\fP << ' warning: '"
+.PP
+Definition at line 75 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBHEX\fP(__n__)   std::hex << '0x' << (__n__)"
+.PP
+Definition at line 65 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBINVALID_ADDRESS\fP   (0x0)"
+.PP
+Definition at line 131 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBINVALID_PTR\fP   (NULL)"
+.PP
+Definition at line 56 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBIS_VALID_PTR\fP(__p__)   ((__p__ != \fBINVALID_PTR\fP))"
+.PP
+Definition at line 57 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBMAX_STRING_SIZE\fP   (1024)"
+.PP
+Definition at line 58 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBNAME_UNKNOWN\fP   '__unknown__'"
+.PP
+Definition at line 59 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBShouldNotArrive\fP   \fBEPAXDie\fP('This function is not yet implemented')"
+.PP
+Definition at line 96 of file EPAXCommonInternal\&.hpp\&.
+.SS "#define \fBTAB\fP   '\\t'"
+.PP
+Definition at line 63 of file EPAXCommonInternal\&.hpp\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef char \fBrawbyte_t\fP"
+.PP
+Definition at line 129 of file EPAXCommonInternal\&.hpp\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBEPAXExportClass\fP"
+.PP
+\fBEnumerator: \fP
+.in +1c
+.TP
+\fB\fIEPAXExportClass_undefined \fP\fP
+.TP
+\fB\fIEPAXExportClass_BIN \fP\fP
+.TP
+\fB\fIEPAXExportClass_SECT \fP\fP
+.TP
+\fB\fIEPAXExportClass_FUNC \fP\fP
+.TP
+\fB\fIEPAXExportClass_CFG \fP\fP
+.TP
+\fB\fIEPAXExportClass_LOOP \fP\fP
+.TP
+\fB\fIEPAXExportClass_BBL \fP\fP
+.TP
+\fB\fIEPAXExportClass_INSN \fP\fP
+.TP
+\fB\fIEPAXExportClass_SYM \fP\fP
+.TP
+\fB\fIEPAXExportClass_FLOW \fP\fP
+.TP
+\fB\fIEPAXExportClass_total \fP\fP
+
+.PP
+Definition at line 98 of file EPAXCommonInternal\&.hpp\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

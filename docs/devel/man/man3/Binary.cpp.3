@@ -1,0 +1,70 @@
+.TH "Binary.cpp" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Binary.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'EPAXCommonInternal\&.hpp'\fP
+.br
+\fC#include 'Binary\&.hpp'\fP
+.br
+\fC#include 'ElfBinary\&.hpp'\fP
+.br
+\fC#include 'Function\&.hpp'\fP
+.br
+\fC#include 'Instruction\&.hpp'\fP
+.br
+\fC#include 'MachOBinary\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBEPAX\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBPTRACE_AND_CHECK\fP(__opt, __pid, __addr, __data)"
+.br
+.ti -1c
+.RI "#define \fBVERIFY_SINGLE_FORMAT\fP(__fmt__)   \fBEPAXAssert\fP(f == BinaryFormat_undefined, 'This binary appears to be valid for two formats: ' << BaseBinary::getFormatName(__fmt__) << ' and ' << BaseBinary::getFormatName(f));"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "LICENSE"
+.PP
+This file is part of the \fBEPAX\fP toolkit\&.
+.PP
+Copyright (c) 2013, EP Analytics, Inc\&. All rights reserved\&.
+.PP
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program\&. If not, see <http://www.gnu.org/licenses/>\&. 
+.PP
+Definition in file \fBBinary\&.cpp\fP\&.
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBPTRACE_AND_CHECK\fP(__opt, __pid, __addr, __data)"\fBValue:\fP
+.PP
+.nf
+res = ptrace(__opt, __pid,__addr,__data);                           \
+    if (res == -1){                                                     \
+        EPAXErr << 'ptrace failed with ' << DEC(errno) << ENDL;       \
+    }                                                                   \
+    EPAXAssert(res == 0, 'call to ptrace(' << #__opt << ', pid=' << DEC(__pid) << ', addr=' << HEX(__addr) << ', data=' << HEX(__data) << ') failed with error ' << DEC(res));
+.fi
+.PP
+Definition at line 61 of file Binary\&.cpp\&.
+.SS "#define \fBVERIFY_SINGLE_FORMAT\fP(__fmt__)   \fBEPAXAssert\fP(f == BinaryFormat_undefined, 'This binary appears to be valid for two formats: ' << BaseBinary::getFormatName(__fmt__) << ' and ' << BaseBinary::getFormatName(f));"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

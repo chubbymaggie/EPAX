@@ -1,0 +1,360 @@
+.TH "Interface.hpp" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Interface.hpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdint\&.h>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBEPAX\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef Binary * \fBEPAX::BIN\fP"
+.br
+.ti -1c
+.RI "typedef Section * \fBEPAX::SECT\fP"
+.br
+.ti -1c
+.RI "typedef Function * \fBEPAX::FUNC\fP"
+.br
+.ti -1c
+.RI "typedef ControlFlow * \fBEPAX::CFG\fP"
+.br
+.ti -1c
+.RI "typedef Loop * \fBEPAX::LOOP\fP"
+.br
+.ti -1c
+.RI "typedef BasicBlock * \fBEPAX::BBL\fP"
+.br
+.ti -1c
+.RI "typedef Instruction * \fBEPAX::INSN\fP"
+.br
+.ti -1c
+.RI "typedef Symbol * \fBEPAX::SYM\fP"
+.br
+.ti -1c
+.RI "typedef FlowEquation * \fBEPAX::FLOW\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "BIN \fBEPAX::BIN_create\fP (std::string fileName)"
+.br
+.ti -1c
+.RI "std::string \fBEPAX::BIN_getName\fP (BIN bin)"
+.br
+.ti -1c
+.RI "void \fBEPAX::BIN_destroy\fP (BIN bin)"
+.br
+.ti -1c
+.RI "void \fBEPAX::BIN_run\fP (BIN bin, int argc, char **argv)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::BIN_firstFunc\fP (BIN bin)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::BIN_nextFunc\fP (BIN bin, FUNC func)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::BIN_isLastFunc\fP (BIN bin, FUNC func)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BIN_countFunc\fP (BIN bin)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::BIN_isExecutable\fP (BIN bin)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BIN_fileSize\fP (BIN bin)"
+.br
+.ti -1c
+.RI "void \fBEPAX::BIN_printStaticFile\fP (BIN bin, std::string fname)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::BIN_findFunc\fP (BIN bin, uint64_t addr)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::FUNC_create\fP (uint8_t *bytes, uint32_t size)"
+.br
+.ti -1c
+.RI "void \fBEPAX::FUNC_Destroy\fP (FUNC func)"
+.br
+.ti -1c
+.RI "void \fBEPAX::FUNC_print\fP (FUNC func)"
+.br
+.ti -1c
+.RI "std::string \fBEPAX::FUNC_name\fP (FUNC func)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::FUNC_size\fP (FUNC func)"
+.br
+.ti -1c
+.RI "uint64_t \fBEPAX::FUNC_addr\fP (FUNC func)"
+.br
+.ti -1c
+.RI "std::string \fBEPAX::FUNC_secName\fP (FUNC func)"
+.br
+.ti -1c
+.RI "BIN \fBEPAX::FUNC_bin\fP (FUNC func)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::FUNC_countBbl\fP (FUNC func)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::FUNC_findBbl\fP (FUNC func, uint64_t addr)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::FUNC_firstBbl\fP (FUNC func)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::FUNC_nextBbl\fP (FUNC func, BBL bbl)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::FUNC_isLastBbl\fP (FUNC func, BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::FUNC_countInsn\fP (FUNC func)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::FUNC_findInsn\fP (FUNC func, uint64_t addr)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::FUNC_firstInsn\fP (FUNC func)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::FUNC_nextInsn\fP (FUNC func, INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::FUNC_isLastInsn\fP (FUNC func, INSN insn)"
+.br
+.ti -1c
+.RI "CFG \fBEPAX::FUNC_cfg\fP (FUNC func)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::FUNC_countTargets\fP (FUNC func)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::FUNC_targets\fP (FUNC func, std::vector< FUNC > &funcList)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::CFG_countLoop\fP (CFG cfg)"
+.br
+.ti -1c
+.RI "LOOP \fBEPAX::CFG_findLoop\fP (CFG cfg, uint64_t addr)"
+.br
+.ti -1c
+.RI "LOOP \fBEPAX::CFG_firstLoop\fP (CFG cfg)"
+.br
+.ti -1c
+.RI "LOOP \fBEPAX::CFG_nextLoop\fP (CFG cfg, LOOP loop)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::CFG_isLastLoop\fP (CFG cfg, LOOP loop)"
+.br
+.ti -1c
+.RI "CFG \fBEPAX::LOOP_cfg\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::LOOP_func\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_size\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_countBbl\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::LOOP_findBbl\fP (LOOP loop, uint64_t addr)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::LOOP_firstBbl\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::LOOP_nextBbl\fP (LOOP loop, BBL bbl)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::LOOP_isLastBbl\fP (LOOP loop, BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_countInsn\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::LOOP_findInsn\fP (LOOP loop, uint64_t addr)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::LOOP_firstInsn\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::LOOP_nextInsn\fP (LOOP loop, INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::LOOP_isLastInsn\fP (LOOP loop, INSN insn)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::LOOP_head\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::LOOP_tail\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_countExits\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_exits\fP (LOOP loop, std::vector< INSN > &insnList)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::LOOP_isInnerLoop\fP (LOOP loop1, LOOP loop2)"
+.br
+.ti -1c
+.RI "LOOP \fBEPAX::LOOP_parent\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_index\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::LOOP_depth\fP (LOOP loop)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::BBL_isHead\fP (BBL bbl, INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::BBL_isTail\fP (BBL bbl, INSN insn)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::BBL_head\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::BBL_tail\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::BBL_func\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "LOOP \fBEPAX::BBL_loop\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_size\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint64_t \fBEPAX::BBL_addr\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_countInsn\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::BBL_findInsn\fP (BBL bbl, uint64_t addr)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::BBL_firstInsn\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "INSN \fBEPAX::BBL_nextInsn\fP (BBL bbl, INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::BBL_isLastInsn\fP (BBL bbl, INSN insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_countTargets\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_targets\fP (BBL bbl, std::vector< BBL > &bblList)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::BBL_hasFallthroughTarget\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::BBL_fallthroughTarget\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_countJumpTargets\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_jumpTargets\fP (BBL bbl, std::vector< BBL > &bblList)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_countSources\fP (BBL bbl)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::BBL_sources\fP (BBL bbl, std::vector< BBL > &bblList)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::INSN_targets\fP (INSN insn, std::vector< uint64_t > &tlist)"
+.br
+.ti -1c
+.RI "BBL \fBEPAX::INSN_bbl\fP (INSN insn)"
+.br
+.ti -1c
+.RI "FUNC \fBEPAX::INSN_func\fP (INSN insn)"
+.br
+.ti -1c
+.RI "LOOP \fBEPAX::INSN_loop\fP (INSN insn)"
+.br
+.ti -1c
+.RI "uint64_t \fBEPAX::INSN_addr\fP (INSN insn)"
+.br
+.ti -1c
+.RI "std::string \fBEPAX::INSN_string\fP (INSN insn)"
+.br
+.ti -1c
+.RI "uint64_t \fBEPAX::INSN_callTarget\fP (INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::INSN_isBranch\fP (INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::INSN_isFpop\fP (INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::INSN_isMemop\fP (INSN insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::INSN_size\fP (INSN insn)"
+.br
+.ti -1c
+.RI "std::string \fBEPAX::INSN_condName\fP (INSN insn)"
+.br
+.ti -1c
+.RI "bool \fBEPAX::INSN_fallsThrough\fP (INSN insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::INSN_sourceRegisterSizeInBits\fP (INSN insn)"
+.br
+.ti -1c
+.RI "uint32_t \fBEPAX::INSN_sourceDatatypeSizeInBits\fP (INSN insn)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "LICENSE"
+.PP
+This file is part of the \fBEPAX\fP toolkit\&.
+.PP
+Copyright (c) 2013, EP Analytics, Inc\&. All rights reserved\&.
+.PP
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program\&. If not, see <http://www.gnu.org/licenses/>\&. 
+.PP
+Definition in file \fBInterface\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

@@ -1,0 +1,1502 @@
+\hypertarget{_interface_8cpp}{\section{\-Interface.\-cpp \-File \-Reference}
+\label{_interface_8cpp}\index{\-Interface.\-cpp@{\-Interface.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}\-E\-P\-A\-X\-Common\-Internal.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Interface.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Interface.\-h\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Basic\-Block.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Binary.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Control\-Flow.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Function.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Instruction.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Loop.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Symbol.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Section.\-hpp\char`\"{}}\*
+{\ttfamily \#include $<$iostream$>$}\*
+{\ttfamily \#include $<$fstream$>$}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\end{DoxyCompactItemize}
+\subsection*{\-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\-B\-I\-N \hyperlink{namespace_e_p_a_x_a68500dbda3daf6e66dc6bf0067ec34b7}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-create} (std\-::string file\-Name)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_af6914ca60796cbbf43e9996bed07763d}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-get\-Name} (\-B\-I\-N bin)
+\item 
+void \hyperlink{namespace_e_p_a_x_a8df16d3fb7f820014a3d6105514420a5}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-destroy} (\-B\-I\-N bin)
+\item 
+void \hyperlink{namespace_e_p_a_x_afbd9f1c546839fb945653279303f2b71}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-run} (\-B\-I\-N bin, int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a40aa644870b9dea8ae37b804724534fb}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-first\-Func} (\-B\-I\-N bin)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_aa71e749763e7bb1f923858e3141349e1}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-next\-Func} (\-B\-I\-N bin, \-F\-U\-N\-C func)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ab584e84ccd83e8c3a381df43cf935087}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-is\-Last\-Func} (\-B\-I\-N bin, \-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a34c62237f68d75bc1741dd752f769bd7}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-count\-Func} (\-B\-I\-N bin)
+\item 
+bool \hyperlink{namespace_e_p_a_x_aa3b4c872835797815fc1a3c4414a042b}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-is\-Executable} (\-B\-I\-N bin)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a911161a84c22b522a7198e84c21addef}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-file\-Size} (\-B\-I\-N bin)
+\item 
+void \hyperlink{namespace_e_p_a_x_a83802d152a35f151ed90b556ad0e6399}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-print\-Static\-File} (\-B\-I\-N bin, std\-::string fname)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_aa4717cb67238e53b20f5562b04e3c53d}{\-E\-P\-A\-X\-::\-B\-I\-N\-\_\-find\-Func} (\-B\-I\-N bin, uint64\-\_\-t addr)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a349bd4305d0560dbb1bff601ec634423}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-create} (uint8\-\_\-t $\ast$bytes, uint32\-\_\-t size)
+\item 
+void \hyperlink{namespace_e_p_a_x_a661aa46a759a43e5d871372294500030}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-destroy} (\-F\-U\-N\-C func)
+\item 
+void \hyperlink{namespace_e_p_a_x_a76df7a31941ac5d79d74ff25e39eaeab}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-print} (\-F\-U\-N\-C func)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_a936650368bfe6e19721ebd681f74ffa3}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-name} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a5b37b2f8b8b1ebd3047a9604b77aa76a}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-size} (\-F\-U\-N\-C func)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_a5c258325decee9b0a23b7990a17afa2f}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-addr} (\-F\-U\-N\-C func)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_a39739003523680adf73ed7ed87e942c5}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-sec\-Name} (\-F\-U\-N\-C func)
+\item 
+\-B\-I\-N \hyperlink{namespace_e_p_a_x_adbcaca9d4ee50185bb1411c4fd08a363}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-bin} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a8f76374258b736961b5639bda6995dce}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-count\-Bbl} (\-F\-U\-N\-C func)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a470fc4dbe2581ab80d711a4fad19b622}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-find\-Bbl} (\-F\-U\-N\-C func, uint64\-\_\-t addr)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a9b124903dac64c103c7279863e2909b5}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-first\-Bbl} (\-F\-U\-N\-C func)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a47f4ceea61874416a382b7a44e1b8ec3}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-next\-Bbl} (\-F\-U\-N\-C func, \-B\-B\-L bbl)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a71eb98e3e6cf284cfe8f03a7d0801f7c}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-is\-Last\-Bbl} (\-F\-U\-N\-C func, \-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_addb0add86b6e8ad05daf12e17d697c4a}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-count\-Insn} (\-F\-U\-N\-C func)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a327e3b3f02444f7c66dab479b7620354}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-find\-Insn} (\-F\-U\-N\-C func, uint64\-\_\-t addr)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a3dd9ce87396bb246839d0ec21c9f5b21}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-first\-Insn} (\-F\-U\-N\-C func)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a145f1ce40606d3b366f8b4705c2026a2}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-next\-Insn} (\-F\-U\-N\-C func, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_af0c27ad1ac87e63188bc038a0b414158}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-is\-Last\-Insn} (\-F\-U\-N\-C func, \-I\-N\-S\-N insn)
+\item 
+\-C\-F\-G \hyperlink{namespace_e_p_a_x_a596ee3e43b9dd3619accda65c795196f}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-cfg} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a720c03d407153acf3d865472a8b02c67}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-count\-Targets} (\-F\-U\-N\-C func)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a885d02ec5f424dba1843a0fe9151b259}{\-E\-P\-A\-X\-::\-F\-U\-N\-C\-\_\-targets} (\-F\-U\-N\-C func, std\-::vector$<$ \-F\-U\-N\-C $>$ \&func\-List)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a54a9a341cf427538ba7fff7440552029}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-count\-Loop} (\-C\-F\-G cfg)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_a2074303b5d993b837aeca2eaf5eeba93}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-find\-Loop} (\-C\-F\-G cfg, uint64\-\_\-t addr)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_a9f6859da3e0f26714de039f65aa9a1ba}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-first\-Loop} (\-C\-F\-G cfg)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_ae7cdc3a7daff14e58341508c038b8b46}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-next\-Loop} (\-C\-F\-G cfg, \-L\-O\-O\-P loop)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a37a23556b1f2779ba46b743e67d652ff}{\-E\-P\-A\-X\-::\-C\-F\-G\-\_\-is\-Last\-Loop} (\-C\-F\-G cfg, \-L\-O\-O\-P loop)
+\item 
+\-C\-F\-G \hyperlink{namespace_e_p_a_x_a57f2035c3219eb2a060e09f6c818f198}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-cfg} (\-L\-O\-O\-P loop)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a94294b6d245c0d7cfb704e7a01516f1c}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-func} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_abdf304f94200c8d774135557f7c1296b}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-size} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a7b98c99a632a12145b19bfade17308e7}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-count\-Bbl} (\-L\-O\-O\-P loop)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_ad82d4c1acb743db14b2476214a778079}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-find\-Bbl} (\-L\-O\-O\-P loop, uint64\-\_\-t addr)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a6b9e75c45e3cb864db99583d88f8e816}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-first\-Bbl} (\-L\-O\-O\-P loop)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_ad4cd439532c10a473b3af726890cd6f2}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-next\-Bbl} (\-L\-O\-O\-P loop, \-B\-B\-L bbl)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a454f4e0f7be8107f0d2c10567fe0d019}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-is\-Last\-Bbl} (\-L\-O\-O\-P loop, \-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ae66ccc27713c07236294b6a1fb201354}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-count\-Insn} (\-L\-O\-O\-P loop)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a231dbea6084a2f5ce35bc46c01020c91}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-find\-Insn} (\-L\-O\-O\-P loop, uint64\-\_\-t addr)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a3b0698af1d614968710c24f8b364f4ef}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-first\-Insn} (\-L\-O\-O\-P loop)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_ac3169a4cb9dda70bb837ddcab42566ae}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-next\-Insn} (\-L\-O\-O\-P loop, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a2548faca0cd72cd585cf39b0c32262b5}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-is\-Last\-Insn} (\-L\-O\-O\-P loop, \-I\-N\-S\-N insn)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_ae8b4e880feb5c2176e80f080d6ef8a9b}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-head} (\-L\-O\-O\-P loop)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a51a87aa43f27e1c634c9515f6fd510fb}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-tail} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_aae01d41cf0c4f34ac24db95e0efd4df3}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-count\-Exits} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a155b2e53ab6fe3ad6b78b028b773b171}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-exits} (\-L\-O\-O\-P loop, std\-::vector$<$ \hyperlink{namespace_e_p_a_x_a601da5f2ead9a877d566da6cfc9026eb}{\-E\-P\-A\-X\-::\-I\-N\-S\-N} $>$ \&insn\-List)
+\item 
+bool \hyperlink{namespace_e_p_a_x_adcf5a5412d67c5a3a4ae4aa3c8aa1498}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-is\-Inner\-Loop} (\-L\-O\-O\-P loop1, \-L\-O\-O\-P loop2)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_ae59c1fe1b7a28c2f8c73593999c3eb77}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-parent} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ab4763dab5b758823eea993ec7b9c6f40}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-index} (\-L\-O\-O\-P loop)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a97473ca1f7ba4b714fb78e4bd024c5f2}{\-E\-P\-A\-X\-::\-L\-O\-O\-P\-\_\-depth} (\-L\-O\-O\-P loop)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a0fbf67e181120081bc763df0a6a7419e}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-is\-Head} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ade8cd00d01f6efb5d1fbbb912fae91b4}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-is\-Tail} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a28444e0dbe8d9105a8737fc429b352f2}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-head} (\-B\-B\-L bbl)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a3cb39eafd1bba241ad89bc43180c0b80}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-tail} (\-B\-B\-L bbl)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a25db62a0c469406c77b2c95391f6f5a9}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-func} (\-B\-B\-L bbl)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_a5c9b5e6ff0101132a1236de3c273eae1}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-loop} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a299e464f40fa0feebf8acb255e5cb73b}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-size} (\-B\-B\-L bbl)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_ab186f92cd67ba3027c6baaddb5f8dc3a}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-addr} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a68e86603f8333b45334d126228f1887b}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Insn} (\-B\-B\-L bbl)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_ae365455b9f876c505ef7b57d7085f788}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-find\-Insn} (\-B\-B\-L bbl, uint64\-\_\-t addr)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a12456a3f644f733fea42a1789f25e253}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-first\-Insn} (\-B\-B\-L bbl)
+\item 
+\-I\-N\-S\-N \hyperlink{namespace_e_p_a_x_a6a61743efee9f1d514f700439188ae35}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-next\-Insn} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a74200da4cf0db88248f6c349d85799bf}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-is\-Last\-Insn} (\-B\-B\-L bbl, \-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a48ec506044b94cd90da90048d6bedb20}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Targets} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ad4eb35cea61f32b54be0ff4126a6ac3d}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-targets} (\-B\-B\-L bbl, std\-::vector$<$ \hyperlink{namespace_e_p_a_x_a0ad4f6573b03fa5c375bed0e68d4fab0}{\-E\-P\-A\-X\-::\-B\-B\-L} $>$ \&bbl\-List)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ad737f9e0fcf37a929d40989b8b04afc7}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-has\-Fallthrough\-Target} (\-B\-B\-L bbl)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a406a64b3b42d7c7e85d2f505b9d72fb2}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-fallthrough\-Target} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_af4bf20df6784bc507a3a87749657b5c8}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Jump\-Targets} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_aeb19b9c8d8f808a3aeb9d9890f95491a}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-jump\-Targets} (\-B\-B\-L bbl, std\-::vector$<$ \hyperlink{namespace_e_p_a_x_a0ad4f6573b03fa5c375bed0e68d4fab0}{\-E\-P\-A\-X\-::\-B\-B\-L} $>$ \&bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_aa23a09b89b8217fde08a9969c60a315c}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-count\-Sources} (\-B\-B\-L bbl)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a343520ef70235a8d8885c3ea5dddcfb3}{\-E\-P\-A\-X\-::\-B\-B\-L\-\_\-sources} (\-B\-B\-L bbl, std\-::vector$<$ \hyperlink{namespace_e_p_a_x_a0ad4f6573b03fa5c375bed0e68d4fab0}{\-E\-P\-A\-X\-::\-B\-B\-L} $>$ \&bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a614cdfc7733f9ba151a7be30277808c4}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-targets} (\-I\-N\-S\-N insn, std\-::vector$<$ uint64\-\_\-t $>$ \&tlist)
+\item 
+\-B\-B\-L \hyperlink{namespace_e_p_a_x_a50bbfd9bb7bc673f43c980bdfb33b6bc}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-bbl} (\-I\-N\-S\-N insn)
+\item 
+\-F\-U\-N\-C \hyperlink{namespace_e_p_a_x_a454c39a6a6075713f08d459276daf3c5}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-func} (\-I\-N\-S\-N insn)
+\item 
+\-L\-O\-O\-P \hyperlink{namespace_e_p_a_x_aa1f4ced523c0a0cb562e877d46fdc8b1}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-loop} (\-I\-N\-S\-N insn)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_a07290c51b68be1f32d0411e5c0f612dc}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-addr} (\-I\-N\-S\-N insn)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_a6606e3913aeb19f5d863723e6ae63e7f}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-string} (\-I\-N\-S\-N insn)
+\item 
+uint64\-\_\-t \hyperlink{namespace_e_p_a_x_a9fb272028d299f7ce5c49e9e2f6d362b}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-call\-Target} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a52a202189d478fbc50c54ed887ef001f}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-is\-Branch} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a995404839753a8da4b2fe7d27d9b32d2}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-is\-Fpop} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_ad79c932f05a0e9b3a54d6625072ab087}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-is\-Memop} (\-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_ac633c15baaafa3d0fc43e61a7701dc77}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-size} (\-I\-N\-S\-N insn)
+\item 
+std\-::string \hyperlink{namespace_e_p_a_x_aea916ea62f9be2c075a9fdc65675d68e}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-cond\-Name} (\-I\-N\-S\-N insn)
+\item 
+bool \hyperlink{namespace_e_p_a_x_a753a61ab7cbf2d2cf3894f87b05575d2}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-falls\-Through} (\-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a14b8ff0be25a61fa32905f2114ab278e}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-source\-Register\-Size\-In\-Bits} (\-I\-N\-S\-N insn)
+\item 
+uint32\-\_\-t \hyperlink{namespace_e_p_a_x_a0a072c84ca3855c0bd6abf775ccbe448}{\-E\-P\-A\-X\-::\-I\-N\-S\-N\-\_\-source\-Datatype\-Size\-In\-Bits} (\-I\-N\-S\-N insn)
+\item 
+\-E\-P\-A\-X\-\_\-bin \hyperlink{_interface_8cpp_aa2936be12bbe46b81f9250ca99ae2512}{\-E\-P\-A\-X\-\_\-bin\-\_\-create} (const char $\ast$file\-Name)
+\item 
+const char $\ast$ \hyperlink{_interface_8cpp_a4ef8c23e0809ea8022a2411edf577b72}{\-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name} (\-E\-P\-A\-X\-\_\-bin bin)
+\item 
+void \hyperlink{_interface_8cpp_a8a32d3e4ea3163e94d508462d67c7bed}{\-E\-P\-A\-X\-\_\-bin\-\_\-destroy} (\-E\-P\-A\-X\-\_\-bin bin)
+\item 
+void \hyperlink{_interface_8cpp_ae7129d904c42914ab92d4da65d6a1178}{\-E\-P\-A\-X\-\_\-bin\-\_\-run} (\-E\-P\-A\-X\-\_\-bin bin, int argc, char $\ast$$\ast$argv)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_a197ee414d5ac56c08bbf2b4230b3ea33}{\-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func} (\-E\-P\-A\-X\-\_\-bin bin)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_a0dc99fc845c16922cf460aa906b6842c}{\-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func} (\-E\-P\-A\-X\-\_\-bin bin, \-E\-P\-A\-X\-\_\-func func)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_acc45d509a15486f1e04bfe74662592d0}{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func} (\-E\-P\-A\-X\-\_\-bin bin, \-E\-P\-A\-X\-\_\-func func)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a15e813d302dc6aea6eb0168c4a0934c1}{\-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func} (\-E\-P\-A\-X\-\_\-bin bin)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_afc28a9e4f282aadf59973d6bc550722d}{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable} (\-E\-P\-A\-X\-\_\-bin bin)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ae2f9bec9b6328307e3282817b651d99c}{\-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size} (\-E\-P\-A\-X\-\_\-bin bin)
+\item 
+void \hyperlink{_interface_8cpp_afe695c3ceb8725410541a152ffdc10eb}{\-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File} (\-E\-P\-A\-X\-\_\-bin bin, const char $\ast$fname)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_af0d373a8bd2247e03aeba77adda54a32}{\-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func} (\-E\-P\-A\-X\-\_\-bin bin, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_ad0baa320cccca95f81b56e4fbe990d11}{\-E\-P\-A\-X\-\_\-func\-\_\-create} (uint8\-\_\-t $\ast$bytes, uint32\-\_\-t size)
+\item 
+void \hyperlink{_interface_8cpp_a0df45b2ccdc52c5668ed8cc7effc11a0}{\-E\-P\-A\-X\-\_\-func\-\_\-destroy} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+void \hyperlink{_interface_8cpp_a36c84ff37bb8851029f284a239d6a8cc}{\-E\-P\-A\-X\-\_\-func\-\_\-print} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+const char $\ast$ \hyperlink{_interface_8cpp_adfbdb381a991347681fabaa3dedf3271}{\-E\-P\-A\-X\-\_\-func\-\_\-name} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_aa4426062c183aa51b7f4d8e516cc49ef}{\-E\-P\-A\-X\-\_\-func\-\_\-size} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+uint64\-\_\-t \hyperlink{_interface_8cpp_ab8121aaec4371c5cbad93407fe6c9ebb}{\-E\-P\-A\-X\-\_\-func\-\_\-addr} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+const char $\ast$ \hyperlink{_interface_8cpp_a567e9fbd8b0152f55e510fd524e3dbba}{\-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+\-E\-P\-A\-X\-\_\-bin \hyperlink{_interface_8cpp_aced6129d894a47e983ba82f34d92a68e}{\-E\-P\-A\-X\-\_\-func\-\_\-bin} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a6cbebe69f02da2e8f661cb7b26056222}{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_a47ac27aea0430df9a9d09a8f676d9218}{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl} (\-E\-P\-A\-X\-\_\-func func, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_af3c6747ed1eed89ee9f3e4661190957d}{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_a34557a0e7b0ff332da8edf3d8f133766}{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl} (\-E\-P\-A\-X\-\_\-func func, \-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_aa1b651ed610ef90445696dfeeb5c27cb}{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl} (\-E\-P\-A\-X\-\_\-func func, \-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a224ef5067178aa5948be05c6dccf071c}{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a4b70bf104080533334e0f4829865c7e9}{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn} (\-E\-P\-A\-X\-\_\-func func, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_afc95e95ee32dbba246a9c6e301edc2fe}{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a6c3c832b27a6f53779d0f38c85931a76}{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn} (\-E\-P\-A\-X\-\_\-func func, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a8805158ac1d616bfff4ae6bf121c28c2}{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn} (\-E\-P\-A\-X\-\_\-func func, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+\-E\-P\-A\-X\-\_\-cfg \hyperlink{_interface_8cpp_a95cb16f9cbdbfc9b8e5ae11adca44dcb}{\-E\-P\-A\-X\-\_\-func\-\_\-cfg} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a14a7b866b563be2edf49c4322d8ed844}{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets} (\-E\-P\-A\-X\-\_\-func func)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a864539d03537e7ec0ce83be616406ca3}{\-E\-P\-A\-X\-\_\-func\-\_\-targets} (\-E\-P\-A\-X\-\_\-func func, \-E\-P\-A\-X\-\_\-func $\ast$func\-List)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_aeff422ab787503cd3810426e17dafa12}{\-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop} (\-E\-P\-A\-X\-\_\-cfg cfg)
+\item 
+\-E\-P\-A\-X\-\_\-loop \hyperlink{_interface_8cpp_afa867f7964e15a53a510568f92c4da65}{\-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop} (\-E\-P\-A\-X\-\_\-cfg cfg, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-loop \hyperlink{_interface_8cpp_a5954d8700e4f53d994ce4f5877b48b4b}{\-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop} (\-E\-P\-A\-X\-\_\-cfg cfg)
+\item 
+\-E\-P\-A\-X\-\_\-loop \hyperlink{_interface_8cpp_a835b285068cd71b545b432ecbad2323d}{\-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop} (\-E\-P\-A\-X\-\_\-cfg cfg, \-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a2f25abda15cf8e82b8125b9103c28fc7}{\-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop} (\-E\-P\-A\-X\-\_\-cfg cfg, \-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-cfg \hyperlink{_interface_8cpp_a8a6a2ab141f60d887ad7fc78a291d271}{\-E\-P\-A\-X\-\_\-loop\-\_\-cfg} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_aa16d65dc511028db2103316d092a98d9}{\-E\-P\-A\-X\-\_\-loop\-\_\-func} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a659b78f70acfbfa8d33c3540142d39ac}{\-E\-P\-A\-X\-\_\-loop\-\_\-size} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_aa2885dbfa13cbf87f45566284ba54cd5}{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_afbcaf1be697553c519a4519b9696598e}{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl} (\-E\-P\-A\-X\-\_\-loop loop, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_a5fef94f333b28492e812a170be8cde52}{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_a6199f70798b3f3c53b0995e5ed2c3723}{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl} (\-E\-P\-A\-X\-\_\-loop loop, \-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a93d840a17e3b313914d4aa1d6e8be03e}{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl} (\-E\-P\-A\-X\-\_\-loop loop, \-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a7f6dbf525a432ba17f00abe52c76f023}{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a7ed92b62a5e773e6820d2d4bb90e99b3}{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn} (\-E\-P\-A\-X\-\_\-loop loop, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a792194c2a149d73529a5bf09c2570ba1}{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_afc619ea7665032b974cdc9c02225ad41}{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn} (\-E\-P\-A\-X\-\_\-loop loop, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a678d65631152fffab96b0b46c19d03b8}{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn} (\-E\-P\-A\-X\-\_\-loop loop, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_a2354e470d1319babd5bd04cd4cb2b4e9}{\-E\-P\-A\-X\-\_\-loop\-\_\-head} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_af4d0993888eb1595b3bdfdcbc358bb0f}{\-E\-P\-A\-X\-\_\-loop\-\_\-tail} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ac9e22579f826d7f6fd8264ecac83d4e1}{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ac6a63809ffef09211668744102b0b620}{\-E\-P\-A\-X\-\_\-loop\-\_\-exits} (\-E\-P\-A\-X\-\_\-loop loop, \-E\-P\-A\-X\-\_\-insn $\ast$insn\-List)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a121a7c48489a0f1d4c020b00a38edcd0}{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop} (\-E\-P\-A\-X\-\_\-loop loop1, \-E\-P\-A\-X\-\_\-loop loop2)
+\item 
+\-E\-P\-A\-X\-\_\-loop \hyperlink{_interface_8cpp_a675e4304bf3b092af4ddf01a0fa419f7}{\-E\-P\-A\-X\-\_\-loop\-\_\-parent} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_aba488b1bf23a295c2a83e1bd3552d29e}{\-E\-P\-A\-X\-\_\-loop\-\_\-index} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_aab1b9e0399a97e34b044ff9349bb9ee0}{\-E\-P\-A\-X\-\_\-loop\-\_\-depth} (\-E\-P\-A\-X\-\_\-loop loop)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_acd9674dcb9a6a46cad471825f4dff63e}{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a0c566a45bd58ce823d9ff578f6b0c77a}{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_aa18ac64f5d710778b4c46f1965618bd3}{\-E\-P\-A\-X\-\_\-bbl\-\_\-head} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a1d31958766350fc1c49194d30cd5ff52}{\-E\-P\-A\-X\-\_\-bbl\-\_\-tail} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_a0a316fe7b353e667d360db6440eb579d}{\-E\-P\-A\-X\-\_\-bbl\-\_\-func} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+\-E\-P\-A\-X\-\_\-loop \hyperlink{_interface_8cpp_a3ea1a46d857c67bddd0c22f9cf1fceac}{\-E\-P\-A\-X\-\_\-bbl\-\_\-loop} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_acc0b3bb98497fd3f3742869905c571bd}{\-E\-P\-A\-X\-\_\-bbl\-\_\-size} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint64\-\_\-t \hyperlink{_interface_8cpp_af27ec50899e980dca7f9dcb854204128}{\-E\-P\-A\-X\-\_\-bbl\-\_\-addr} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ac549d055b9d97d76dac54c392c5e84d4}{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_aa1c9486f204cbd55486d2f0f4684db7b}{\-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn} (\-E\-P\-A\-X\-\_\-bbl bbl, uint64\-\_\-t addr)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a4413e9cd8010e0eeae37505dca8f704c}{\-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+\-E\-P\-A\-X\-\_\-insn \hyperlink{_interface_8cpp_a4fcf875a4b29aacdc5900227520b6a2d}{\-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ae5716780b546d1c275fd9b64b4c34c59}{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a9fdbb5e0933690900581c33d100a190c}{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a86c8dab7d6d8751349eab98b3d120eb7}{\-E\-P\-A\-X\-\_\-bbl\-\_\-targets} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-bbl $\ast$bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ae736fa4029e4e5c30355fb5687190bdb}{\-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_ab53ad05120c049d85b7f024a96622272}{\-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a50fe1a91e46871a424192fa49b86a2e0}{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ab5627ba439de400a405080b8bb2ee548}{\-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-bbl $\ast$bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a9954b9ed5092ecc26be0d3cb465de394}{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources} (\-E\-P\-A\-X\-\_\-bbl bbl)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ad5aff49f962658a850e307e4fb6a9ea8}{\-E\-P\-A\-X\-\_\-bbl\-\_\-sources} (\-E\-P\-A\-X\-\_\-bbl bbl, \-E\-P\-A\-X\-\_\-bbl $\ast$bbl\-List)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a642f41826e66bdfad20105fe5fcd4e05}{\-E\-P\-A\-X\-\_\-insn\-\_\-targets} (\-E\-P\-A\-X\-\_\-insn insn, uint64\-\_\-t $\ast$tlist)
+\item 
+\-E\-P\-A\-X\-\_\-bbl \hyperlink{_interface_8cpp_a79d6c9739351a5553d3997207d364604}{\-E\-P\-A\-X\-\_\-insn\-\_\-bbl} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+\-E\-P\-A\-X\-\_\-func \hyperlink{_interface_8cpp_a13585e4d1cf7b1acac57b5d97f921a61}{\-E\-P\-A\-X\-\_\-insn\-\_\-func} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+\-E\-P\-A\-X\-\_\-loop \hyperlink{_interface_8cpp_a8ed14c792b911cab1b35c5248630acff}{\-E\-P\-A\-X\-\_\-insn\-\_\-loop} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint64\-\_\-t \hyperlink{_interface_8cpp_a2e263dcfe59305614fdf9ea6d5630270}{\-E\-P\-A\-X\-\_\-insn\-\_\-addr} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+const char $\ast$ \hyperlink{_interface_8cpp_a1b592189ed0b7b7e721f9b86e52d2e52}{\-E\-P\-A\-X\-\_\-insn\-\_\-string} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint64\-\_\-t \hyperlink{_interface_8cpp_afd5090aec3907d61deae6b84c84b957d}{\-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a41c4bec724eb1cfd3226abfe32565233}{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ab6991624847213e2ba8ecbe70d273f1b}{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a4948be986cd803425e1f279253520aa2}{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ad3c0319290aab82aae37ab60f6bfdd93}{\-E\-P\-A\-X\-\_\-insn\-\_\-size} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+const char $\ast$ \hyperlink{_interface_8cpp_aa1440e7d47ff5db92fefe18101d16da2}{\-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a23e7248390a1db2979cb53b2881ec170}{\-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_a8c68358bdbab70da652aab8c8bee820d}{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits} (\-E\-P\-A\-X\-\_\-insn insn)
+\item 
+uint32\-\_\-t \hyperlink{_interface_8cpp_ac23bc8a9ddc5820f58edb445218f7ebe}{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits} (\-E\-P\-A\-X\-\_\-insn insn)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_interface_8cpp_source}{\-Interface.\-cpp}.
+
+
+
+\subsection{\-Function \-Documentation}
+\hypertarget{_interface_8cpp_af27ec50899e980dca7f9dcb854204128}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-addr@{\-E\-P\-A\-X\-\_\-bbl\-\_\-addr}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-addr@{\-E\-P\-A\-X\-\_\-bbl\-\_\-addr}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-addr} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_af27ec50899e980dca7f9dcb854204128}
+
+
+\-Definition at line 1085 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ac549d055b9d97d76dac54c392c5e84d4}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ac549d055b9d97d76dac54c392c5e84d4}
+
+
+\-Definition at line 1089 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a50fe1a91e46871a424192fa49b86a2e0}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Jump\-Targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a50fe1a91e46871a424192fa49b86a2e0}
+
+
+\-Definition at line 1133 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a9954b9ed5092ecc26be0d3cb465de394}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Sources} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a9954b9ed5092ecc26be0d3cb465de394}
+
+
+\-Definition at line 1149 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a9fdbb5e0933690900581c33d100a190c}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-count\-Targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a9fdbb5e0933690900581c33d100a190c}
+
+
+\-Definition at line 1109 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ab53ad05120c049d85b7f024a96622272}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target@{\-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target@{\-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-fallthrough\-Target} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ab53ad05120c049d85b7f024a96622272}
+
+
+\-Definition at line 1129 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa1c9486f204cbd55486d2f0f4684db7b}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-find\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa1c9486f204cbd55486d2f0f4684db7b}
+
+
+\-Definition at line 1093 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a4413e9cd8010e0eeae37505dca8f704c}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-first\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a4413e9cd8010e0eeae37505dca8f704c}
+
+
+\-Definition at line 1097 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a0a316fe7b353e667d360db6440eb579d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-func@{\-E\-P\-A\-X\-\_\-bbl\-\_\-func}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-func@{\-E\-P\-A\-X\-\_\-bbl\-\_\-func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a0a316fe7b353e667d360db6440eb579d}
+
+
+\-Definition at line 1073 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ae736fa4029e4e5c30355fb5687190bdb}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target@{\-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target@{\-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-has\-Fallthrough\-Target} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ae736fa4029e4e5c30355fb5687190bdb}
+
+
+\-Definition at line 1125 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa18ac64f5d710778b4c46f1965618bd3}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-head@{\-E\-P\-A\-X\-\_\-bbl\-\_\-head}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-head@{\-E\-P\-A\-X\-\_\-bbl\-\_\-head}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-head}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-head} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa18ac64f5d710778b4c46f1965618bd3}
+
+
+\-Definition at line 1065 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_acd9674dcb9a6a46cad471825f4dff63e}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head@{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head@{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Head} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_acd9674dcb9a6a46cad471825f4dff63e}
+
+
+\-Definition at line 1057 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ae5716780b546d1c275fd9b64b4c34c59}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Last\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ae5716780b546d1c275fd9b64b4c34c59}
+
+
+\-Definition at line 1105 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a0c566a45bd58ce823d9ff578f6b0c77a}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail@{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail@{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-is\-Tail} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a0c566a45bd58ce823d9ff578f6b0c77a}
+
+
+\-Definition at line 1061 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ab5627ba439de400a405080b8bb2ee548}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-jump\-Targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-bbl $\ast$}]{bbl\-List}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ab5627ba439de400a405080b8bb2ee548}
+
+
+\-Definition at line 1137 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a3ea1a46d857c67bddd0c22f9cf1fceac}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-loop@{\-E\-P\-A\-X\-\_\-bbl\-\_\-loop}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-loop@{\-E\-P\-A\-X\-\_\-bbl\-\_\-loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-loop {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a3ea1a46d857c67bddd0c22f9cf1fceac}
+
+
+\-Definition at line 1077 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a4fcf875a4b29aacdc5900227520b6a2d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn@{\-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-next\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a4fcf875a4b29aacdc5900227520b6a2d}
+
+
+\-Definition at line 1101 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_acc0b3bb98497fd3f3742869905c571bd}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-size@{\-E\-P\-A\-X\-\_\-bbl\-\_\-size}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-size@{\-E\-P\-A\-X\-\_\-bbl\-\_\-size}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-size} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_acc0b3bb98497fd3f3742869905c571bd}
+
+
+\-Definition at line 1081 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ad5aff49f962658a850e307e4fb6a9ea8}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-sources@{\-E\-P\-A\-X\-\_\-bbl\-\_\-sources}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-sources@{\-E\-P\-A\-X\-\_\-bbl\-\_\-sources}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-sources}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-sources} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-bbl $\ast$}]{bbl\-List}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ad5aff49f962658a850e307e4fb6a9ea8}
+
+
+\-Definition at line 1153 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a1d31958766350fc1c49194d30cd5ff52}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-tail@{\-E\-P\-A\-X\-\_\-bbl\-\_\-tail}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-tail@{\-E\-P\-A\-X\-\_\-bbl\-\_\-tail}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-tail}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-tail} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a1d31958766350fc1c49194d30cd5ff52}
+
+
+\-Definition at line 1069 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a86c8dab7d6d8751349eab98b3d120eb7}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bbl\-\_\-targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-targets}}
+\index{\-E\-P\-A\-X\-\_\-bbl\-\_\-targets@{\-E\-P\-A\-X\-\_\-bbl\-\_\-targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bbl\-\_\-targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bbl\-\_\-targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl, }
+\item[{\-E\-P\-A\-X\-\_\-bbl $\ast$}]{bbl\-List}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a86c8dab7d6d8751349eab98b3d120eb7}
+
+
+\-Definition at line 1113 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a15e813d302dc6aea6eb0168c4a0934c1}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-count\-Func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a15e813d302dc6aea6eb0168c4a0934c1}
+
+
+\-Definition at line 830 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa2936be12bbe46b81f9250ca99ae2512}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-create@{\-E\-P\-A\-X\-\_\-bin\-\_\-create}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-create@{\-E\-P\-A\-X\-\_\-bin\-\_\-create}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bin {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-create} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file\-Name}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa2936be12bbe46b81f9250ca99ae2512}
+
+
+\-Definition at line 800 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a8a32d3e4ea3163e94d508462d67c7bed}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-destroy@{\-E\-P\-A\-X\-\_\-bin\-\_\-destroy}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-destroy@{\-E\-P\-A\-X\-\_\-bin\-\_\-destroy}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a8a32d3e4ea3163e94d508462d67c7bed}
+
+
+\-Definition at line 810 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ae2f9bec9b6328307e3282817b651d99c}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size@{\-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size@{\-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-file\-Size} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ae2f9bec9b6328307e3282817b651d99c}
+
+
+\-Definition at line 838 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a197ee414d5ac56c08bbf2b4230b3ea33}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-first\-Func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a197ee414d5ac56c08bbf2b4230b3ea33}
+
+
+\-Definition at line 818 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_af0d373a8bd2247e03aeba77adda54a32}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-fund\-Func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_af0d373a8bd2247e03aeba77adda54a32}
+
+
+\-Definition at line 847 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a4ef8c23e0809ea8022a2411edf577b72}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name@{\-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name@{\-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-get\-Name} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a4ef8c23e0809ea8022a2411edf577b72}
+
+
+\-Definition at line 805 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afc28a9e4f282aadf59973d6bc550722d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable@{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable@{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-is\-Executable} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afc28a9e4f282aadf59973d6bc550722d}
+
+
+\-Definition at line 834 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_acc45d509a15486f1e04bfe74662592d0}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-is\-Last\-Func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin, }
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_acc45d509a15486f1e04bfe74662592d0}
+
+
+\-Definition at line 826 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a0dc99fc845c16922cf460aa906b6842c}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func@{\-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-next\-Func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin, }
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a0dc99fc845c16922cf460aa906b6842c}
+
+
+\-Definition at line 822 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afe695c3ceb8725410541a152ffdc10eb}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File@{\-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File@{\-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-print\-Static\-File} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin, }
+\item[{const char $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afe695c3ceb8725410541a152ffdc10eb}
+
+
+\-Definition at line 842 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ae7129d904c42914ab92d4da65d6a1178}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-bin\-\_\-run@{\-E\-P\-A\-X\-\_\-bin\-\_\-run}}
+\index{\-E\-P\-A\-X\-\_\-bin\-\_\-run@{\-E\-P\-A\-X\-\_\-bin\-\_\-run}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-bin\-\_\-run}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-\_\-bin\-\_\-run} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-bin}]{bin, }
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ae7129d904c42914ab92d4da65d6a1178}
+
+
+\-Definition at line 814 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aeff422ab787503cd3810426e17dafa12}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop}}
+\index{\-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-cfg\-\_\-count\-Loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-cfg}]{cfg}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aeff422ab787503cd3810426e17dafa12}
+
+
+\-Definition at line 945 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afa867f7964e15a53a510568f92c4da65}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop}}
+\index{\-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-loop {\bf \-E\-P\-A\-X\-\_\-cfg\-\_\-find\-Loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-cfg}]{cfg, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afa867f7964e15a53a510568f92c4da65}
+
+
+\-Definition at line 949 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a5954d8700e4f53d994ce4f5877b48b4b}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop}}
+\index{\-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-loop {\bf \-E\-P\-A\-X\-\_\-cfg\-\_\-first\-Loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-cfg}]{cfg}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a5954d8700e4f53d994ce4f5877b48b4b}
+
+
+\-Definition at line 953 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a2f25abda15cf8e82b8125b9103c28fc7}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop}}
+\index{\-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-cfg\-\_\-is\-Last\-Loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-cfg}]{cfg, }
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a2f25abda15cf8e82b8125b9103c28fc7}
+
+
+\-Definition at line 961 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a835b285068cd71b545b432ecbad2323d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop}}
+\index{\-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop@{\-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-loop {\bf \-E\-P\-A\-X\-\_\-cfg\-\_\-next\-Loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-cfg}]{cfg, }
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a835b285068cd71b545b432ecbad2323d}
+
+
+\-Definition at line 957 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ab8121aaec4371c5cbad93407fe6c9ebb}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-addr@{\-E\-P\-A\-X\-\_\-func\-\_\-addr}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-addr@{\-E\-P\-A\-X\-\_\-func\-\_\-addr}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-addr} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ab8121aaec4371c5cbad93407fe6c9ebb}
+
+
+\-Definition at line 872 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aced6129d894a47e983ba82f34d92a68e}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-bin@{\-E\-P\-A\-X\-\_\-func\-\_\-bin}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-bin@{\-E\-P\-A\-X\-\_\-func\-\_\-bin}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-bin}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bin {\bf \-E\-P\-A\-X\-\_\-func\-\_\-bin} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aced6129d894a47e983ba82f34d92a68e}
+
+
+\-Definition at line 881 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a95cb16f9cbdbfc9b8e5ae11adca44dcb}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-cfg@{\-E\-P\-A\-X\-\_\-func\-\_\-cfg}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-cfg@{\-E\-P\-A\-X\-\_\-func\-\_\-cfg}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-cfg}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-cfg {\bf \-E\-P\-A\-X\-\_\-func\-\_\-cfg} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a95cb16f9cbdbfc9b8e5ae11adca44dcb}
+
+
+\-Definition at line 925 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a6cbebe69f02da2e8f661cb7b26056222}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-count\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a6cbebe69f02da2e8f661cb7b26056222}
+
+
+\-Definition at line 885 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a224ef5067178aa5948be05c6dccf071c}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-count\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a224ef5067178aa5948be05c6dccf071c}
+
+
+\-Definition at line 905 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a14a7b866b563be2edf49c4322d8ed844}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets@{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets@{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-count\-Targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a14a7b866b563be2edf49c4322d8ed844}
+
+
+\-Definition at line 929 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ad0baa320cccca95f81b56e4fbe990d11}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-create@{\-E\-P\-A\-X\-\_\-func\-\_\-create}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-create@{\-E\-P\-A\-X\-\_\-func\-\_\-create}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-func\-\_\-create} (
+\begin{DoxyParamCaption}
+\item[{uint8\-\_\-t $\ast$}]{bytes, }
+\item[{uint32\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ad0baa320cccca95f81b56e4fbe990d11}
+
+
+\-Definition at line 851 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a0df45b2ccdc52c5668ed8cc7effc11a0}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-destroy@{\-E\-P\-A\-X\-\_\-func\-\_\-destroy}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-destroy@{\-E\-P\-A\-X\-\_\-func\-\_\-destroy}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-\_\-func\-\_\-destroy} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a0df45b2ccdc52c5668ed8cc7effc11a0}
+
+
+\-Definition at line 855 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a47ac27aea0430df9a9d09a8f676d9218}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-func\-\_\-find\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a47ac27aea0430df9a9d09a8f676d9218}
+
+
+\-Definition at line 889 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a4b70bf104080533334e0f4829865c7e9}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-func\-\_\-find\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a4b70bf104080533334e0f4829865c7e9}
+
+
+\-Definition at line 909 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_af3c6747ed1eed89ee9f3e4661190957d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-func\-\_\-first\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_af3c6747ed1eed89ee9f3e4661190957d}
+
+
+\-Definition at line 893 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afc95e95ee32dbba246a9c6e301edc2fe}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-func\-\_\-first\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afc95e95ee32dbba246a9c6e301edc2fe}
+
+
+\-Definition at line 913 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa1b651ed610ef90445696dfeeb5c27cb}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa1b651ed610ef90445696dfeeb5c27cb}
+
+
+\-Definition at line 901 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a8805158ac1d616bfff4ae6bf121c28c2}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-is\-Last\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a8805158ac1d616bfff4ae6bf121c28c2}
+
+
+\-Definition at line 921 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_adfbdb381a991347681fabaa3dedf3271}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-name@{\-E\-P\-A\-X\-\_\-func\-\_\-name}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-name@{\-E\-P\-A\-X\-\_\-func\-\_\-name}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf \-E\-P\-A\-X\-\_\-func\-\_\-name} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_adfbdb381a991347681fabaa3dedf3271}
+
+
+\-Definition at line 863 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a34557a0e7b0ff332da8edf3d8f133766}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl@{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-func\-\_\-next\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a34557a0e7b0ff332da8edf3d8f133766}
+
+
+\-Definition at line 897 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a6c3c832b27a6f53779d0f38c85931a76}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn@{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-func\-\_\-next\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a6c3c832b27a6f53779d0f38c85931a76}
+
+
+\-Definition at line 917 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a36c84ff37bb8851029f284a239d6a8cc}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-print@{\-E\-P\-A\-X\-\_\-func\-\_\-print}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-print@{\-E\-P\-A\-X\-\_\-func\-\_\-print}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-\_\-func\-\_\-print} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a36c84ff37bb8851029f284a239d6a8cc}
+
+
+\-Definition at line 859 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a567e9fbd8b0152f55e510fd524e3dbba}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name@{\-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name@{\-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf \-E\-P\-A\-X\-\_\-func\-\_\-sec\-Name} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a567e9fbd8b0152f55e510fd524e3dbba}
+
+
+\-Definition at line 876 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa4426062c183aa51b7f4d8e516cc49ef}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-size@{\-E\-P\-A\-X\-\_\-func\-\_\-size}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-size@{\-E\-P\-A\-X\-\_\-func\-\_\-size}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-size} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa4426062c183aa51b7f4d8e516cc49ef}
+
+
+\-Definition at line 868 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a864539d03537e7ec0ce83be616406ca3}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-func\-\_\-targets@{\-E\-P\-A\-X\-\_\-func\-\_\-targets}}
+\index{\-E\-P\-A\-X\-\_\-func\-\_\-targets@{\-E\-P\-A\-X\-\_\-func\-\_\-targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-func\-\_\-targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-func\-\_\-targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-func}]{func, }
+\item[{\-E\-P\-A\-X\-\_\-func $\ast$}]{func\-List}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a864539d03537e7ec0ce83be616406ca3}
+
+
+\-Definition at line 933 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a2e263dcfe59305614fdf9ea6d5630270}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-addr@{\-E\-P\-A\-X\-\_\-insn\-\_\-addr}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-addr@{\-E\-P\-A\-X\-\_\-insn\-\_\-addr}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-addr} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a2e263dcfe59305614fdf9ea6d5630270}
+
+
+\-Definition at line 1189 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a79d6c9739351a5553d3997207d364604}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-bbl@{\-E\-P\-A\-X\-\_\-insn\-\_\-bbl}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-bbl@{\-E\-P\-A\-X\-\_\-insn\-\_\-bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a79d6c9739351a5553d3997207d364604}
+
+
+\-Definition at line 1177 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afd5090aec3907d61deae6b84c84b957d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target@{\-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target@{\-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-call\-Target} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afd5090aec3907d61deae6b84c84b957d}
+
+
+\-Definition at line 1198 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa1440e7d47ff5db92fefe18101d16da2}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name@{\-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name@{\-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-cond\-Name} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa1440e7d47ff5db92fefe18101d16da2}
+
+
+\-Definition at line 1218 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a23e7248390a1db2979cb53b2881ec170}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through@{\-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through@{\-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-falls\-Through} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a23e7248390a1db2979cb53b2881ec170}
+
+
+\-Definition at line 1223 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a13585e4d1cf7b1acac57b5d97f921a61}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-func@{\-E\-P\-A\-X\-\_\-insn\-\_\-func}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-func@{\-E\-P\-A\-X\-\_\-insn\-\_\-func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a13585e4d1cf7b1acac57b5d97f921a61}
+
+
+\-Definition at line 1181 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a41c4bec724eb1cfd3226abfe32565233}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch@{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch@{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-is\-Branch} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a41c4bec724eb1cfd3226abfe32565233}
+
+
+\-Definition at line 1202 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ab6991624847213e2ba8ecbe70d273f1b}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop@{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop@{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-is\-Fpop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ab6991624847213e2ba8ecbe70d273f1b}
+
+
+\-Definition at line 1206 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a4948be986cd803425e1f279253520aa2}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop@{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop@{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-is\-Memop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a4948be986cd803425e1f279253520aa2}
+
+
+\-Definition at line 1210 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a8ed14c792b911cab1b35c5248630acff}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-loop@{\-E\-P\-A\-X\-\_\-insn\-\_\-loop}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-loop@{\-E\-P\-A\-X\-\_\-insn\-\_\-loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-loop}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-loop {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a8ed14c792b911cab1b35c5248630acff}
+
+
+\-Definition at line 1185 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ad3c0319290aab82aae37ab60f6bfdd93}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-size@{\-E\-P\-A\-X\-\_\-insn\-\_\-size}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-size@{\-E\-P\-A\-X\-\_\-insn\-\_\-size}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-size} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ad3c0319290aab82aae37ab60f6bfdd93}
+
+
+\-Definition at line 1214 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ac23bc8a9ddc5820f58edb445218f7ebe}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits@{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits@{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-source\-Datatype\-Size\-In\-Bits} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ac23bc8a9ddc5820f58edb445218f7ebe}
+
+
+\-Definition at line 1231 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a8c68358bdbab70da652aab8c8bee820d}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits@{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits@{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-source\-Register\-Size\-In\-Bits} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a8c68358bdbab70da652aab8c8bee820d}
+
+
+\-Definition at line 1227 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a1b592189ed0b7b7e721f9b86e52d2e52}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-string@{\-E\-P\-A\-X\-\_\-insn\-\_\-string}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-string@{\-E\-P\-A\-X\-\_\-insn\-\_\-string}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-string} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a1b592189ed0b7b7e721f9b86e52d2e52}
+
+
+\-Definition at line 1193 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a642f41826e66bdfad20105fe5fcd4e05}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-insn\-\_\-targets@{\-E\-P\-A\-X\-\_\-insn\-\_\-targets}}
+\index{\-E\-P\-A\-X\-\_\-insn\-\_\-targets@{\-E\-P\-A\-X\-\_\-insn\-\_\-targets}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-insn\-\_\-targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-insn\-\_\-targets} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn, }
+\item[{uint64\-\_\-t $\ast$}]{tlist}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a642f41826e66bdfad20105fe5fcd4e05}
+
+
+\-Definition at line 1165 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a8a6a2ab141f60d887ad7fc78a291d271}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-cfg@{\-E\-P\-A\-X\-\_\-loop\-\_\-cfg}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-cfg@{\-E\-P\-A\-X\-\_\-loop\-\_\-cfg}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-cfg}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-cfg {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-cfg} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a8a6a2ab141f60d887ad7fc78a291d271}
+
+
+\-Definition at line 965 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa2885dbfa13cbf87f45566284ba54cd5}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-count\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa2885dbfa13cbf87f45566284ba54cd5}
+
+
+\-Definition at line 977 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ac9e22579f826d7f6fd8264ecac83d4e1}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits@{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits@{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-count\-Exits} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ac9e22579f826d7f6fd8264ecac83d4e1}
+
+
+\-Definition at line 1025 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a7f6dbf525a432ba17f00abe52c76f023}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-count\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a7f6dbf525a432ba17f00abe52c76f023}
+
+
+\-Definition at line 997 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aab1b9e0399a97e34b044ff9349bb9ee0}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-depth@{\-E\-P\-A\-X\-\_\-loop\-\_\-depth}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-depth@{\-E\-P\-A\-X\-\_\-loop\-\_\-depth}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-depth}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-depth} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aab1b9e0399a97e34b044ff9349bb9ee0}
+
+
+\-Definition at line 1053 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_ac6a63809ffef09211668744102b0b620}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-exits@{\-E\-P\-A\-X\-\_\-loop\-\_\-exits}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-exits@{\-E\-P\-A\-X\-\_\-loop\-\_\-exits}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-exits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-exits} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{\-E\-P\-A\-X\-\_\-insn $\ast$}]{insn\-List}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_ac6a63809ffef09211668744102b0b620}
+
+
+\-Definition at line 1029 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afbcaf1be697553c519a4519b9696598e}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-find\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afbcaf1be697553c519a4519b9696598e}
+
+
+\-Definition at line 981 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a7ed92b62a5e773e6820d2d4bb90e99b3}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-find\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a7ed92b62a5e773e6820d2d4bb90e99b3}
+
+
+\-Definition at line 1001 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a5fef94f333b28492e812a170be8cde52}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-first\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a5fef94f333b28492e812a170be8cde52}
+
+
+\-Definition at line 985 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a792194c2a149d73529a5bf09c2570ba1}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-first\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a792194c2a149d73529a5bf09c2570ba1}
+
+
+\-Definition at line 1005 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aa16d65dc511028db2103316d092a98d9}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-func@{\-E\-P\-A\-X\-\_\-loop\-\_\-func}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-func@{\-E\-P\-A\-X\-\_\-loop\-\_\-func}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-func {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-func} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aa16d65dc511028db2103316d092a98d9}
+
+
+\-Definition at line 969 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a2354e470d1319babd5bd04cd4cb2b4e9}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-head@{\-E\-P\-A\-X\-\_\-loop\-\_\-head}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-head@{\-E\-P\-A\-X\-\_\-loop\-\_\-head}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-head}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-head} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a2354e470d1319babd5bd04cd4cb2b4e9}
+
+
+\-Definition at line 1017 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_aba488b1bf23a295c2a83e1bd3552d29e}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-index@{\-E\-P\-A\-X\-\_\-loop\-\_\-index}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-index@{\-E\-P\-A\-X\-\_\-loop\-\_\-index}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-index} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_aba488b1bf23a295c2a83e1bd3552d29e}
+
+
+\-Definition at line 1049 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a121a7c48489a0f1d4c020b00a38edcd0}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop@{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop@{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-is\-Inner\-Loop} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop1, }
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop2}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a121a7c48489a0f1d4c020b00a38edcd0}
+
+
+\-Definition at line 1041 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a93d840a17e3b313914d4aa1d6e8be03e}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a93d840a17e3b313914d4aa1d6e8be03e}
+
+
+\-Definition at line 993 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a678d65631152fffab96b0b46c19d03b8}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-is\-Last\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a678d65631152fffab96b0b46c19d03b8}
+
+
+\-Definition at line 1013 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a6199f70798b3f3c53b0995e5ed2c3723}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl@{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-next\-Bbl} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{\-E\-P\-A\-X\-\_\-bbl}]{bbl}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a6199f70798b3f3c53b0995e5ed2c3723}
+
+
+\-Definition at line 989 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_afc619ea7665032b974cdc9c02225ad41}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn@{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-insn {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-next\-Insn} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop, }
+\item[{\-E\-P\-A\-X\-\_\-insn}]{insn}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_afc619ea7665032b974cdc9c02225ad41}
+
+
+\-Definition at line 1009 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a675e4304bf3b092af4ddf01a0fa419f7}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-parent@{\-E\-P\-A\-X\-\_\-loop\-\_\-parent}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-parent@{\-E\-P\-A\-X\-\_\-loop\-\_\-parent}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-parent}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-loop {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-parent} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a675e4304bf3b092af4ddf01a0fa419f7}
+
+
+\-Definition at line 1045 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_a659b78f70acfbfa8d33c3540142d39ac}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-size@{\-E\-P\-A\-X\-\_\-loop\-\_\-size}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-size@{\-E\-P\-A\-X\-\_\-loop\-\_\-size}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-size} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_a659b78f70acfbfa8d33c3540142d39ac}
+
+
+\-Definition at line 973 of file \-Interface.\-cpp.
+
+\hypertarget{_interface_8cpp_af4d0993888eb1595b3bdfdcbc358bb0f}{\index{\-Interface.\-cpp@{\-Interface.\-cpp}!\-E\-P\-A\-X\-\_\-loop\-\_\-tail@{\-E\-P\-A\-X\-\_\-loop\-\_\-tail}}
+\index{\-E\-P\-A\-X\-\_\-loop\-\_\-tail@{\-E\-P\-A\-X\-\_\-loop\-\_\-tail}!Interface.cpp@{\-Interface.\-cpp}}
+\subsubsection[{\-E\-P\-A\-X\-\_\-loop\-\_\-tail}]{\setlength{\rightskip}{0pt plus 5cm}\-E\-P\-A\-X\-\_\-bbl {\bf \-E\-P\-A\-X\-\_\-loop\-\_\-tail} (
+\begin{DoxyParamCaption}
+\item[{\-E\-P\-A\-X\-\_\-loop}]{loop}
+\end{DoxyParamCaption}
+)}}\label{_interface_8cpp_af4d0993888eb1595b3bdfdcbc358bb0f}
+
+
+\-Definition at line 1021 of file \-Interface.\-cpp.
+

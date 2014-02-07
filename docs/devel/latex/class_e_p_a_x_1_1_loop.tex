@@ -1,0 +1,279 @@
+\hypertarget{class_e_p_a_x_1_1_loop}{\section{\-E\-P\-A\-X\-:\-:\-Loop \-Class \-Reference}
+\label{class_e_p_a_x_1_1_loop}\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}}
+}
+
+
+{\ttfamily \#include $<$\-Loop.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Loop\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_p_a_x_1_1_loop}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_loop_a2bae87ec3d967c7bd70300687723c327}{\-Loop} (\hyperlink{class_e_p_a_x_1_1_control_flow}{\-Control\-Flow} $\ast$c, uint32\-\_\-t h, uint32\-\_\-t t, uint32\-\_\-t d, \hyperlink{class_e_p_a_x_1_1dyn__bitset}{dyn\-\_\-bitset} $\ast$m, uint32\-\_\-t i)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_loop_a4e3bd5964896020904db2cc76cae55fb}{$\sim$\-Loop} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_control_flow}{\-Control\-Flow} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_aaace2fef9ea1eb09918ecb56017da0a2}{get\-Control\-Flow} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_loop_a70b6e7c9894ab1984df350d155cd20e1}{count\-Basic\-Blocks} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_loop_a54ac86da0c06049b8af6c6128e96fdca}{count\-Instructions} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_loop_a4c4c2097f1cb528e553ae7e6d75b9b14}{get\-Size} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_ad6b1a8c5fc295c42de1996658150c5f5}{find\-Basic\-Block} (uint64\-\_\-t addr)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_loop_ab22ae5ef44f2e033fb5d4ced1d72734d}{has\-Basic\-Block} (uint32\-\_\-t idx)
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_a4f64475b12d85dbee8cb207903eb0b3b}{get\-Basic\-Block} (uint32\-\_\-t idx)
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_abad7041e4d159472e14fcd0900510581}{get\-Next\-Basic\-Block} (uint32\-\_\-t idx)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_loop_adef4258c1ff9bde98a568bb5a0398be8}{is\-Last\-Basic\-Block} (uint32\-\_\-t idx)
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_ab5a3d377e2da69fe6822dbf66a7390cd}{head} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_a5cecf77effc28550c9978371b113b6cb}{tail} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_ae44e1bd79a213b3b5873d24164d55623}{find\-Instruction} (uint64\-\_\-t addr)
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_loop_a2c75eef1d286f9d35800e668414a7950}{get\-Instruction} (uint32\-\_\-t idx)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_loop_a03aa2ad89a7b73560803f4e482fec5de}{is\-Last\-Instruction} (uint32\-\_\-t idx)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_loop_ad361e0d0fc5b10185c84de493524f255}{set\-Depth} (uint32\-\_\-t d)
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_loop_adbc0df439a7dfc5957a8850a041f0b34}{get\-Depth} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_loop_a9a2c4a4fd37713d66b55095191aa0b35}{is\-Child\-Of} (\hyperlink{class_e_p_a_x_1_1_loop}{\-Loop} $\ast$lp)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 37 of file \-Loop.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_loop_a2bae87ec3d967c7bd70300687723c327}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!\-Loop@{\-Loop}}
+\index{\-Loop@{\-Loop}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Loop\-::\-Loop} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Control\-Flow} $\ast$}]{c, }
+\item[{uint32\-\_\-t}]{h, }
+\item[{uint32\-\_\-t}]{t, }
+\item[{uint32\-\_\-t}]{d, }
+\item[{{\bf dyn\-\_\-bitset} $\ast$}]{m, }
+\item[{uint32\-\_\-t}]{i}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a2bae87ec3d967c7bd70300687723c327}
+
+
+\-Definition at line 34 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a4e3bd5964896020904db2cc76cae55fb}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!$\sim$\-Loop@{$\sim$\-Loop}}
+\index{$\sim$\-Loop@{$\sim$\-Loop}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{$\sim$\-Loop}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Loop\-::$\sim$\-Loop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_loop_a4e3bd5964896020904db2cc76cae55fb}
+
+
+\-Definition at line 50 of file \-Loop.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_loop_a70b6e7c9894ab1984df350d155cd20e1}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!count\-Basic\-Blocks@{count\-Basic\-Blocks}}
+\index{count\-Basic\-Blocks@{count\-Basic\-Blocks}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{count\-Basic\-Blocks}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Loop\-::count\-Basic\-Blocks} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a70b6e7c9894ab1984df350d155cd20e1}
+
+
+\-Definition at line 98 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a54ac86da0c06049b8af6c6128e96fdca}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!count\-Instructions@{count\-Instructions}}
+\index{count\-Instructions@{count\-Instructions}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{count\-Instructions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Loop\-::count\-Instructions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a54ac86da0c06049b8af6c6128e96fdca}
+
+
+\-Definition at line 86 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_ad6b1a8c5fc295c42de1996658150c5f5}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!find\-Basic\-Block@{find\-Basic\-Block}}
+\index{find\-Basic\-Block@{find\-Basic\-Block}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{find\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::find\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_ad6b1a8c5fc295c42de1996658150c5f5}
+
+
+\-Definition at line 120 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_ae44e1bd79a213b3b5873d24164d55623}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!find\-Instruction@{find\-Instruction}}
+\index{find\-Instruction@{find\-Instruction}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{find\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::find\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_ae44e1bd79a213b3b5873d24164d55623}
+
+
+\-Definition at line 78 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a4f64475b12d85dbee8cb207903eb0b3b}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!get\-Basic\-Block@{get\-Basic\-Block}}
+\index{get\-Basic\-Block@{get\-Basic\-Block}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{get\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::get\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a4f64475b12d85dbee8cb207903eb0b3b}
+
+
+\-Definition at line 139 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_aaace2fef9ea1eb09918ecb56017da0a2}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!get\-Control\-Flow@{get\-Control\-Flow}}
+\index{get\-Control\-Flow@{get\-Control\-Flow}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{get\-Control\-Flow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Control\-Flow}$\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::get\-Control\-Flow} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_loop_aaace2fef9ea1eb09918ecb56017da0a2}
+
+
+\-Definition at line 50 of file \-Loop.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_adbc0df439a7dfc5957a8850a041f0b34}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!get\-Depth@{get\-Depth}}
+\index{get\-Depth@{get\-Depth}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{get\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Loop\-::get\-Depth} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_adbc0df439a7dfc5957a8850a041f0b34}
+
+
+\-Definition at line 201 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a2c75eef1d286f9d35800e668414a7950}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!get\-Instruction@{get\-Instruction}}
+\index{get\-Instruction@{get\-Instruction}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{get\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction}$\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::get\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a2c75eef1d286f9d35800e668414a7950}
+\hypertarget{class_e_p_a_x_1_1_loop_abad7041e4d159472e14fcd0900510581}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!get\-Next\-Basic\-Block@{get\-Next\-Basic\-Block}}
+\index{get\-Next\-Basic\-Block@{get\-Next\-Basic\-Block}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{get\-Next\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::get\-Next\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_abad7041e4d159472e14fcd0900510581}
+
+
+\-Definition at line 149 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a4c4c2097f1cb528e553ae7e6d75b9b14}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!get\-Size@{get\-Size}}
+\index{get\-Size@{get\-Size}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{get\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Loop\-::get\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a4c4c2097f1cb528e553ae7e6d75b9b14}
+
+
+\-Definition at line 108 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_ab22ae5ef44f2e033fb5d4ced1d72734d}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!has\-Basic\-Block@{has\-Basic\-Block}}
+\index{has\-Basic\-Block@{has\-Basic\-Block}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{has\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Loop\-::has\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_ab22ae5ef44f2e033fb5d4ced1d72734d}
+
+
+\-Definition at line 135 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_ab5a3d377e2da69fe6822dbf66a7390cd}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!head@{head}}
+\index{head@{head}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::head} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_ab5a3d377e2da69fe6822dbf66a7390cd}
+
+
+\-Definition at line 56 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a9a2c4a4fd37713d66b55095191aa0b35}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!is\-Child\-Of@{is\-Child\-Of}}
+\index{is\-Child\-Of@{is\-Child\-Of}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{is\-Child\-Of}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Loop\-::is\-Child\-Of} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Loop} $\ast$}]{lp}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a9a2c4a4fd37713d66b55095191aa0b35}
+
+
+\-Definition at line 182 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_adef4258c1ff9bde98a568bb5a0398be8}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!is\-Last\-Basic\-Block@{is\-Last\-Basic\-Block}}
+\index{is\-Last\-Basic\-Block@{is\-Last\-Basic\-Block}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{is\-Last\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Loop\-::is\-Last\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_adef4258c1ff9bde98a568bb5a0398be8}
+
+
+\-Definition at line 165 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a03aa2ad89a7b73560803f4e482fec5de}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!is\-Last\-Instruction@{is\-Last\-Instruction}}
+\index{is\-Last\-Instruction@{is\-Last\-Instruction}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{is\-Last\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Loop\-::is\-Last\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a03aa2ad89a7b73560803f4e482fec5de}
+\hypertarget{class_e_p_a_x_1_1_loop_ad361e0d0fc5b10185c84de493524f255}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!set\-Depth@{set\-Depth}}
+\index{set\-Depth@{set\-Depth}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{set\-Depth}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Loop\-::set\-Depth} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{d}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_ad361e0d0fc5b10185c84de493524f255}
+
+
+\-Definition at line 197 of file \-Loop.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_loop_a5cecf77effc28550c9978371b113b6cb}{\index{\-E\-P\-A\-X\-::\-Loop@{\-E\-P\-A\-X\-::\-Loop}!tail@{tail}}
+\index{tail@{tail}!EPAX::Loop@{\-E\-P\-A\-X\-::\-Loop}}
+\subsubsection[{tail}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Loop\-::tail} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_loop_a5cecf77effc28550c9978371b113b6cb}
+
+
+\-Definition at line 67 of file \-Loop.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_loop_8hpp}{\-Loop.\-hpp}\item 
+\hyperlink{_loop_8cpp}{\-Loop.\-cpp}\end{DoxyCompactItemize}

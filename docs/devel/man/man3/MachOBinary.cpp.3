@@ -1,0 +1,73 @@
+.TH "MachOBinary.cpp" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MachOBinary.cpp \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'EPAXCommonInternal\&.hpp'\fP
+.br
+\fC#include 'MachO/loader\&.h'\fP
+.br
+\fC#include 'InputFile\&.hpp'\fP
+.br
+\fC#include 'MachOBinary\&.hpp'\fP
+.br
+\fC#include 'BaseClass\&.hpp'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBEPAX\fP"
+.br
+.ti -1c
+.RI "namespace \fBEPAX::MachO\fP"
+.br
+.in -1c
+.SS "Defines"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMHDR32_ENTRY\fP   ((mach_header*)entry)"
+.br
+.ti -1c
+.RI "#define \fBMHDR64_ENTRY\fP   ((mach_header_64*)entry)"
+.br
+.ti -1c
+.RI "#define \fBSCASE\fP(__typ__)   case CPU_SUBTYPE_ARM_ ## __typ__: std::cout << 'isa=ARM_' << #__typ__; break"
+.br
+.ti -1c
+.RI "#define \fBCCASE\fP(__typ__)   case CPU_TYPE_ ## __typ__: std::cout << 'isa=' << #__typ__; break"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+.SH "LICENSE"
+.PP
+This file is part of the \fBEPAX\fP toolkit\&.
+.PP
+Copyright (c) 2013, EP Analytics, Inc\&. All rights reserved\&.
+.PP
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version\&.
+.PP
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE\&. See the GNU General Public License for more details\&.
+.PP
+You should have received a copy of the GNU General Public License along with this program\&. If not, see <http://www.gnu.org/licenses/>\&. 
+.PP
+Definition in file \fBMachOBinary\&.cpp\fP\&.
+.SH "Define Documentation"
+.PP 
+.SS "#define \fBCCASE\fP(__typ__)   case CPU_TYPE_ ## __typ__: std::cout << 'isa=' << #__typ__; break"
+.SS "#define \fBMHDR32_ENTRY\fP   ((mach_header*)entry)"
+.PP
+Definition at line 37 of file MachOBinary\&.cpp\&.
+.SS "#define \fBMHDR64_ENTRY\fP   ((mach_header_64*)entry)"
+.PP
+Definition at line 38 of file MachOBinary\&.cpp\&.
+.SS "#define \fBSCASE\fP(__typ__)   case CPU_SUBTYPE_ARM_ ## __typ__: std::cout << 'isa=ARM_' << #__typ__; break"
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

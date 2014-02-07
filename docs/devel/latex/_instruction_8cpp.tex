@@ -1,0 +1,61 @@
+\hypertarget{_instruction_8cpp}{\section{\-Instruction.\-cpp \-File \-Reference}
+\label{_instruction_8cpp}\index{\-Instruction.\-cpp@{\-Instruction.\-cpp}}
+}
+{\ttfamily \#include \char`\"{}\-E\-P\-A\-X\-Common\-Internal.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Instruction.\-hpp\char`\"{}}\*
+{\ttfamily \#include \char`\"{}\-Function.\-hpp\char`\"{}}\*
+{\ttfamily \#include $<$assert.\-h$>$}\*
+\subsection*{\-Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X}
+\end{DoxyCompactItemize}
+\subsection*{\-Defines}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_instruction_8cpp_a573340d8af9cbe755088163cb41796e6}{\-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G}(\-\_\-\-\_\-list, \-\_\-\-\_\-reg)~((\-\_\-\-\_\-list $>$$>$ \-\_\-\-\_\-reg) != 0)
+\item 
+\#define \hyperlink{_instruction_8cpp_afa7fffa6930dbd28ea64fca30f8d6d7f}{\-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D}(\-\_\-\-\_\-pred)~(\-C\-\_\-\-A\-L == \-\_\-\-\_\-pred)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\hypertarget{_symbol_8hpp_LICENSE}{}\subsection{\-L\-I\-C\-E\-N\-S\-E}\label{_symbol_8hpp_LICENSE}
+\-This file is part of the \hyperlink{namespace_e_p_a_x}{\-E\-P\-A\-X} toolkit.
+
+\-Copyright (c) 2013, \-E\-P \-Analytics, \-Inc. \-All rights reserved.
+
+\-This program is free software\-: you can redistribute it and/or modify it under the terms of the \-G\-N\-U \-General \-Public \-License as published by the \-Free \-Software \-Foundation, either version 3 of the \-License, or (at your option) any later version.
+
+\-This program is distributed in the hope that it will be useful, but \-W\-I\-T\-H\-O\-U\-T \-A\-N\-Y \-W\-A\-R\-R\-A\-N\-T\-Y; without even the implied warranty of \-M\-E\-R\-C\-H\-A\-N\-T\-A\-B\-I\-L\-I\-T\-Y or \-F\-I\-T\-N\-E\-S\-S \-F\-O\-R \-A \-P\-A\-R\-T\-I\-C\-U\-L\-A\-R \-P\-U\-R\-P\-O\-S\-E. \-See the \-G\-N\-U \-General \-Public \-License for more details.
+
+\-You should have received a copy of the \-G\-N\-U \-General \-Public \-License along with this program. \-If not, see $<$\href{http://www.gnu.org/licenses/}{\tt http\-://www.\-gnu.\-org/licenses/}$>$. 
+
+\-Definition in file \hyperlink{_instruction_8cpp_source}{\-Instruction.\-cpp}.
+
+
+
+\subsection{\-Define \-Documentation}
+\hypertarget{_instruction_8cpp_afa7fffa6930dbd28ea64fca30f8d6d7f}{\index{\-Instruction.\-cpp@{\-Instruction.\-cpp}!\-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D@{\-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D}}
+\index{\-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D@{\-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D}!Instruction.cpp@{\-Instruction.\-cpp}}
+\subsubsection[{\-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-A\-R\-M\-\_\-\-P\-R\-E\-D\-I\-C\-A\-T\-E\-\_\-\-U\-N\-C\-O\-N\-D}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-pred}
+\end{DoxyParamCaption}
+)~(\-C\-\_\-\-A\-L == \-\_\-\-\_\-pred)}}\label{_instruction_8cpp_afa7fffa6930dbd28ea64fca30f8d6d7f}
+
+
+\-Definition at line 35 of file \-Instruction.\-cpp.
+
+\hypertarget{_instruction_8cpp_a573340d8af9cbe755088163cb41796e6}{\index{\-Instruction.\-cpp@{\-Instruction.\-cpp}!\-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G@{\-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G}}
+\index{\-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G@{\-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G}!Instruction.cpp@{\-Instruction.\-cpp}}
+\subsubsection[{\-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define {\bf \-D\-A\-R\-M\-\_\-\-R\-E\-G\-L\-I\-S\-T\-\_\-\-H\-A\-S\-R\-E\-G}(
+\begin{DoxyParamCaption}
+\item[{}]{\-\_\-\-\_\-list, }
+\item[{}]{\-\_\-\-\_\-reg}
+\end{DoxyParamCaption}
+)~((\-\_\-\-\_\-list $>$$>$ \-\_\-\-\_\-reg) != 0)}}\label{_instruction_8cpp_a573340d8af9cbe755088163cb41796e6}
+
+
+\-Definition at line 34 of file \-Instruction.\-cpp.
+

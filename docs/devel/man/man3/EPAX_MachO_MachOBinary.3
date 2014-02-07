@@ -1,0 +1,193 @@
+.TH "EPAX::MachO::MachOBinary" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::MachO::MachOBinary \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MachOBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::BaseBinary\fP\&.
+.PP
+Inherited by \fBEPAX::MachO::MachOBinary32\fP, and \fBEPAX::MachO::MachOBinary64\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMachOBinary\fP (std::string n)"
+.br
+.ti -1c
+.RI "virtual \fB~MachOBinary\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBBinaryFormat\fP \fBgetFormat\fP ()=0"
+.br
+.ti -1c
+.RI "uint64_t \fBgetStartAddr\fP ()"
+.br
+.ti -1c
+.RI "void \fBemit\fP (std::string n)"
+.br
+.ti -1c
+.RI "bool \fBverify\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisARM\fP ()"
+.br
+.ti -1c
+.RI "void \fBdescribe\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis32Bit\fP ()"
+.br
+.ti -1c
+.RI "bool \fBis64Bit\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisExecutable\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindFunctions\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindSymbols\fP ()"
+.br
+.ti -1c
+.RI "void \fBfindSections\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinsideTextRange\fP (uint64_t a)"
+.br
+.ti -1c
+.RI "uint64_t \fBfunctionEndAddress\fP (\fBFunction\fP *f, \fBFunction\fP *nextf)"
+.br
+.ti -1c
+.RI "void \fBprintSections\fP (std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "void \fBprintFunctions\fP (std::ostream &stream=std::cout)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBMachHeader\fP * \fBmachheader\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 37 of file MachOBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::MachO::MachOBinary::MachOBinary\fP (std::stringn)"
+.PP
+Definition at line 40 of file MachOBinary\&.cpp\&.
+.SS "\fBEPAX::MachO::MachOBinary::~MachOBinary\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 45 of file MachOBinary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::MachO::MachOBinary::describe\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 95 of file MachOBinary\&.cpp\&.
+.SS "void \fBEPAX::MachO::MachOBinary::emit\fP (std::stringn)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 83 of file MachOBinary\&.cpp\&.
+.SS "void \fBEPAX::MachO::MachOBinary::findFunctions\fP ()\fC [virtual]\fP"Finds and internally stores all functions in the image
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 99 of file MachOBinary\&.cpp\&.
+.SS "void \fBEPAX::MachO::MachOBinary::findSections\fP ()"
+.PP
+Definition at line 107 of file MachOBinary\&.cpp\&.
+.SS "void \fBEPAX::MachO::MachOBinary::findSymbols\fP ()\fC [virtual]\fP"Finds and internally stores all symbols in the image
+.PP
+\fBReturns:\fP
+.RS 4
+none 
+.RE
+.PP
+
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 103 of file MachOBinary\&.cpp\&.
+.SS "uint64_t \fBEPAX::MachO::MachOBinary::functionEndAddress\fP (\fBFunction\fP *f, \fBFunction\fP *nextf)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 51 of file MachOBinary\&.cpp\&.
+.SS "virtual \fBBinaryFormat\fP \fBEPAX::MachO::MachOBinary::getFormat\fP ()\fC [pure virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Implemented in \fBEPAX::MachO::MachOBinary64\fP, and \fBEPAX::MachO::MachOBinary32\fP\&.
+.SS "uint64_t \fBEPAX::MachO::MachOBinary::getStartAddr\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 67 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachOBinary::insideTextRange\fP (uint64_ta)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 55 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachOBinary::is32Bit\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 59 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachOBinary::is64Bit\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 63 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachOBinary::isARM\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 91 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachOBinary::isExecutable\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 190 of file MachOBinary\&.cpp\&.
+.SS "void \fBEPAX::MachO::MachOBinary::printFunctions\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 115 of file MachOBinary\&.cpp\&.
+.SS "void \fBEPAX::MachO::MachOBinary::printSections\fP (std::ostream &stream = \fCstd::cout\fP)\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 111 of file MachOBinary\&.cpp\&.
+.SS "bool \fBEPAX::MachO::MachOBinary::verify\fP ()\fC [virtual]\fP"
+.PP
+Implements \fBEPAX::BaseBinary\fP\&.
+.PP
+Definition at line 87 of file MachOBinary\&.cpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBMachHeader\fP* \fBEPAX::MachO::MachOBinary::machheader\fP\fC [protected]\fP"
+.PP
+Definition at line 39 of file MachOBinary\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

@@ -1,0 +1,81 @@
+.TH "EPAX::SymbolTable" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::SymbolTable \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Symbol\&.hpp>\fP
+.PP
+Inherits \fBEPAX::Section\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::ElfSymbolTable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSymbolTable\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t fs, uint64_t ma, uint64_t ms, uint32_t i, std::string n)"
+.br
+.ti -1c
+.RI "virtual \fB~SymbolTable\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBcountSymbols\fP ()"
+.br
+.ti -1c
+.RI "\fBSymbol\fP * \fBgetSymbol\fP (uint32_t i)"
+.br
+.ti -1c
+.RI "virtual void \fBprint\fP (std::ostream &stream=std::cout)=0"
+.br
+.ti -1c
+.RI "bool \fBisSymbol\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< \fBSymbol\fP * > * \fBsymbols\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 44 of file Symbol\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::SymbolTable::SymbolTable\fP (\fBBaseBinary\fP *b, uint64_to, uint64_tfs, uint64_tma, uint64_tms, uint32_ti, std::stringn)"
+.PP
+Definition at line 40 of file Symbol\&.cpp\&.
+.SS "\fBEPAX::SymbolTable::~SymbolTable\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 46 of file Symbol\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint32_t \fBEPAX::SymbolTable::countSymbols\fP ()\fC [inline]\fP"
+.PP
+Definition at line 52 of file Symbol\&.hpp\&.
+.SS "\fBSymbol\fP * \fBEPAX::SymbolTable::getSymbol\fP (uint32_ti)"
+.PP
+Definition at line 56 of file Symbol\&.cpp\&.
+.SS "bool \fBEPAX::SymbolTable::isSymbol\fP ()\fC [inline, virtual]\fP"
+.PP
+Reimplemented from \fBEPAX::Section\fP\&.
+.PP
+Definition at line 57 of file Symbol\&.hpp\&.
+.SS "virtual void \fBEPAX::SymbolTable::print\fP (std::ostream &stream = \fCstd::cout\fP)\fC [pure virtual]\fP"
+.PP
+Reimplemented from \fBEPAX::Section\fP\&.
+.PP
+Implemented in \fBEPAX::Elf::ElfSymbolTable\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<\fBSymbol\fP*>* \fBEPAX::SymbolTable::symbols\fP\fC [protected]\fP"
+.PP
+Definition at line 46 of file Symbol\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

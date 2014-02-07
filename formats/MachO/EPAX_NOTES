@@ -1,0 +1,5 @@
+EPAX has all of the necessary files to support minimal functionality (detecting
+file type) for the mach-o file format in this
+directory. To do this we grabbed the appropriate headers from an OSX installation
+then hacked them to taste.
+

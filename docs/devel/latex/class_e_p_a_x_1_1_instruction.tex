@@ -1,0 +1,337 @@
+\hypertarget{class_e_p_a_x_1_1_instruction}{\section{\-E\-P\-A\-X\-:\-:\-Instruction \-Class \-Reference}
+\label{class_e_p_a_x_1_1_instruction}\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+}
+
+
+{\ttfamily \#include $<$\-Instruction.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Instruction\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_p_a_x_1_1_instruction}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction_a4e347d9655c0c4f3f9ea5a2168825d0c}{\-Instruction} (const uint64\-\_\-t a, const \hyperlink{_e_p_a_x_common_internal_8hpp_a17755bdd71c02e656c667b16de61dd7b}{rawbyte\-\_\-t} $\ast$r, \hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$func, const darm\-\_\-mode\-\_\-t mode)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_instruction_acba01d9121bc060ee462d80cc34fc7fc}{$\sim$\-Instruction} ()
+\item 
+darm\-\_\-t $\ast$ \hyperlink{class_e_p_a_x_1_1_instruction_a890f727eb1f9fec8368af54cf8688b97}{source} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_instruction_a38277ea3536685fc8f03fecd186302f8}{set\-Basic\-Block} (\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$bb)
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_instruction_afeafa6b86ee4e118663439c907a5c89b}{get\-Basic\-Block} ()
+\item 
+darm\-\_\-cond\-\_\-t \hyperlink{class_e_p_a_x_1_1_instruction_a0571ec1274ce9c264b2091fb7d679986}{get\-Condition} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_af6355646396d8a907a27822f074cc677}{is\-Branch} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a4e9f0285e1bc78ffb0ce120ba1644c8c}{is\-Conditional\-Branch} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_aa2262112acef930a6bab1c5d37651486}{is\-Unconditional\-Branch} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a42bc25733ce0d1095c0235d75fe22d77}{has\-Fallthrough} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a0905e9164967ddbfa9b746676ed3e221}{touches\-P\-C} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a75f19cced51e7904d97e7f3224a40279}{is\-Call} ()
+\item 
+uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_instruction_a4d78a9d0f7ab52c678f3ff52a411eed6}{fallthrough\-Target} ()
+\item 
+uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_instruction_a8571ae62b9e8a2a24b6f063eff68902e}{get\-Branch\-Target} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_instruction_ab534268df34959940b11e31eb0473f00}{get\-Control\-Targets} (std\-::vector$<$ uint64\-\_\-t $>$ \&tgts)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a6c4f718fb43f948b0ddfea2e79bee122}{is\-Fpop} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a40207280f01d8a7f28527f6f85381b79}{is\-Load} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a46a6b8fbab40247d8e9ff7c3f914b369}{is\-Store} ()
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_instruction_a25c8f4fa7ad6296684fad26860f5719b}{is\-Memop} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_instruction_a971eef056f7df199d3ee902e33ce3ac1}{get\-Source\-Register\-Size\-In\-Bits} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_instruction_a863b17b7a11dd35b38ed72ba12e1a4a2}{get\-Source\-Datatype\-Size\-In\-Bits} ()
+\item 
+std\-::string \hyperlink{class_e_p_a_x_1_1_instruction_aa1e4422b1b5468ef2a6bc7ced4f93fc3}{string\-Rep} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_instruction_aad46a5ae82142ed736ced45e9bf7d775}{print} (std\-::ostream \&stream=std\-::cout)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 40 of file \-Instruction.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_instruction_a4e347d9655c0c4f3f9ea5a2168825d0c}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!\-Instruction@{\-Instruction}}
+\index{\-Instruction@{\-Instruction}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Instruction\-::\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{const uint64\-\_\-t}]{a, }
+\item[{const {\bf rawbyte\-\_\-t} $\ast$}]{r, }
+\item[{{\bf \-Function} $\ast$}]{func, }
+\item[{const darm\-\_\-mode\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a4e347d9655c0c4f3f9ea5a2168825d0c}
+
+
+\-Definition at line 38 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_acba01d9121bc060ee462d80cc34fc7fc}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!$\sim$\-Instruction@{$\sim$\-Instruction}}
+\index{$\sim$\-Instruction@{$\sim$\-Instruction}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{$\sim$\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Instruction\-::$\sim$\-Instruction} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_instruction_acba01d9121bc060ee462d80cc34fc7fc}
+
+
+\-Definition at line 106 of file \-Instruction.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_instruction_a4d78a9d0f7ab52c678f3ff52a411eed6}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!fallthrough\-Target@{fallthrough\-Target}}
+\index{fallthrough\-Target@{fallthrough\-Target}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{fallthrough\-Target}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Instruction\-::fallthrough\-Target} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a4d78a9d0f7ab52c678f3ff52a411eed6}
+
+
+\-Definition at line 257 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_afeafa6b86ee4e118663439c907a5c89b}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!get\-Basic\-Block@{get\-Basic\-Block}}
+\index{get\-Basic\-Block@{get\-Basic\-Block}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{get\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block}$\ast$ {\bf \-E\-P\-A\-X\-::\-Instruction\-::get\-Basic\-Block} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_instruction_afeafa6b86ee4e118663439c907a5c89b}
+
+
+\-Definition at line 55 of file \-Instruction.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a8571ae62b9e8a2a24b6f063eff68902e}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!get\-Branch\-Target@{get\-Branch\-Target}}
+\index{get\-Branch\-Target@{get\-Branch\-Target}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{get\-Branch\-Target}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Instruction\-::get\-Branch\-Target} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a8571ae62b9e8a2a24b6f063eff68902e}
+
+
+\-Definition at line 217 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a0571ec1274ce9c264b2091fb7d679986}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!get\-Condition@{get\-Condition}}
+\index{get\-Condition@{get\-Condition}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{get\-Condition}]{\setlength{\rightskip}{0pt plus 5cm}darm\-\_\-cond\-\_\-t {\bf \-E\-P\-A\-X\-::\-Instruction\-::get\-Condition} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a0571ec1274ce9c264b2091fb7d679986}
+
+
+\-Definition at line 117 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_ab534268df34959940b11e31eb0473f00}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!get\-Control\-Targets@{get\-Control\-Targets}}
+\index{get\-Control\-Targets@{get\-Control\-Targets}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{get\-Control\-Targets}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Instruction\-::get\-Control\-Targets} (
+\begin{DoxyParamCaption}
+\item[{std\-::vector$<$ uint64\-\_\-t $>$ \&}]{tgts}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_ab534268df34959940b11e31eb0473f00}
+
+
+\-Definition at line 262 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a863b17b7a11dd35b38ed72ba12e1a4a2}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!get\-Source\-Datatype\-Size\-In\-Bits@{get\-Source\-Datatype\-Size\-In\-Bits}}
+\index{get\-Source\-Datatype\-Size\-In\-Bits@{get\-Source\-Datatype\-Size\-In\-Bits}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{get\-Source\-Datatype\-Size\-In\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Instruction\-::get\-Source\-Datatype\-Size\-In\-Bits} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a863b17b7a11dd35b38ed72ba12e1a4a2}
+
+
+\-Definition at line 351 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a971eef056f7df199d3ee902e33ce3ac1}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!get\-Source\-Register\-Size\-In\-Bits@{get\-Source\-Register\-Size\-In\-Bits}}
+\index{get\-Source\-Register\-Size\-In\-Bits@{get\-Source\-Register\-Size\-In\-Bits}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{get\-Source\-Register\-Size\-In\-Bits}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Instruction\-::get\-Source\-Register\-Size\-In\-Bits} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a971eef056f7df199d3ee902e33ce3ac1}
+
+
+\-Definition at line 335 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a42bc25733ce0d1095c0235d75fe22d77}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!has\-Fallthrough@{has\-Fallthrough}}
+\index{has\-Fallthrough@{has\-Fallthrough}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{has\-Fallthrough}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::has\-Fallthrough} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a42bc25733ce0d1095c0235d75fe22d77}
+
+
+\-Definition at line 244 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_af6355646396d8a907a27822f074cc677}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Branch@{is\-Branch}}
+\index{is\-Branch@{is\-Branch}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Branch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Branch} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_af6355646396d8a907a27822f074cc677}
+
+
+\-Definition at line 175 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a75f19cced51e7904d97e7f3224a40279}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Call@{is\-Call}}
+\index{is\-Call@{is\-Call}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Call}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Call} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a75f19cced51e7904d97e7f3224a40279}
+
+
+\-Definition at line 209 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a4e9f0285e1bc78ffb0ce120ba1644c8c}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Conditional\-Branch@{is\-Conditional\-Branch}}
+\index{is\-Conditional\-Branch@{is\-Conditional\-Branch}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Conditional\-Branch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Conditional\-Branch} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a4e9f0285e1bc78ffb0ce120ba1644c8c}
+
+
+\-Definition at line 179 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a6c4f718fb43f948b0ddfea2e79bee122}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Fpop@{is\-Fpop}}
+\index{is\-Fpop@{is\-Fpop}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Fpop}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Fpop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a6c4f718fb43f948b0ddfea2e79bee122}
+
+
+\-Definition at line 273 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a40207280f01d8a7f28527f6f85381b79}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Load@{is\-Load}}
+\index{is\-Load@{is\-Load}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Load}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Load} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a40207280f01d8a7f28527f6f85381b79}
+
+
+\-Definition at line 293 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a25c8f4fa7ad6296684fad26860f5719b}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Memop@{is\-Memop}}
+\index{is\-Memop@{is\-Memop}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Memop}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Memop} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a25c8f4fa7ad6296684fad26860f5719b}
+
+
+\-Definition at line 331 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a46a6b8fbab40247d8e9ff7c3f914b369}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Store@{is\-Store}}
+\index{is\-Store@{is\-Store}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Store}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Store} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a46a6b8fbab40247d8e9ff7c3f914b369}
+
+
+\-Definition at line 312 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_aa2262112acef930a6bab1c5d37651486}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!is\-Unconditional\-Branch@{is\-Unconditional\-Branch}}
+\index{is\-Unconditional\-Branch@{is\-Unconditional\-Branch}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{is\-Unconditional\-Branch}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::is\-Unconditional\-Branch} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_aa2262112acef930a6bab1c5d37651486}
+
+
+\-Definition at line 202 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_aad46a5ae82142ed736ced45e9bf7d775}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!print@{print}}
+\index{print@{print}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Instruction\-::print} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_aad46a5ae82142ed736ced45e9bf7d775}
+
+
+\-Definition at line 121 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a38277ea3536685fc8f03fecd186302f8}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!set\-Basic\-Block@{set\-Basic\-Block}}
+\index{set\-Basic\-Block@{set\-Basic\-Block}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{set\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Instruction\-::set\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Basic\-Block} $\ast$}]{bb}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_instruction_a38277ea3536685fc8f03fecd186302f8}
+
+
+\-Definition at line 54 of file \-Instruction.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a890f727eb1f9fec8368af54cf8688b97}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!source@{source}}
+\index{source@{source}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{source}]{\setlength{\rightskip}{0pt plus 5cm}darm\-\_\-t$\ast$ {\bf \-E\-P\-A\-X\-::\-Instruction\-::source} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_instruction_a890f727eb1f9fec8368af54cf8688b97}
+
+
+\-Definition at line 52 of file \-Instruction.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_aa1e4422b1b5468ef2a6bc7ced4f93fc3}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!string\-Rep@{string\-Rep}}
+\index{string\-Rep@{string\-Rep}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{string\-Rep}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-E\-P\-A\-X\-::\-Instruction\-::string\-Rep} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_aa1e4422b1b5468ef2a6bc7ced4f93fc3}
+
+
+\-Definition at line 109 of file \-Instruction.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_instruction_a0905e9164967ddbfa9b746676ed3e221}{\index{\-E\-P\-A\-X\-::\-Instruction@{\-E\-P\-A\-X\-::\-Instruction}!touches\-P\-C@{touches\-P\-C}}
+\index{touches\-P\-C@{touches\-P\-C}!EPAX::Instruction@{\-E\-P\-A\-X\-::\-Instruction}}
+\subsubsection[{touches\-P\-C}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Instruction\-::touches\-P\-C} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_instruction_a0905e9164967ddbfa9b746676ed3e221}
+
+
+\-Definition at line 186 of file \-Instruction.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_instruction_8hpp}{\-Instruction.\-hpp}\item 
+\hyperlink{_instruction_8cpp}{\-Instruction.\-cpp}\end{DoxyCompactItemize}

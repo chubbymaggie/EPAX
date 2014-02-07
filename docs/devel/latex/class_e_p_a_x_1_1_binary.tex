@@ -1,0 +1,332 @@
+\hypertarget{class_e_p_a_x_1_1_binary}{\section{\-E\-P\-A\-X\-:\-:\-Binary \-Class \-Reference}
+\label{class_e_p_a_x_1_1_binary}\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}}
+}
+
+
+{\ttfamily \#include $<$\-Binary.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Binary\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_e_p_a_x_1_1_binary}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_binary_ad423337a4b3db46476c82649fc66ecc1}{\-Binary} (std\-::string n)
+\item 
+\hyperlink{class_e_p_a_x_1_1_binary_ac675512e9efc0881ab5e83a215adfdd6}{\-Binary} (std\-::string n, \hyperlink{namespace_e_p_a_x_a4be639c006ef14def4708b37ee6dd67d}{\-Binary\-Format} f)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_binary_a70f9599a0d1bca21d5754e642047da73}{$\sim$\-Binary} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_binary_a81b916828abd97f8d2e100219f794ca8}{run\-Basic} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+uint64\-\_\-t \hyperlink{class_e_p_a_x_1_1_binary_a1a0fffa95568cc49ca69d92475866123}{get\-Start\-Addr} ()
+\item 
+std\-::string \hyperlink{class_e_p_a_x_1_1_binary_a98a84a6650f61a8d991bf9097d9a989b}{get\-Name} ()
+\item 
+\hyperlink{namespace_e_p_a_x_a4be639c006ef14def4708b37ee6dd67d}{\-Binary\-Format} \hyperlink{class_e_p_a_x_1_1_binary_a77cec506fbd4bc57e5bd0eed0d808902}{get\-Format} ()
+\item 
+const char $\ast$ \hyperlink{class_e_p_a_x_1_1_binary_aa7cc363e1e514cc97050e85e03c9ed84}{get\-Format\-Name} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_binary_a122d78f5264e90338d9833b181839c95}{count\-Functions} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$ \hyperlink{class_e_p_a_x_1_1_binary_a5616364ee9c96da558b94af2ad299788}{get\-First\-Function} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$ \hyperlink{class_e_p_a_x_1_1_binary_af69f8f6130b81c4c8c09dd380fa62d8d}{get\-Next\-Function} (\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$f)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_binary_a034e51a36f35dd0da6f81d728328e3df}{is\-Last\-Function} (\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$f)
+\item 
+\hyperlink{class_e_p_a_x_1_1_function}{\-Function} $\ast$ \hyperlink{class_e_p_a_x_1_1_binary_aed61687c67d986596865c8cd068cfd2f}{find\-Function} (uint64\-\_\-t addr)
+\item 
+bool \hyperlink{class_e_p_a_x_1_1_binary_a6a4f7d1494137b9f3a3926b620864847}{is\-Executable} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_binary_a05b4aa5fe82b7cc1ef774148f5f57a37}{print\-Static\-File} (std\-::string \&fname)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_binary_a7d64388704852033519f660d3e5d125f}{print\-Static\-File} (const char $\ast$fname)
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_binary_a875b74e881fb5560eee2bb0e1b8fec43}{get\-File\-Size} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{namespace_e_p_a_x_a4be639c006ef14def4708b37ee6dd67d}{\-Binary\-Format} \hyperlink{class_e_p_a_x_1_1_binary_a915cea1ebad14a5d96f4695f1cc7e1d7}{detect\-Format} (std\-::string n)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-A thin wrapper around the classes which will hold all of the useful information about program binaryies. \-The idea is that this class will provide a single interface on top of any number of different formats. 
+
+\-Definition at line 51 of file \-Binary.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_binary_ad423337a4b3db46476c82649fc66ecc1}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!\-Binary@{\-Binary}}
+\index{\-Binary@{\-Binary}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{\-Binary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Binary\-::\-Binary} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_ad423337a4b3db46476c82649fc66ecc1}
+\-Constructs an \hyperlink{class_e_p_a_x_1_1_binary}{\-Binary} object.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em n} & \-The name of a file. \-Format will be set based on the file's contents. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 35 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_ac675512e9efc0881ab5e83a215adfdd6}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!\-Binary@{\-Binary}}
+\index{\-Binary@{\-Binary}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{\-Binary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Binary\-::\-Binary} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n, }
+\item[{{\bf \-Binary\-Format}}]{f}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_ac675512e9efc0881ab5e83a215adfdd6}
+\-Constructs an \hyperlink{class_e_p_a_x_1_1_binary}{\-Binary} object.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em n} & \-The name of a file. \\
+\hline
+{\em f} & \-The format of the file. \\
+\hline
+\end{DoxyParams}
+
+
+\-Definition at line 41 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a70f9599a0d1bca21d5754e642047da73}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!$\sim$\-Binary@{$\sim$\-Binary}}
+\index{$\sim$\-Binary@{$\sim$\-Binary}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{$\sim$\-Binary}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Binary\-::$\sim$\-Binary} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_binary_a70f9599a0d1bca21d5754e642047da73}
+\-Destroys an \hyperlink{class_e_p_a_x_1_1_binary}{\-Binary} instance. \-Should not be called directly. 
+
+\-Definition at line 47 of file \-Binary.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_binary_a122d78f5264e90338d9833b181839c95}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!count\-Functions@{count\-Functions}}
+\index{count\-Functions@{count\-Functions}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{count\-Functions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Binary\-::count\-Functions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a122d78f5264e90338d9833b181839c95}
+\-Counts the functions in the binary
+
+\begin{DoxyReturn}{\-Returns}
+the number of functions in the binary 
+\end{DoxyReturn}
+
+
+\-Definition at line 225 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a915cea1ebad14a5d96f4695f1cc7e1d7}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!detect\-Format@{detect\-Format}}
+\index{detect\-Format@{detect\-Format}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{detect\-Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Binary\-Format} {\bf \-E\-P\-A\-X\-::\-Binary\-::detect\-Format} (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{n}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_e_p_a_x_1_1_binary_a915cea1ebad14a5d96f4695f1cc7e1d7}
+\-Attempts to guess the format of an binary file
+
+\begin{DoxyReturn}{\-Returns}
+the format of the binary file, or \-Binary\-Format\-\_\-undefined(0) if the format cannot be found 
+\end{DoxyReturn}
+
+
+\-Definition at line 160 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_aed61687c67d986596865c8cd068cfd2f}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!find\-Function@{find\-Function}}
+\index{find\-Function@{find\-Function}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{find\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Function} $\ast$ {\bf \-E\-P\-A\-X\-::\-Binary\-::find\-Function} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_aed61687c67d986596865c8cd068cfd2f}
+
+
+\-Definition at line 221 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a875b74e881fb5560eee2bb0e1b8fec43}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-File\-Size@{get\-File\-Size}}
+\index{get\-File\-Size@{get\-File\-Size}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-File\-Size}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-File\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a875b74e881fb5560eee2bb0e1b8fec43}
+
+
+\-Definition at line 233 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a5616364ee9c96da558b94af2ad299788}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-First\-Function@{get\-First\-Function}}
+\index{get\-First\-Function@{get\-First\-Function}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-First\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Function} $\ast$ {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-First\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a5616364ee9c96da558b94af2ad299788}
+\-Gets the first function in the binary
+
+\begin{DoxyReturn}{\-Returns}
+the first function in the binary 
+\end{DoxyReturn}
+
+
+\-Definition at line 209 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a77cec506fbd4bc57e5bd0eed0d808902}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-Format@{get\-Format}}
+\index{get\-Format@{get\-Format}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-Format}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Binary\-Format} {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-Format} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_binary_a77cec506fbd4bc57e5bd0eed0d808902}
+\-Gets the format of the binary.
+
+\begin{DoxyReturn}{\-Returns}
+the format of this binary 
+\end{DoxyReturn}
+
+
+\-Definition at line 106 of file \-Binary.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_aa7cc363e1e514cc97050e85e03c9ed84}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-Format\-Name@{get\-Format\-Name}}
+\index{get\-Format\-Name@{get\-Format\-Name}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-Format\-Name}]{\setlength{\rightskip}{0pt plus 5cm}const char $\ast$ {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-Format\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_aa7cc363e1e514cc97050e85e03c9ed84}
+\-Gets a string representation of the format of this binary.
+
+@ return a string representation of the format of this binary 
+
+\-Definition at line 123 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a98a84a6650f61a8d991bf9097d9a989b}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-Name@{get\-Name}}
+\index{get\-Name@{get\-Name}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-Name}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-Name} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a98a84a6650f61a8d991bf9097d9a989b}
+
+
+\-Definition at line 205 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_af69f8f6130b81c4c8c09dd380fa62d8d}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-Next\-Function@{get\-Next\-Function}}
+\index{get\-Next\-Function@{get\-Next\-Function}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-Next\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Function} $\ast$ {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-Next\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Function} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_af69f8f6130b81c4c8c09dd380fa62d8d}
+\-Gets the next function in the binary
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em f} & a function in the binary\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+the function following f 
+\end{DoxyReturn}
+
+
+\-Definition at line 213 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a1a0fffa95568cc49ca69d92475866123}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!get\-Start\-Addr@{get\-Start\-Addr}}
+\index{get\-Start\-Addr@{get\-Start\-Addr}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{get\-Start\-Addr}]{\setlength{\rightskip}{0pt plus 5cm}uint64\-\_\-t {\bf \-E\-P\-A\-X\-::\-Binary\-::get\-Start\-Addr} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a1a0fffa95568cc49ca69d92475866123}
+
+
+\-Definition at line 201 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a6a4f7d1494137b9f3a3926b620864847}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!is\-Executable@{is\-Executable}}
+\index{is\-Executable@{is\-Executable}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{is\-Executable}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Binary\-::is\-Executable} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a6a4f7d1494137b9f3a3926b620864847}
+
+
+\-Definition at line 229 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a034e51a36f35dd0da6f81d728328e3df}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!is\-Last\-Function@{is\-Last\-Function}}
+\index{is\-Last\-Function@{is\-Last\-Function}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{is\-Last\-Function}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-E\-P\-A\-X\-::\-Binary\-::is\-Last\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Function} $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a034e51a36f35dd0da6f81d728328e3df}
+\-Tells whether this is the last function in the binary
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em f} & a function in the binary\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+true iff f is the last function in the binary 
+\end{DoxyReturn}
+
+
+\-Definition at line 217 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a05b4aa5fe82b7cc1ef774148f5f57a37}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!print\-Static\-File@{print\-Static\-File}}
+\index{print\-Static\-File@{print\-Static\-File}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{print\-Static\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Binary\-::print\-Static\-File} (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{fname}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a05b4aa5fe82b7cc1ef774148f5f57a37}
+
+
+\-Definition at line 53 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a7d64388704852033519f660d3e5d125f}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!print\-Static\-File@{print\-Static\-File}}
+\index{print\-Static\-File@{print\-Static\-File}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{print\-Static\-File}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Binary\-::print\-Static\-File} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a7d64388704852033519f660d3e5d125f}
+
+
+\-Definition at line 57 of file \-Binary.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_binary_a81b916828abd97f8d2e100219f794ca8}{\index{\-E\-P\-A\-X\-::\-Binary@{\-E\-P\-A\-X\-::\-Binary}!run\-Basic@{run\-Basic}}
+\index{run\-Basic@{run\-Basic}!EPAX::Binary@{\-E\-P\-A\-X\-::\-Binary}}
+\subsubsection[{run\-Basic}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Binary\-::run\-Basic} (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_binary_a81b916828abd97f8d2e100219f794ca8}
+
+
+\-Definition at line 69 of file \-Binary.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_binary_8hpp}{\-Binary.\-hpp}\item 
+\hyperlink{_binary_8cpp}{\-Binary.\-cpp}\end{DoxyCompactItemize}

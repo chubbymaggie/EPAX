@@ -1,0 +1,61 @@
+.TH "EPAX::DetachedText" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::DetachedText \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Function\&.hpp>\fP
+.PP
+Inherits \fBEPAX::FileBase\fP, \fBEPAX::MemoryBase\fP, and \fBEPAX::IndexBase\fP\&.
+.PP
+Inherited by \fBEPAX::Function\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDetachedText\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s, uint64_t a, uint32_t i)"
+.br
+.ti -1c
+.RI "virtual \fB~DetachedText\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::vector< void * > \fBinstructions\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 43 of file Function\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::DetachedText::DetachedText\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts, uint64_ta, uint32_ti)"
+.PP
+Definition at line 36 of file Function\&.cpp\&.
+.SS "virtual \fBEPAX::DetachedText::~DetachedText\fP ()\fC [inline, virtual]\fP"
+.PP
+Definition at line 49 of file Function\&.hpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void \fBEPAX::DetachedText::print\fP (std::ostream &stream = \fCstd::cout\fP)\fC [inline, virtual]\fP"
+.PP
+Reimplemented in \fBEPAX::Function\fP\&.
+.PP
+Definition at line 51 of file Function\&.hpp\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<void*> \fBEPAX::DetachedText::instructions\fP\fC [protected]\fP"
+.PP
+Definition at line 45 of file Function\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

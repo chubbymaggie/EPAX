@@ -1,0 +1,60 @@
+BINDIR       = ../bin/
+LIBDIR       = ../lib/
+INCDIR       = ../include/
+FMTDIR       = ../formats/
+
+# compile settings
+CXX          = @CXX@
+INCLUDE      = @DARM_INCLUDE@ -I. -I$(INCDIR) -I$(FMTDIR) @DEFS@
+CXXFLAGS     = @CXXFLAGS@ $(INCLUDE)
+LDFLAGS      = @LDFLAGS@ @DARM_LIB@ -ldarm
+
+## TODO: detect these with autoconf
+PICFLAGS     = -fPIC
+SHARED       = -shared
+STATIC       = -static
+AR           = ar cruv
+RM           = rm -rf
+CP           = cp
+
+BINTGT       = epax
+LIBTGT       = lib$(BINTGT).so
+LDLOCAL      = -L. -l$(BINTGT)
+
+FILS         = BaseClass BasicBlock Binary ControlFlow InputFile ElfBinary Function Instruction Interface MachOBinary Loop Section Symbol
+SRCS         = $(foreach var,$(FILS),$(var).cpp)
+HDRS         = $(foreach var,$(FILS),$(var).hpp)
+OBJS         = $(foreach var,$(FILS),$(var).o)
+
+.PHONY: all lib bin local-install clean depend interface
+
+all: lib bin local-install
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $(PICFLAGS) -c -o $@ $<
+
+lib: $(LIBTGT)
+
+bin: $(BINTGT)
+
+$(BINTGT): $(BINTGT).o $(LIBTGT) $(OBJS)
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< -o $@ $(LDLOCAL) $(INCLOCAL)
+
+$(LIBTGT): $(OBJS) interface
+	$(CXX) -o $@ $(OBJS) $(SHARED) $(LDFLAGS)
+
+local-install: $(BINTGT) $(LIBTGT)
+	$(CP) $(LIBTGT) $(LIBDIR)
+	$(CP) $(BINTGT) $(BINDIR)
+
+depend: interface
+	g++ -E -MM $(INCLUDE) $(SRCS) > .EPAX_DEPENDS
+
+interface: Interface.h
+Interface.h: Interface.hpp c_interface.py
+	python ./c_interface.py $@pp $@
+
+clean:
+	$(RM) *.o $(LIBTGT) $(BINTGT) Interface.h
+
+-include .EPAX_DEPENDS

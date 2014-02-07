@@ -1,0 +1,165 @@
+.TH "EPAX::Instruction" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Instruction \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Instruction\&.hpp>\fP
+.PP
+Inherits \fBEPAX::MemoryBase\fP, \fBEPAX::IndexBase\fP, and \fBEPAXExport\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBInstruction\fP (const uint64_t a, const \fBrawbyte_t\fP *r, \fBFunction\fP *func, const darm_mode_t mode)"
+.br
+.ti -1c
+.RI "virtual \fB~Instruction\fP ()"
+.br
+.ti -1c
+.RI "darm_t * \fBsource\fP ()"
+.br
+.ti -1c
+.RI "void \fBsetBasicBlock\fP (\fBBasicBlock\fP *bb)"
+.br
+.ti -1c
+.RI "\fBBasicBlock\fP * \fBgetBasicBlock\fP ()"
+.br
+.ti -1c
+.RI "darm_cond_t \fBgetCondition\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisBranch\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisConditionalBranch\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisUnconditionalBranch\fP ()"
+.br
+.ti -1c
+.RI "bool \fBhasFallthrough\fP ()"
+.br
+.ti -1c
+.RI "bool \fBtouchesPC\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisCall\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBfallthroughTarget\fP ()"
+.br
+.ti -1c
+.RI "uint64_t \fBgetBranchTarget\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetControlTargets\fP (std::vector< uint64_t > &tgts)"
+.br
+.ti -1c
+.RI "bool \fBisFpop\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisLoad\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisStore\fP ()"
+.br
+.ti -1c
+.RI "bool \fBisMemop\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSourceRegisterSizeInBits\fP ()"
+.br
+.ti -1c
+.RI "uint32_t \fBgetSourceDatatypeSizeInBits\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBstringRep\fP ()"
+.br
+.ti -1c
+.RI "void \fBprint\fP (std::ostream &stream=std::cout)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 40 of file Instruction\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Instruction::Instruction\fP (const uint64_ta, const \fBrawbyte_t\fP *r, \fBFunction\fP *func, const darm_mode_tmode)"
+.PP
+Definition at line 38 of file Instruction\&.cpp\&.
+.SS "\fBEPAX::Instruction::~Instruction\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 106 of file Instruction\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "uint64_t \fBEPAX::Instruction::fallthroughTarget\fP ()"
+.PP
+Definition at line 257 of file Instruction\&.cpp\&.
+.SS "\fBBasicBlock\fP* \fBEPAX::Instruction::getBasicBlock\fP ()\fC [inline]\fP"
+.PP
+Definition at line 55 of file Instruction\&.hpp\&.
+.SS "uint64_t \fBEPAX::Instruction::getBranchTarget\fP ()"
+.PP
+Definition at line 217 of file Instruction\&.cpp\&.
+.SS "darm_cond_t \fBEPAX::Instruction::getCondition\fP ()"
+.PP
+Definition at line 117 of file Instruction\&.cpp\&.
+.SS "uint32_t \fBEPAX::Instruction::getControlTargets\fP (std::vector< uint64_t > &tgts)"
+.PP
+Definition at line 262 of file Instruction\&.cpp\&.
+.SS "uint32_t \fBEPAX::Instruction::getSourceDatatypeSizeInBits\fP ()"
+.PP
+Definition at line 351 of file Instruction\&.cpp\&.
+.SS "uint32_t \fBEPAX::Instruction::getSourceRegisterSizeInBits\fP ()"
+.PP
+Definition at line 335 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::hasFallthrough\fP ()"
+.PP
+Definition at line 244 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isBranch\fP ()"
+.PP
+Definition at line 175 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isCall\fP ()"
+.PP
+Definition at line 209 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isConditionalBranch\fP ()"
+.PP
+Definition at line 179 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isFpop\fP ()"
+.PP
+Definition at line 273 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isLoad\fP ()"
+.PP
+Definition at line 293 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isMemop\fP ()"
+.PP
+Definition at line 331 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isStore\fP ()"
+.PP
+Definition at line 312 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::isUnconditionalBranch\fP ()"
+.PP
+Definition at line 202 of file Instruction\&.cpp\&.
+.SS "void \fBEPAX::Instruction::print\fP (std::ostream &stream = \fCstd::cout\fP)"
+.PP
+Definition at line 121 of file Instruction\&.cpp\&.
+.SS "void \fBEPAX::Instruction::setBasicBlock\fP (\fBBasicBlock\fP *bb)\fC [inline]\fP"
+.PP
+Definition at line 54 of file Instruction\&.hpp\&.
+.SS "darm_t* \fBEPAX::Instruction::source\fP ()\fC [inline]\fP"
+.PP
+Definition at line 52 of file Instruction\&.hpp\&.
+.SS "std::string \fBEPAX::Instruction::stringRep\fP ()"
+.PP
+Definition at line 109 of file Instruction\&.cpp\&.
+.SS "bool \fBEPAX::Instruction::touchesPC\fP ()"
+.PP
+Definition at line 186 of file Instruction\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.

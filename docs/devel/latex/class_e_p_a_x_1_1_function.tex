@@ -1,0 +1,203 @@
+\hypertarget{class_e_p_a_x_1_1_function}{\section{\-E\-P\-A\-X\-:\-:\-Function \-Class \-Reference}
+\label{class_e_p_a_x_1_1_function}\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}}
+}
+
+
+{\ttfamily \#include $<$\-Function.\-hpp$>$}
+
+\-Inheritance diagram for \-E\-P\-A\-X\-:\-:\-Function\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_e_p_a_x_1_1_function}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_e_p_a_x_1_1_function_ac873403538ebdbf41e3dd50e6717ed8e}{\-Function} (\hyperlink{class_e_p_a_x_1_1_base_binary}{\-Base\-Binary} $\ast$b, uint64\-\_\-t o, uint64\-\_\-t s, uint64\-\_\-t a, uint32\-\_\-t i, \hyperlink{class_e_p_a_x_1_1_symbol}{\-Symbol} $\ast$y)
+\item 
+virtual \hyperlink{class_e_p_a_x_1_1_function_ab25462d1e27b1619c989c82d8f052b5e}{$\sim$\-Function} ()
+\item 
+void \hyperlink{class_e_p_a_x_1_1_function_a82cd9c2c9b4210f2c189e60f13445b77}{print} (std\-::ostream \&stream=std\-::cout)
+\item 
+\hyperlink{class_e_p_a_x_1_1_control_flow}{\-Control\-Flow} $\ast$ \hyperlink{class_e_p_a_x_1_1_function_a21ef5f83eff1f260deea42edd3f9288a}{get\-Control\-Flow} ()
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_function_ab6ab497ee5a9fd8794a6fc007c28322e}{count\-Basic\-Blocks} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_function_affd34e44b8b26be10b2eaeafa90c72e2}{find\-Basic\-Block} (uint64\-\_\-t addr)
+\item 
+\hyperlink{class_e_p_a_x_1_1_basic_block}{\-Basic\-Block} $\ast$ \hyperlink{class_e_p_a_x_1_1_function_aab41091efc192b4da0912746b4b03c4c}{get\-Basic\-Block} (uint32\-\_\-t idx)
+\item 
+uint32\-\_\-t \hyperlink{class_e_p_a_x_1_1_function_aa7cf28ca6fd8dda7391a142a3fce6f20}{count\-Instructions} ()
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_function_a0d6c6cd2a010690550065de7865591d7}{find\-Instruction} (uint64\-\_\-t addr)
+\item 
+\hyperlink{class_e_p_a_x_1_1_instruction}{\-Instruction} $\ast$ \hyperlink{class_e_p_a_x_1_1_function_a80400b0ca8d9047bff8dd588d8a03918}{get\-Instruction} (uint32\-\_\-t idx)
+\item 
+void \hyperlink{class_e_p_a_x_1_1_function_a0388e0d1e3953da9e259711c4352c146}{disassemble} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_e_p_a_x_1_1_function_acf8e6e84f93e87bab13edc2c03929425}{print\-Header} (std\-::ostream \&stream=std\-::cout)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+
+
+\-Definition at line 55 of file \-Function.\-hpp.
+
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_function_ac873403538ebdbf41e3dd50e6717ed8e}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!\-Function@{\-Function}}
+\index{\-Function@{\-Function}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Function\-::\-Function} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Base\-Binary} $\ast$}]{b, }
+\item[{uint64\-\_\-t}]{o, }
+\item[{uint64\-\_\-t}]{s, }
+\item[{uint64\-\_\-t}]{a, }
+\item[{uint32\-\_\-t}]{i, }
+\item[{{\bf \-Symbol} $\ast$}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_ac873403538ebdbf41e3dd50e6717ed8e}
+
+
+\-Definition at line 154 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_ab25462d1e27b1619c989c82d8f052b5e}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!$\sim$\-Function@{$\sim$\-Function}}
+\index{$\sim$\-Function@{$\sim$\-Function}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{$\sim$\-Function}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-E\-P\-A\-X\-::\-Function\-::$\sim$\-Function} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_function_ab25462d1e27b1619c989c82d8f052b5e}
+
+
+\-Definition at line 166 of file \-Function.\-cpp.
+
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_e_p_a_x_1_1_function_ab6ab497ee5a9fd8794a6fc007c28322e}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!count\-Basic\-Blocks@{count\-Basic\-Blocks}}
+\index{count\-Basic\-Blocks@{count\-Basic\-Blocks}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{count\-Basic\-Blocks}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Function\-::count\-Basic\-Blocks} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_ab6ab497ee5a9fd8794a6fc007c28322e}
+
+
+\-Definition at line 198 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_aa7cf28ca6fd8dda7391a142a3fce6f20}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!count\-Instructions@{count\-Instructions}}
+\index{count\-Instructions@{count\-Instructions}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{count\-Instructions}]{\setlength{\rightskip}{0pt plus 5cm}uint32\-\_\-t {\bf \-E\-P\-A\-X\-::\-Function\-::count\-Instructions} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_aa7cf28ca6fd8dda7391a142a3fce6f20}
+
+
+\-Definition at line 220 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_a0388e0d1e3953da9e259711c4352c146}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!disassemble@{disassemble}}
+\index{disassemble@{disassemble}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{disassemble}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Function\-::disassemble} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_a0388e0d1e3953da9e259711c4352c146}
+
+
+\-Definition at line 172 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_affd34e44b8b26be10b2eaeafa90c72e2}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!find\-Basic\-Block@{find\-Basic\-Block}}
+\index{find\-Basic\-Block@{find\-Basic\-Block}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{find\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Function\-::find\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_affd34e44b8b26be10b2eaeafa90c72e2}
+
+
+\-Definition at line 205 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_a0d6c6cd2a010690550065de7865591d7}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!find\-Instruction@{find\-Instruction}}
+\index{find\-Instruction@{find\-Instruction}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{find\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Function\-::find\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint64\-\_\-t}]{addr}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_a0d6c6cd2a010690550065de7865591d7}
+
+
+\-Definition at line 227 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_aab41091efc192b4da0912746b4b03c4c}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!get\-Basic\-Block@{get\-Basic\-Block}}
+\index{get\-Basic\-Block@{get\-Basic\-Block}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{get\-Basic\-Block}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Basic\-Block} $\ast$ {\bf \-E\-P\-A\-X\-::\-Function\-::get\-Basic\-Block} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_aab41091efc192b4da0912746b4b03c4c}
+
+
+\-Definition at line 213 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_a21ef5f83eff1f260deea42edd3f9288a}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!get\-Control\-Flow@{get\-Control\-Flow}}
+\index{get\-Control\-Flow@{get\-Control\-Flow}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{get\-Control\-Flow}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Control\-Flow}$\ast$ {\bf \-E\-P\-A\-X\-::\-Function\-::get\-Control\-Flow} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_e_p_a_x_1_1_function_a21ef5f83eff1f260deea42edd3f9288a}
+
+
+\-Definition at line 68 of file \-Function.\-hpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_a80400b0ca8d9047bff8dd588d8a03918}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!get\-Instruction@{get\-Instruction}}
+\index{get\-Instruction@{get\-Instruction}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{get\-Instruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Instruction} $\ast$ {\bf \-E\-P\-A\-X\-::\-Function\-::get\-Instruction} (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_e_p_a_x_1_1_function_a80400b0ca8d9047bff8dd588d8a03918}
+
+
+\-Definition at line 234 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_a82cd9c2c9b4210f2c189e60f13445b77}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!print@{print}}
+\index{print@{print}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{print}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Function\-::print} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_e_p_a_x_1_1_function_a82cd9c2c9b4210f2c189e60f13445b77}
+
+
+\-Reimplemented from \hyperlink{class_e_p_a_x_1_1_detached_text_a8a32ccd60ccd9a710a84301b4c483902}{\-E\-P\-A\-X\-::\-Detached\-Text}.
+
+
+
+\-Definition at line 186 of file \-Function.\-cpp.
+
+\hypertarget{class_e_p_a_x_1_1_function_acf8e6e84f93e87bab13edc2c03929425}{\index{\-E\-P\-A\-X\-::\-Function@{\-E\-P\-A\-X\-::\-Function}!print\-Header@{print\-Header}}
+\index{print\-Header@{print\-Header}!EPAX::Function@{\-E\-P\-A\-X\-::\-Function}}
+\subsubsection[{print\-Header}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-E\-P\-A\-X\-::\-Function\-::print\-Header} (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{stream = {\ttfamily std\-:\-:cout}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_e_p_a_x_1_1_function_acf8e6e84f93e87bab13edc2c03929425}
+
+
+\-Definition at line 178 of file \-Function.\-cpp.
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_function_8hpp}{\-Function.\-hpp}\item 
+\hyperlink{_function_8cpp}{\-Function.\-cpp}\end{DoxyCompactItemize}

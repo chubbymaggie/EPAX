@@ -1,0 +1,137 @@
+.TH "EPAX::Elf::FileHeader" 3 "Fri Feb 7 2014" "Version 0.01" "EPAXDeveloperGuide" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+EPAX::Elf::FileHeader \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ElfBinary\&.hpp>\fP
+.PP
+Inherits \fBEPAX::FileBase\fP\&.
+.PP
+Inherited by \fBEPAX::Elf::FileHeader32\fP, and \fBEPAX::Elf::FileHeader64\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFileHeader\fP (\fBBaseBinary\fP *b, uint64_t o, uint64_t s)"
+.br
+.ti -1c
+.RI "virtual \fB~FileHeader\fP ()"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetStartAddr\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBverify\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBisARM\fP ()=0"
+.br
+.ti -1c
+.RI "virtual void \fBdescribe\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetSectionCount\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetSecTableOffset\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetShdrSize\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetShdrStringIndex\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetSegmentCount\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint64_t \fBgetSegTableOffset\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetPhdrSize\fP ()=0"
+.br
+.ti -1c
+.RI "virtual uint32_t \fBgetFileType\fP ()=0"
+.br
+.in -1c
+.SS "Static Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBdescribeISA\fP (uint32_t ctype)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBrawbyte_t\fP * \fBentry\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 101 of file ElfBinary\&.hpp\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "\fBEPAX::Elf::FileHeader::FileHeader\fP (\fBBaseBinary\fP *b, uint64_to, uint64_ts)"
+.PP
+Definition at line 321 of file ElfBinary\&.cpp\&.
+.SS "\fBEPAX::Elf::FileHeader::~FileHeader\fP ()\fC [virtual]\fP"
+.PP
+Definition at line 327 of file ElfBinary\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBEPAX::Elf::FileHeader::describe\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.PP
+Definition at line 462 of file ElfBinary\&.cpp\&.
+.SS "void \fBEPAX::Elf::FileHeader::describeISA\fP (uint32_tctype)\fC [static, protected]\fP"
+.PP
+Definition at line 466 of file ElfBinary\&.cpp\&.
+.SS "virtual uint32_t \fBEPAX::Elf::FileHeader::getFileType\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::FileHeader::getPhdrSize\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::FileHeader::getSecTableOffset\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::FileHeader::getSectionCount\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::FileHeader::getSegmentCount\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::FileHeader::getSegTableOffset\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::FileHeader::getShdrSize\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint32_t \fBEPAX::Elf::FileHeader::getShdrStringIndex\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual uint64_t \fBEPAX::Elf::FileHeader::getStartAddr\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual bool \fBEPAX::Elf::FileHeader::isARM\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SS "virtual bool \fBEPAX::Elf::FileHeader::verify\fP ()\fC [pure virtual]\fP"
+.PP
+Implemented in \fBEPAX::Elf::FileHeader64\fP, and \fBEPAX::Elf::FileHeader32\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBrawbyte_t\fP* \fBEPAX::Elf::FileHeader::entry\fP\fC [protected]\fP"
+.PP
+Definition at line 103 of file ElfBinary\&.hpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for EPAXDeveloperGuide from the source code\&.
