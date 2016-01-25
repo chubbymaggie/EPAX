@@ -43,6 +43,7 @@ namespace EPAX {
 
     class BaseBinary;
     class Function;
+    class LineInformation;
 
     /**
      * A thin wrapper around the classes which will hold all of the useful information about program binaryies.
@@ -53,6 +54,7 @@ namespace EPAX {
 
         BinaryFormat format;
         BaseBinary* binary;
+        LineInformation* lineinfo;
 
         void construct(std::string n, BinaryFormat f);
 
@@ -145,7 +147,7 @@ namespace EPAX {
          */
         bool isLastFunction(Function* f);
 
-        Function* findFunction(uint64_t addr);
+        Function* findFunctionAt(uint64_t addr);
 
         bool isExecutable();
 
@@ -154,6 +156,9 @@ namespace EPAX {
 
         uint32_t getFileSize();
 
+        bool hasDebugLineInfo();
+        uint32_t getDebugLineNumber(uint64_t addr);
+        std::string getDebugLineFile(uint64_t addr);
     }; // class Binary
 
 } // namespace EPAX

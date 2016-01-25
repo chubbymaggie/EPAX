@@ -37,29 +37,21 @@ void error_out(char* prg, const char* msg){
 int main(int argc, char** argv){
 
     const char* fname;
-    char** args = NULL;
     
-    if (argc < 2){
-        error_out(argv[0], "at least one argument (a path to an executable) is required");
+    if (argc != 2){
+        error_out(argv[0], "exactly one argument (a path to an executable/library) is required");
     } else {
         fname = argv[1];
     }
 
-    args = &(argv[1]);
-
+    // create a BIN
     EPAX::BIN mybin = EPAX::BIN_create(fname);
 
+    // print out static analysis of the BIN to a file
     std::string sfname(fname);
     sfname.append(".static");
-
-    for (EPAX::FUNC f = BIN_firstFunc(mybin); EPAX::BIN_isLastFunc(mybin, f) == false; f = EPAX::BIN_nextFunc(mybin, f)){
-        //FUNC_print(f);
-    }
-
     EPAX::BIN_printStaticFile(mybin, sfname.c_str());
-    if (false && EPAX::BIN_isExecutable(mybin)){
-        EPAX::BIN_run(mybin, argc - 1, args); // does not return
-        assert(false && "should not arrive");
-    }
+
+    // destroy the BIN
     EPAX::BIN_destroy(mybin);
 }

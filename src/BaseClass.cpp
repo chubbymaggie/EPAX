@@ -150,11 +150,13 @@ namespace EPAX {
         return inputfile->getFileSize();
     }
 
-    Function* BaseBinary::findFunction(uint64_t addr){
-        // TODO: binary search
+    Function* BaseBinary::findFunctionAt(uint64_t addr){
+        lazyFunctions();
+
+        // TODO: binary search... they are sorted
         for (std::vector<Function*>::const_iterator it = functions->begin(); it != functions->end(); it++){
             Function* func = (*it);
-            if (func->getMemoryAddress() == addr || func->inRange(addr)){
+            if (IS_VALID_PTR(func) && (func->getMemoryAddress() == addr || func->inRange(addr))){
                 return func;
             }
         }

@@ -3,6 +3,9 @@
 epaxdir="@abs_top_builddir@"
 export EPAX_ROOT=$epaxdir
 echo "***** initializing environment using EPAX_ROOT=$EPAX_ROOT"
-export LD_LIBRARY_PATH=${EPAX_ROOT}/lib:${LD_LIBRARY_PATH}:@DARM_LIBDIR@
 export PATH=${EPAX_ROOT}/bin:${PATH}
+## OSX
+export DYLD_LIBRARY_PATH=${EPAX_ROOT}/lib:${DYLD_LIBRARY_PATH}:@DISASM_LIBDIR@
+## Linux
+export LD_LIBRARY_PATH=${EPAX_ROOT}/lib:${LD_LIBRARY_PATH}:@DISASM_LIBDIR@
 

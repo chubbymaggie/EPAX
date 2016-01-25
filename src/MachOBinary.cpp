@@ -168,6 +168,7 @@ namespace EPAX {
             if (MHDR32_ENTRY->cputype == CPU_TYPE_ARM){
                 return true;
             }
+	    return false;
         }
 
         bool MachHeader64::isARM(){

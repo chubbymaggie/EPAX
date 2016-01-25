@@ -58,7 +58,7 @@ namespace EPAX {
     void DFS(std::vector<BasicBlock*>& backedg, BasicBlock* start, dyn_bitset& v, dyn_bitset& c){
 
         v.set(start->getIndex());
-        uint32_t size = start->countTargets();
+        const uint32_t size = start->countTargets();
         for (uint32_t i = 0; i < size; i++){
             BasicBlock* tgt = start->getTarget(i);
 
@@ -140,6 +140,10 @@ namespace EPAX {
     }
     
     void ControlFlow::initialize(std::vector<BasicBlock*> bbs){
+        if (bbs.size() < 1){
+            return;
+        }
+
         uint32_t bcount = bbs.size();
         std::map<uint64_t, uint32_t> bb_map;
         uint32_t i = 0;
@@ -167,25 +171,15 @@ namespace EPAX {
 
                 if (function->inRange(tgt)){
                     // could make this assertion if we also knew the tgt was reachable
-                    /*
-                    if (bb_map.count(tgt) == 0){
-                        function->print();
-                        this->print();
-                        bb->print();
-                        bb->tail()->print();
-                    }
-                    */
                     //EPAXAssert(bb_map.count(tgt) > 0, "Target address " << HEX(tgt) << " from insn at " << HEX(bb->tail()->getMemoryAddress()) << " should be present in map");
-                    BasicBlock* targetBlock = basicblocks[bb_map[tgt]];
+                    if (bb_map.count(tgt) > 0){
+                        BasicBlock* targetBlock = basicblocks[bb_map[tgt]];
 
-                    bb->addTarget(targetBlock);
-                    targetBlock->addSource(bb);
+                        bb->addTarget(targetBlock);
+                        targetBlock->addSource(bb);
+                    }
                 }
             }
-        }
-
-        if (bbs.size() < 1){
-            return;
         }
 
         // dominators[i][j] == true iff BB_i is dominated by BB_j
@@ -213,7 +207,7 @@ namespace EPAX {
             backedg.pop_back();
             BasicBlock* head = backedg.back(); 
             backedg.pop_back();
- 
+
             if (dominators[tail->getIndex()]->has(head->getIndex())){
                 dyn_bitset* members = new dyn_bitset(bbs.size());
                 members->clear();

@@ -172,13 +172,12 @@ namespace EPAX {
                 for (uint32_t i = 0; i < symt->countSymbols(); i++){
                     ElfSymbol* s = (ElfSymbol*)symt->getSymbol(i);
                     if (s->isFunction() && insideTextRange(s->getFunctionAddress())){
-                        functions->push_back(new Function(this, vaddrToFile(s->getFunctionAddress()), s->getSize(), s->getFunctionAddress(), cur, s));
+                        functions->push_back(new Function(this, vaddrToFile(s->getFunctionAddress()), s->getSize(), s->getFunctionAddress(), cur, s, fileheader->getBits() == 64));
                         cur++;
                     }
                 }
             }
 
-            // TODO: sort functions, then figure out how many bytes till the next function boundary
             cur = 0;
             std::sort(functions->begin(), functions->end(), compareMemory);
             for (std::vector<Function*>::const_iterator it = functions->begin(); it != functions->end(); it++){
@@ -204,7 +203,14 @@ namespace EPAX {
                 f->disassemble();
             }
 
-            //printFunctions();
+
+            Function* prev = INVALID_PTR;
+            for (std::vector<Function*>::const_iterator it = functions->begin(); it != functions->end(); it++){
+                Function* f = *it;
+                if (IS_VALID_PTR(prev)){
+                    EPAXAssert(prev->getMemoryAddress() < f->getMemoryAddress(), "Functions should be sorted");
+                }
+            }
         }
 
         void ElfBinary::printFunctions(std::ostream& stream){
@@ -445,9 +451,7 @@ namespace EPAX {
         }
 
         bool FileHeader32::isARM(){
-            if (EHDR32_ENTRY->e_machine == EM_ARM){
-                return true;
-            }
+            return (EHDR32_ENTRY->e_machine == EM_ARM); 
         }
 
         bool FileHeader64::isARM(){
@@ -461,10 +465,8 @@ namespace EPAX {
 
         void FileHeader::describe(){
             EPAXOut << "format=elf" << TAB;
-        }
-
-        void FileHeader::describeISA(uint32_t ctype){
-            switch(ctype){
+            std::cout << "bits=" << DEC(getBits()) << TAB;
+            switch(getISA()){
 #define CASE(__typ__) case EM_ ## __typ__: std::cout << "isa=" << #__typ__ ; break
                 CASE(SPARC);
                 CASE(386);
@@ -475,22 +477,28 @@ namespace EPAX {
                 CASE(IA_64);
                 CASE(X86_64);
                 CASE(VAX);
+                CASE(AARCH64);
             default:
                 std::cout << "isa=unknown";
+                EPAXAssert(false, "Unkown ISA found: " << std::dec << getISA());
             }
             std::cout << ENDL;
         }
 
-        void FileHeader32::describe(){
-            FileHeader::describe();
-            std::cout << "bits=32" << TAB;
-            FileHeader::describeISA(EHDR32_ENTRY->e_machine);
+        uint32_t FileHeader32::getISA(){
+            return EHDR32_ENTRY->e_machine;
         }
 
-        void FileHeader64::describe(){
-            FileHeader::describe();
-            std::cout << "bits=64" << TAB;
-            FileHeader::describeISA(EHDR64_ENTRY->e_machine);
+        uint32_t FileHeader64::getISA(){
+            return EHDR64_ENTRY->e_machine;
+        }
+
+        uint32_t FileHeader32::getBits(){
+            return 32;
+        }
+
+        uint32_t FileHeader64::getBits(){
+            return 64;
         }
 
         ElfSymbol::ElfSymbol(BaseBinary* b, uint64_t o, uint64_t s, uint32_t i)

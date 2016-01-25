@@ -116,7 +116,7 @@ namespace EPAX {
             }
             stream << DEC(bb->getIndex());
         }
-        stream << " } -> ME -> { ";
+        stream << " } -> SELF -> { ";
         for (std::vector<BasicBlock*>::const_iterator it = targets.begin(); it != targets.end(); it++){
             BasicBlock* bb = (*it);
            if (it != targets.begin()){
@@ -125,10 +125,12 @@ namespace EPAX {
             stream << DEC(bb->getIndex());
         }
         stream << " }" << ENDL;
+        /*
         for (std::vector<Instruction*>::const_iterator it = instructions.begin(); it != instructions.end(); it++){
             Instruction* insn = (*it);
             insn->print(stream);
         }
+        */
     }
 
     uint32_t BasicBlock::countInstructions(){

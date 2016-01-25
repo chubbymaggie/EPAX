@@ -102,8 +102,6 @@ namespace EPAX {
         protected:
             rawbyte_t* entry;
 
-            static void describeISA(uint32_t ctype);
-
         public:
             FileHeader(BaseBinary* b, uint64_t o, uint64_t s);
             virtual ~FileHeader();
@@ -111,7 +109,9 @@ namespace EPAX {
             virtual uint64_t getStartAddr() = 0;
             virtual bool verify() = 0;
             virtual bool isARM() = 0;
-            virtual void describe() = 0;
+            virtual void describe();
+            virtual uint32_t getISA() = 0;
+            virtual uint32_t getBits() = 0;
 
             virtual uint32_t getSectionCount() = 0;
             virtual uint64_t getSecTableOffset() = 0;
@@ -133,7 +133,8 @@ namespace EPAX {
             uint64_t getStartAddr();
             bool verify();
             bool isARM();
-            void describe();
+            uint32_t getISA();
+            uint32_t getBits();
 
             uint32_t getSectionCount();
             uint64_t getSecTableOffset();
@@ -154,7 +155,8 @@ namespace EPAX {
             uint64_t getStartAddr();
             bool verify();
             bool isARM();
-            void describe();
+            uint32_t getISA();
+            uint32_t getBits();
 
             uint32_t getSectionCount();
             uint64_t getSecTableOffset();

@@ -58,6 +58,7 @@ namespace EPAX {
         }
         handle.read(buffer, size);
         EPAXAssert(!handle.fail(), "Cannot read byte range [" << std::dec << offset << "," << (offset + size) << ") in " << getName() << ".");
+        return size;
     }
 
 } // namespace EPAX

@@ -134,13 +134,13 @@ namespace EPAX {
         //staticfile << "# sha1sum        = " << sha1str << ENDL;
         staticfile << "# <sequence> <vaddr> <funcname> <funcid> <bbid> <line>" << ENDL;
         staticfile << "# +str <mnemonic> [<and> <ops>]" << ENDL;
-        staticfile << "# +isa <class> <type> <bytes>" << ENDL;
+        staticfile << "# +isa <groups> <bytes>" << ENDL;
         staticfile << "# +prd <pred_condition>" << ENDL;
-        staticfile << "# +flw <list> <of> <control> <targets>" << ENDL;
+        staticfile << "# +flw <list> <of> <known> <control> <targets>" << ENDL;
         staticfile << "# +lpi <loopcnt> <loopid> <ldepth> <loop_head_addr> <loop_tail_addr>" << ENDL;
         staticfile << "# +lpc <parent_loop_head> <parent_loop_tail>" << ENDL;
-        staticfile << "# +cnt <branch_op> <fp_op> <mem_op>" << ENDL;
-        staticfile << "# +vec <bits>x<elements>:<fp>:<int>" << ENDL;
+        staticfile << "# +cnt <branch_op> <fp_op> <load_op> <store_op>" << ENDL;
+        staticfile << "# +srg <bits>x<elements>:<fp>:<int>" << ENDL;
         //staticfile << "# +mem <total_mem_op> <total_mem_bytes> <bytes/op>" << ENDL;
         //staticfile << "# +dud <dudist1>:<duint1>:<dufp1> <dudist2>:<ducnt2>:<dufp2>..." << ENDL;
         //staticfile << "# +dxi <count_def_use_cross> <count_call>" << ENDL;
@@ -167,25 +167,36 @@ namespace EPAX {
                                << TAB << FUNC_name(func)
                                << TAB << DEC(funcid)
                                << TAB << DEC(bblid)
-                               << TAB << "???" // TODO: line info
+                               << TAB << BIN_debugFileName(bin, INSN_addr(insn)) << ":" << BIN_debugLineNumber(bin, INSN_addr(insn))
                                << ENDL;
 
                     staticfile << TAB << "+str"
                                << TAB << INSN_string(insn)
                                << ENDL;
 
-                    staticfile << TAB << "+isa"
-                               << TAB << "???" // TODO: insn class string
-                               << TAB << "???" // TODO: insn type string
-                               << TAB << INSN_size(insn)
+                    std::vector<std::string> groups;
+                    INSN_groupNames(insn, groups);
+                    staticfile << TAB << "+isa";
+                    if (groups.size() == 0){
+                        staticfile << TAB << NAME_UNKNOWN;
+                    } else {
+                        staticfile << TAB;
+                        for (uint32_t i = 0; i < groups.size(); i++){
+                            if (i > 0){
+                                staticfile << ",";
+                            }
+                            staticfile << groups[i];
+                        }
+                    }
+                    staticfile << TAB << INSN_size(insn)
                                << ENDL;
 
-		    std::string cname = INSN_condName(insn);
-		    if (cname.compare("AL")){
- 		        staticfile << TAB << "+prd"
-				   << TAB << INSN_condName(insn)
-				   << ENDL;
-		    }
+                    std::string condname = INSN_condName(insn);
+                    if (condname.compare("INVALID") != 0){
+                        staticfile << TAB << "+prd"
+                                   << TAB << condname
+                                   << ENDL;
+                    }
 
                     std::vector<uint64_t> tlist;
                     INSN_targets(insn, tlist);
@@ -222,26 +233,27 @@ namespace EPAX {
                     staticfile << TAB << "+cnt"
                                << TAB << DEC(INSN_isBranch(insn))
                                << TAB << DEC(INSN_isFpop(insn))
-                               << TAB << DEC(INSN_isMemop(insn))
+                               << TAB << DEC(INSN_isLoad(insn))
+                               << TAB << DEC(INSN_isStore(insn))
                                << ENDL;
 
                     uint32_t bitsInReg = INSN_sourceRegisterSizeInBits(insn);
                     uint32_t bitsInElem = INSN_sourceDatatypeSizeInBits(insn);
 
-                    staticfile << TAB << "+vec";
                     if(bitsInReg != 0 && bitsInElem != 0) {
+                        staticfile << TAB << "+srg";
                         uint32_t isFp = INSN_isFpop(insn);
                         uint32_t elemInReg = bitsInReg / bitsInElem;
                         staticfile << TAB << elemInReg << "x" << bitsInElem << ":" << isFp << ":" << !isFp;
+                        staticfile << ENDL;
                     }
-                    staticfile << ENDL;
 
                     uint64_t tgt = INSN_callTarget(insn);
                     if (tgt){
-                        FUNC ftgt = BIN_findFunc(bin, tgt);
+                        FUNC ftgt = BIN_findFuncAt(bin, tgt);
                         staticfile << TAB << "+ipa"
                                    << TAB << HEX(tgt)
-                                   << TAB << (IS_VALID_PTR(func)? NAME_UNKNOWN:FUNC_name(ftgt))
+                                   << TAB << (IS_VALID_PTR(ftgt)? FUNC_name(ftgt):NAME_UNKNOWN)
                                    << ENDL;
                     }
                     insnid++;
@@ -255,17 +267,34 @@ namespace EPAX {
         fb.close();
 
         return;
-        
+
+        // TODO: move the meat of this function down into the Binary class?
         bin->printStaticFile(fname);
     }
 
-    FUNC BIN_findFunc(BIN bin, uint64_t addr){
+    FUNC BIN_findFuncAt(BIN bin, uint64_t addr){
         EPAXVerifyType(BIN, bin);
-        return bin->findFunction(addr);
+        return bin->findFunctionAt(addr);
+    }
+
+    bool BIN_hasDebugLineInfo(BIN bin){
+        EPAXVerifyType(BIN, bin);
+        return bin->hasDebugLineInfo();
+    }
+
+    uint32_t BIN_debugLineNumber(BIN bin, uint64_t addr){
+        EPAXVerifyType(BIN, bin);
+        return bin->getDebugLineNumber(addr);
+    }
+
+    std::string BIN_debugFileName(BIN bin, uint64_t addr){
+        EPAXVerifyType(BIN, bin);
+        return bin->getDebugLineFile(addr);
     }
 
     FUNC FUNC_create(uint8_t* bytes, uint32_t size){
         ShouldNotArrive; // TODO        
+        return INVALID_PTR;
     }
 
     void FUNC_destroy(FUNC func){
@@ -766,6 +795,16 @@ namespace EPAX {
         return insn->isMemop();
     }
 
+    bool INSN_isLoad(INSN insn){
+        EPAXVerifyType(INSN, insn);
+        return insn->isLoad();
+    }
+
+    bool INSN_isStore(INSN insn){
+        EPAXVerifyType(INSN, insn);
+        return insn->isStore();
+    }
+
     uint32_t INSN_size(INSN insn){
         EPAXVerifyType(INSN, insn);
         return insn->getMemorySize();        
@@ -773,8 +812,7 @@ namespace EPAX {
 
     std::string INSN_condName(INSN insn){
         EPAXVerifyType(INSN, insn);
-        darm_cond_t cond = insn->getCondition();
-        return std::string(darm_condition_name(cond, 0));
+        return std::string(insn->getConditionName());
     }
 
     bool INSN_fallsThrough(INSN insn){
@@ -792,9 +830,21 @@ namespace EPAX {
         return insn->getSourceDatatypeSizeInBits();
     }
 
+    uint32_t INSN_groupNames(INSN insn, std::vector<std::string>& groups){
+        EPAXVerifyType(INSN, insn);
+        return insn->getGroupNames(groups);
+    }
+
+    uint32_t INSN_groupCount(INSN insn){
+        EPAXVerifyType(INSN, insn);
+        std::vector<std::string> groups;
+        uint32_t count = INSN_groupNames(insn, groups);
+        return count;
+    }
+
 } // namespace EPAX
 
-/* these are just a thin layer around the C++ implementations */
+/* these C implementations are just a thin layer around the C++ implementations */
 extern "C" {
 
     EPAX_bin EPAX_bin_create(const char* fileName){
@@ -845,7 +895,7 @@ extern "C" {
     }
 
     EPAX_func EPAX_bin_fundFunc(EPAX_bin bin, uint64_t addr){
-        return (EPAX_func)EPAX::BIN_findFunc((EPAX::BIN)bin, addr);
+        return (EPAX_func)EPAX::BIN_findFuncAt((EPAX::BIN)bin, addr);
     }
 
     EPAX_func EPAX_func_create(uint8_t* bytes, uint32_t size){
@@ -1211,6 +1261,14 @@ extern "C" {
         return (uint32_t)EPAX::INSN_isMemop((EPAX::INSN)insn);
     }
 
+    uint32_t EPAX_insn_isLoad(EPAX_insn insn){
+        return (uint32_t)EPAX::INSN_isLoad((EPAX::INSN)insn);
+    }
+
+    uint32_t EPAX_insn_isStore(EPAX_insn insn){
+        return (uint32_t)EPAX::INSN_isStore((EPAX::INSN)insn);
+    }
+
     uint32_t EPAX_insn_size(EPAX_insn insn){
         return EPAX::INSN_size((EPAX::INSN)insn);
     }
@@ -1232,5 +1290,23 @@ extern "C" {
         return EPAX::INSN_sourceDatatypeSizeInBits((EPAX::INSN)insn);
     }
 
+    uint32_t EPAX_insn_groupNames(EPAX_insn insn, char** groups){
+        EPAXAssert(IS_VALID_PTR(groups), "NULL pointer cannot be passed for output parameter");
+        std::vector<std::string> grps;
+        EPAX::INSN_groupNames((EPAX::INSN)insn, grps);
+
+        for (uint32_t i = 0; i < grps.size(); i++){
+            char* name = (char*)(grps[i].c_str());
+            groups[i] = name;
+        }
+        return grps.size();
+    }
+
+    uint32_t EPAX_insn_groupCount(EPAX_insn insn){
+        std::vector<std::string> grps;
+        EPAX::INSN_groupNames((EPAX::INSN)insn, grps);
+
+        return grps.size();
+    }
 }
 

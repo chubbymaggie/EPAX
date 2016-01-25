@@ -35,8 +35,15 @@
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
+#ifdef HAVE_ARMV7_NATIVE
 #include <sys/ptrace.h>
 #include <sys/user.h>
+#endif
+#ifdef HAVE_ARMV8_NATIVE
+#include <sys/ptrace.h>
+#include <asm/ptrace.h>
+#include <linux/uio.h>
+#endif
 #include <errno.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -52,6 +59,15 @@
 #include <stack>
 #include <set>
 #include <algorithm>
+
+#ifdef HAVE_CXX11
+#include <unordered_map>
+template<typename K, typename V> struct fastmap { typedef std::unordered_map<K, V> map; };
+#else
+template<typename K, typename V> struct fastmap { typedef std::map<K, V> map; };
+#endif
+
+#include "EPAXDefs.hpp"
 
 #define INVALID_PTR (NULL)
 #define IS_VALID_PTR(__p__) ((__p__ != INVALID_PTR))
@@ -76,14 +92,14 @@ static int _arrayBacktraceIterator;
 
 #ifdef HAVE_EXECINFO_H
 #include <execinfo.h>
-#define EPAXAssert(__stmt__, __msg__)                                 \
+#define EPAXAssert(__stmt__, __msg__)                                   \
     if (!(__stmt__)){ _backtraceSize = backtrace(_backtraceArray, BACKTRACE_LIMIT); _backtraceStrings = backtrace_symbols(_backtraceArray, _backtraceSize); \
         EPAXErr << "Assert failure: " << __PRETTY_FUNCTION__ << " at " << __FILE__ << ":" << __LINE__ << ENDL; \
-        EPAXErr << __msg__ << ENDL;                                   \
+        EPAXErr << __msg__ << ENDL;                                     \
         for (_arrayBacktraceIterator = 0; _arrayBacktraceIterator < _backtraceSize; _arrayBacktraceIterator++){ EPAXErr << TAB << _backtraceStrings[_arrayBacktraceIterator] << ENDL; } \
         free(_backtraceStrings);                                        \
         exit(1); }
-#else // !HAVE_EXECINFO_H
+#else // HAVE_EXECINFO_H
 #define EPAXAssert(__stmt__, __msg__)                                 \
     if (!(__stmt__)){                                                   \
         EPAXErr << "Assert failure: " << __PRETTY_FUNCTION__ << " at " << __FILE__ << ":" << __LINE__ << ENDL; \

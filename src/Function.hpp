@@ -27,22 +27,18 @@
 #define __EPAX_Function_hpp__
 
 #include "BaseClass.hpp"
-
-extern "C" {
-#include "darm.h"
-}
+#include "Instruction.hpp"
 
 namespace EPAX {
 
     class BaseBinary;
     class BasicBlock;
     class ControlFlow;
-    class Instruction;
     class Symbol;
 
     class DetachedText : public FileBase, public MemoryBase, public IndexBase {
     protected:
-        std::vector<void*> instructions; // TODO: or blocks or something?
+        std::vector<void*> handlers;
 
     public:
         DetachedText(BaseBinary* b, uint64_t o, uint64_t s, uint64_t a, uint32_t i);
@@ -54,12 +50,13 @@ namespace EPAX {
 
     class Function : public DetachedText, public SymbolBase, public EPAXExport {
     private:
+        bool isARMv8;
         ControlFlow* controlflow;
         void disasm(std::vector<BasicBlock*>& bbs);
-        darm_mode_t disassembleMode();
+        DisasmMode disassembleMode();
 
     public:
-        Function(BaseBinary* b, uint64_t o, uint64_t s, uint64_t a, uint32_t i, Symbol* y);
+        Function(BaseBinary* b, uint64_t o, uint64_t s, uint64_t a, uint32_t i, Symbol* y, bool isv8);
         virtual ~Function();
 
         void print(std::ostream& stream = std::cout);

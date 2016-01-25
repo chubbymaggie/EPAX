@@ -1,13 +1,13 @@
-BINDIR       = ../bin/
-LIBDIR       = ../lib/
-INCDIR       = ../include/
-FMTDIR       = ../formats/
+BINDIR       = ../bin
+LIBDIR       = ../lib
+INCDIR       = ../include
+FMTDIR       = ../formats
 
 # compile settings
 CXX          = @CXX@
-INCLUDE      = @DARM_INCLUDE@ -I. -I$(INCDIR) -I$(FMTDIR) @DEFS@
+INCLUDE      = @DISASM_INCLUDE@ -I. -I$(INCDIR) -I$(FMTDIR) @DEFS@ -DHAVE_@DISASM_SOURCE@
 CXXFLAGS     = @CXXFLAGS@ $(INCLUDE)
-LDFLAGS      = @LDFLAGS@ @DARM_LIB@ -ldarm
+LDFLAGS      = @LDFLAGS@ -Wl,-Bstatic @DISASM_LINK@ -Wl,-Bdynamic
 
 ## TODO: detect these with autoconf
 PICFLAGS     = -fPIC
@@ -21,7 +21,7 @@ BINTGT       = epax
 LIBTGT       = lib$(BINTGT).so
 LDLOCAL      = -L. -l$(BINTGT)
 
-FILS         = BaseClass BasicBlock Binary ControlFlow InputFile ElfBinary Function Instruction Interface MachOBinary Loop Section Symbol
+FILS         = BaseClass BasicBlock Binary ControlFlow Instruction DarmInstruction CapstoneInstruction InputFile ElfBinary Function Interface MachOBinary LineInformation Loop Section Symbol
 SRCS         = $(foreach var,$(FILS),$(var).cpp)
 HDRS         = $(foreach var,$(FILS),$(var).hpp)
 OBJS         = $(foreach var,$(FILS),$(var).o)
@@ -40,7 +40,7 @@ bin: $(BINTGT)
 $(BINTGT): $(BINTGT).o $(LIBTGT) $(OBJS)
 	$(CXX) $(CXXFLAGS) $(LDFLAGS) $< -o $@ $(LDLOCAL) $(INCLOCAL)
 
-$(LIBTGT): $(OBJS) interface
+$(LIBTGT): interface $(OBJS)
 	$(CXX) -o $@ $(OBJS) $(SHARED) $(LDFLAGS)
 
 local-install: $(BINTGT) $(LIBTGT)
@@ -50,11 +50,11 @@ local-install: $(BINTGT) $(LIBTGT)
 depend: interface
 	g++ -E -MM $(INCLUDE) $(SRCS) > .EPAX_DEPENDS
 
-interface: Interface.h
-Interface.h: Interface.hpp c_interface.py
+interface: $(INCDIR)/Interface.h
+$(INCDIR)/Interface.h: $(INCDIR)/Interface.hpp c_interface.py
 	python ./c_interface.py $@pp $@
 
 clean:
-	$(RM) *.o $(LIBTGT) $(BINTGT) Interface.h
+	$(RM) *.o $(LIBTGT) $(BINTGT) $(INCDIR)/Interface.h
 
 -include .EPAX_DEPENDS

@@ -181,7 +181,7 @@ namespace EPAX {
         Function* getNextFunction(Function* f);
         bool isLastFunction(Function* f);
 
-        Function* findFunction(uint64_t addr);
+        Function* findFunctionAt(uint64_t addr);
 
         InputFile* getInputFile() { return inputfile; }
         

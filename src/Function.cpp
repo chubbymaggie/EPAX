@@ -40,12 +40,12 @@ namespace EPAX {
     {
     }
 
-    darm_mode_t Function::disassembleMode(){
+    DisasmMode Function::disassembleMode(){
         Symbol* sym = getSymbol();
         if (IS_VALID_PTR(sym) && sym->isThumbFunction()){
-            return M_THUMB2;
+            return DisasmMode_THUMB2;
         }
-        return M_ARM;
+        return DisasmMode_ARM;
     }
 
     void Function::disasm(std::vector<BasicBlock*>& bbs){
@@ -57,45 +57,16 @@ namespace EPAX {
         rawbyte_t* buf = new rawbyte_t[limit];
         getInputFile()->getBytes(getFileOffset(), limit, buf);
 
-        // disassemble instructions
         std::vector<Instruction*> insns;
-        std::map<uint64_t, uint32_t> insn_map;
+        fastmap<uint64_t, uint32_t>::map insn_map;
 
-        // TODO: mode changes inside functions (BLX, BXJ, etc)
-        darm_mode_t mode = disassembleMode();
-        for (uint32_t cur = 0; cur < limit; ){
-            uint64_t addr = getMemoryAddress() + cur;
+        DisasmMode mode = disassembleMode();
 
-            // machinations to make sure we don't go out of bounds on buf
-            uint32_t len = 4;
-            if (M_ARM == mode){
-                len = 4;
-            } else if (M_THUMB == mode){
-                len = 2;
-            } else if (M_THUMB2 == mode){
-                if (IS_THUMB2_32BIT(buf[cur] | buf[cur+1])){
-                    len = 4;
-                } else {
-                    len = 2;
-                }
-            }
-
-            if (M_THUMB == mode){
-                len = 2;
-            } else if (M_THUMB2 == mode){
-                if (cur + 2 > limit) break;
-                if (!IS_THUMB2_32BIT((buf[cur] << 8) | (buf[cur+1] << 0))){
-                    len = 2;
-                }
-            }
-
-            if (cur + len > limit) break;
-
-            Instruction* insn = new Instruction(addr, &(buf[cur]), this, mode);
-            cur += insn->getMemorySize();
-
-            insn_map[addr] = insns.size();
-            insns.push_back(insn);
+        // TODO: seems like this should be a member of Function instead
+        if (isARMv8){
+            Instruction::disassemble(buf, getMemoryAddress(), limit, insns, insn_map, mode, this, handlers, isARMv8);
+        }  else {
+            Instruction::disassemble(buf, getMemoryAddress(), limit, insns, insn_map, mode, this, handlers, isARMv8);
         }
 
         delete[] buf;
@@ -151,19 +122,20 @@ namespace EPAX {
         }
     }
 
-    Function::Function(BaseBinary* b, uint64_t o, uint64_t s, uint64_t a, uint32_t i, Symbol* y)
+    Function::Function(BaseBinary* b, uint64_t o, uint64_t s, uint64_t a, uint32_t i, Symbol* y, bool isv8)
         : DetachedText(b, o, s, a, i),
           SymbolBase(y),
           EPAXExport(EPAXExportClass_FUNC),
-          controlflow(INVALID_PTR)
+          controlflow(INVALID_PTR),
+          isARMv8(isv8)
     {
         if (IS_VALID_PTR(getSymbol())){
             EPAXAssert(getSymbol()->isFunction(), "Functions have to be tied to function symbols");
         }
-
     }
 
     Function::~Function(){
+        Instruction::freedisasm(handlers);
         if (IS_VALID_PTR(controlflow)){
             delete controlflow;
         }
@@ -173,6 +145,7 @@ namespace EPAX {
         std::vector<BasicBlock*> bbs;
         disasm(bbs);
         controlflow = new ControlFlow(this, bbs);
+        //print();
     }
 
     void Function::printHeader(std::ostream& stream){

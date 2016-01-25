@@ -28,18 +28,19 @@
 #include "ElfBinary.hpp"
 #include "Function.hpp"
 #include "Instruction.hpp"
+#include "LineInformation.hpp"
 #include "MachOBinary.hpp"
 
 namespace EPAX {
 
     Binary::Binary(std::string n)
-        : EPAXExport(EPAXExportClass_BIN), binary(INVALID_PTR)
+        : EPAXExport(EPAXExportClass_BIN), binary(INVALID_PTR), lineinfo(INVALID_PTR)
     {
         construct(n, BinaryFormat_undefined);
     }
 
     Binary::Binary(std::string n, BinaryFormat f)
-        : EPAXExport(EPAXExportClass_BIN), binary(INVALID_PTR)
+        : EPAXExport(EPAXExportClass_BIN), binary(INVALID_PTR), lineinfo(INVALID_PTR)
     {
         construct(n, f);
     }
@@ -48,6 +49,9 @@ namespace EPAX {
         if (IS_VALID_PTR(binary)){
             delete binary;
         }
+        if (IS_VALID_PTR(lineinfo)){
+            delete lineinfo;
+        }
     }
 
     void Binary::printStaticFile(std::string& fname){
@@ -55,8 +59,10 @@ namespace EPAX {
     }
 
     void Binary::printStaticFile(const char* fname){
-
     }
+
+
+#ifdef HAVE_ARMV7_NATIVE
 
 #define PTRACE_AND_CHECK(__opt, __pid, __addr, __data)                  \
     res = ptrace(__opt, __pid,__addr,__data);                           \
@@ -120,6 +126,13 @@ namespace EPAX {
         exit(0);        
     }
 
+    // TODO: write the ARMv8 version of this function (see examples/pcsample.cpp for some useful bits)
+#else // HAVE_ARMV7_NATIVE
+    void Binary::runBasic(int argc, char* argv[]){
+	EPAXDie("ARMv7 Native support not enabled. You cannot run executables.");
+    }
+#endif // HAVE_ARMV7_NATIVE
+
     const char* Binary::getFormatName(){
         return BaseBinary::getFormatName(format);
     }
@@ -152,7 +165,9 @@ namespace EPAX {
         }
 
         EPAXOut << "Program entry point at vaddr " << HEX(binary->getStartAddr()) << ENDL;
-        
+
+        lineinfo = new LineInformation(binary);
+
         binary->describe();
         //EPAXAssert(binary->isARM(), "This binary contains non-ARM code... bailing");
     }
@@ -199,39 +214,68 @@ namespace EPAX {
     }
 
     uint64_t Binary::getStartAddr(){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->getStartAddr();
     }
 
     std::string Binary::getName(){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->getName();
     }
 
     Function* Binary::getFirstFunction(){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->getFirstFunction();
     }
 
     Function* Binary::getNextFunction(Function* f){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->getNextFunction(f);
     }
 
     bool Binary::isLastFunction(Function* f){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->isLastFunction(f);
     }
 
-    Function* Binary::findFunction(uint64_t addr){
-        return binary->findFunction(addr);
+    Function* Binary::findFunctionAt(uint64_t addr){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
+        return binary->findFunctionAt(addr);
     }
 
     uint32_t Binary::countFunctions(){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->countFunctions();
     }
 
     bool Binary::isExecutable(){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->isExecutable();
     }
 
     uint32_t Binary::getFileSize(){
+        EPAXAssert(IS_VALID_PTR(binary), "Binary is not valid");
         return binary->getFileSize();
     }
 
+    bool Binary::hasDebugLineInfo(){
+        if (IS_VALID_PTR(lineinfo)){
+            return lineinfo->hasInformation();
+        }
+        return false;
+    }
+
+    uint32_t Binary::getDebugLineNumber(uint64_t addr){
+        if (hasDebugLineInfo()){
+            return lineinfo->getLineNumber(addr);
+        }
+        return 0;
+    }
+
+    std::string Binary::getDebugLineFile(uint64_t addr){
+        if (hasDebugLineInfo()){
+            return lineinfo->getLineFile(addr);
+        }
+        return NAME_UNKNOWN;
+    }
 } // namespace EPAX

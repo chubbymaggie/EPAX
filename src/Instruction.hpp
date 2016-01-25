@@ -28,55 +28,95 @@
 
 #include "BaseClass.hpp"
 
-extern "C" {
-#include "darm.h"
-}
-
 namespace EPAX {
 
     class BasicBlock;
     class Function;
 
+    typedef enum {
+        PredCondition_EQ = 0,
+        PredCondition_NE,
+        PredCondition_HS,
+        PredCondition_LO,
+        PredCondition_MI,
+        PredCondition_PL,
+        PredCondition_VS,
+        PredCondition_VC, 
+        PredCondition_HI,
+        PredCondition_LS,
+        PredCondition_GE,
+        PredCondition_LT,
+        PredCondition_GT,
+        PredCondition_LE,
+        PredCondition_AL,
+        PredCondition_INVALID,
+        PredCondition_total
+    } PredCondition;
+
+    typedef enum {
+        DisasmMode_ARM,
+        DisasmMode_THUMB,
+        DisasmMode_THUMB2_16,
+        DisasmMode_THUMB2,
+        DisasmMode_ARM_VFP,
+        DisasmMode_THUMB2_VFP,
+        DisasmMode_ARM_NEON,
+        DisasmMode_THUMB2_NEON,
+
+        DisasmMode_INVLD = -1,
+    } DisasmMode;
+
     class Instruction : public MemoryBase, public IndexBase, public EPAXExport {
-    private:
-        darm_t info;
-        int disasm_res;
+    protected:
+        bool disasm_res;
 
         Function* function;
         BasicBlock* basicblock;
 
     public:
-        Instruction(const uint64_t a, const rawbyte_t* r, Function* func, const darm_mode_t mode);
-        virtual ~Instruction();
+        Instruction(const uint64_t a, const rawbyte_t* r, Function* func)
+            : MemoryBase(a, 0),
+              IndexBase(0),
+              EPAXExport(EPAXExportClass_INSN),
+              function(func)
+        {}
 
-        darm_t* source() { return &info; }
+        virtual ~Instruction(){}
 
-        void setBasicBlock(BasicBlock* bb) { basicblock = bb; }
+        static void disassemble(rawbyte_t* buf, uint64_t addr, const uint32_t size, std::vector<Instruction*>& insns, fastmap<uint64_t, uint32_t>::map& insn_map, DisasmMode mode, Function* func, std::vector<void*>& handlers, bool isARMv8);
+        static void freedisasm(std::vector<void*> handlers);
+
+        void setBasicBlock(BasicBlock* bb){ basicblock = bb; }
         BasicBlock* getBasicBlock() { return basicblock; }
+        Function* getFunction() { return function; }
 
-        darm_cond_t getCondition();
+        virtual const char* const getConditionName();
+        virtual PredCondition getCondition() = 0;
 
         // control-related
-        bool isBranch();
-        bool isConditionalBranch();
-        bool isUnconditionalBranch();
-        bool hasFallthrough();
-        bool touchesPC();
-        bool isCall();
-        uint64_t fallthroughTarget();
-        uint64_t getBranchTarget();
-        uint32_t getControlTargets(std::vector<uint64_t>& tgts);
+        virtual bool isBranch();
+        virtual bool isConditionalBranch() = 0;
+        virtual bool isUnconditionalBranch() = 0;
+        virtual bool hasFallthrough() = 0;
+        virtual bool touchesPC() = 0;
+        virtual bool isReturn() = 0;
+        virtual bool isCall() = 0;
+        virtual uint64_t fallthroughTarget() = 0;
+        virtual uint64_t getBranchTarget() = 0;
+        virtual uint32_t getControlTargets(std::vector<uint64_t>& tgts) = 0;
 
-        bool isFpop();
-        bool isLoad();
-        bool isStore();
-        bool isMemop();
+        virtual bool isFpop() = 0;
+        virtual bool isLoad() = 0;
+        virtual bool isStore() = 0;
+        virtual bool isMemop();
 
-        uint32_t getSourceRegisterSizeInBits();
-        uint32_t getSourceDatatypeSizeInBits();
+        virtual uint32_t getSourceRegisterSizeInBits() = 0;
+        virtual uint32_t getSourceDatatypeSizeInBits() = 0;
 
-        std::string stringRep();
-        void print(std::ostream& stream = std::cout);
+        virtual std::string stringRep() = 0;
+        virtual void print(std::ostream& stream = std::cout) = 0;
+
+        virtual uint32_t getGroupNames(std::vector<std::string>& cls);
     }; // class Instruction
 
 } // namespace EPAX

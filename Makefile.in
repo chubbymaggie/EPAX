@@ -1,6 +1,6 @@
-.PHONY: all lib bin clean local-install depend interface
+.PHONY: all lib bin clean examples local-install depend interface
 
-all: lib bin interface local-install
+all: lib bin interface examples local-install
 
 lib: interface
 	$(MAKE) -C src/ lib
@@ -13,6 +13,9 @@ local-install: bin lib
 
 interface:
 	$(MAKE) -C src/ interface
+
+examples:
+	$(MAKE) -C examples/
 
 docs:
 	$(MAKE) -C docs/
